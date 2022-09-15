@@ -1,0 +1,7 @@
+// Functions
+
+// Import if google fonts url is defined:
+
+@if variable-exists($font-url--google) {
+    @import url($font-url--google);
+}
