@@ -190,23 +190,25 @@ ul {
 
 /* line 11, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 li {
-  list-style: none; }
+  list-style: none;
+  font-size: 13px; }
 
-/* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 16, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 a {
   color: #fff;
   text-decoration: none; }
 
-/* line 20, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 21, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 footer {
   color: #fff;
   background: #333645; }
 
-/* line 25, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 26, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 h4 {
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 26px; }
+  margin-bottom: 26px;
+  font-size: 16px; }
 
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
 .container {
