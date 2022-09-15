@@ -3,3 +3,28 @@
 body {
     font-family: $font-family--primary;
 }
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    color: $white;
+    text-decoration: none;
+}
+
+footer {
+    color: $white;
+    background: $pauper;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-weight: $font-weight--regular;
+    margin-bottom: 26px;
+}
+
