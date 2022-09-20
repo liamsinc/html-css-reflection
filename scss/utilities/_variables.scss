@@ -42,9 +42,13 @@ $jaipur: #a3331d;
 $underpass-shrine: #ce4125;
 $ginshu: #bc2c28;
 
-// Breakpoints
+// Text
 
-$brkpoint-xs: 479px;
+$base__font-size : 16px;
+$letter-space: .4px;
+
+
+// Breakpoints
 $brkpoint-sm: 767px;
 $brkpoint-md: 991px;
 $brkpoint-lg: 1259px;

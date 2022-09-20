@@ -2,19 +2,19 @@
 
 body {
     font-family: $font-family--primary;
-    font-size: 1rem;
-    letter-spacing: .4px;
+    font-size: $base__font-size;
+    letter-spacing: $letter-space;
     color: $squant;
 }
 
 ul {
     padding-left: 0;
+    margin: 0;
 }
 
 li {
     list-style: none;
     font-size: 13px;
-    line-height: 1.75em;
 }
 
 a{
