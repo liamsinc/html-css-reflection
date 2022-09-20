@@ -7,6 +7,11 @@
     padding: em(50px) 0;
 }
 
+.required:after {
+    content: ' *';
+    color: red;
+}
+
 .newsletter h2 {
     font-weight: $font-weight--regular;
     margin: 0 0 em(15px);
@@ -18,12 +23,14 @@
 }
 
 .form-input {
-    height: em(34px);
+    height: em(47px);
     padding: em(5px) em(15px);
     border: 1px solid $silver-medal;
     border-color: $cerebral-grey;
     border-radius: 2px;
     width: 100%;
+    color: $stone-cold;
+    font-size: em(14px);
     &:focus {
         outline: 0;
         border-color: $input-border;

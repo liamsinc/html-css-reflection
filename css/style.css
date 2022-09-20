@@ -343,48 +343,55 @@ footer li {
   padding: 3.125em 0; }
 
 /* line 10, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+.required:after {
+  content: ' *';
+  color: red; }
+
+/* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .newsletter h2 {
   font-weight: 400;
   margin: 0 0 0.9375em;
   font-size: 2em; }
 
-/* line 16, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 21, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .newsletter label {
   font-weight: 600; }
 
-/* line 20, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 25, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .form-input {
-  height: 2.125em;
+  height: 2.9375em;
   padding: 0.3125em 0.9375em;
   border: 1px solid #e5e5e5;
   border-color: #ccc;
   border-radius: 2px;
-  width: 100%; }
-  /* line 27, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+  width: 100%;
+  color: #555;
+  font-size: 0.875em; }
+  /* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
   .form-input:focus {
     outline: 0;
     border-color: #5bc0de;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6); }
 
-/* line 36, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 43, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .form-group {
   margin-bottom: 0.9375em; }
 
-/* line 40, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 47, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 label, input {
   display: block; }
 
-/* line 45, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 52, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .form-label {
   margin: 0 0 0.3125em; }
 
-/* line 49, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 56, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .sign-up-inputs-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
 
-/* line 55, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 62, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .sign-up-input {
   flex: 1 1 28.125em; }
 
