@@ -180,27 +180,31 @@ template {
 [hidden] {
   display: none; }
 
-/* line 3, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 2, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 5, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   letter-spacing: 0.4px;
   color: #666; }
 
-/* line 10, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 12, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 ul {
   padding-left: 0;
   margin: 0; }
 
-/* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 17, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 li {
   list-style: none; }
 
-/* line 19, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 21, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 a {
   text-decoration: none; }
 
-/* line 23, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 25, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 h4 {
   font-weight: 400; }
 
@@ -296,37 +300,36 @@ footer li {
   font-size: 1.125em;
   padding: 0.4375em 0.625em 0.625em;
   border-radius: 50%;
-  text-align: center;
-  width: 0.9em; }
+  text-align: center; }
 
-/* line 72, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 71, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .fa-facebook-f:hover {
   background-color: #4267b2; }
 
-/* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .fa-twitter:hover {
   background-color: #1da1f2; }
 
-/* line 84, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .fa-instagram:hover {
   background-color: #bc2a8d; }
 
-/* line 90, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .fa-linkedin-in:hover {
   background-color: #0072b1; }
 
 @media (max-width: 767px) {
-  /* line 96, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
   .visible-xs {
     display: block !important; } }
 
 @media (min-width: 991px) {
-  /* line 102, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  /* line 101, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
   .visible-xs {
     display: none !important; } }
 
 @media (min-width: 1259px) {
-  /* line 108, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  /* line 107, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
   .footer-row {
     justify-content: space-between; } }
 
@@ -336,16 +339,53 @@ footer li {
   color: #333645; }
 
 /* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
-.newsletter h2 {
-  font-weight: 400; }
+.form {
+  padding: 3.125em 0; }
 
 /* line 10, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+.newsletter h2 {
+  font-weight: 400;
+  margin: 0 0 0.9375em;
+  font-size: 2em; }
+
+/* line 16, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .newsletter label {
   font-weight: 600; }
 
-/* line 14, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 20, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .form-input {
-  height: 2.9375em;
-  padding: 0.3125em 0.9375em; }
+  height: 2.125em;
+  padding: 0.3125em 0.9375em;
+  border: 1px solid #e5e5e5;
+  border-color: #ccc;
+  border-radius: 2px;
+  width: 100%; }
+  /* line 27, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+  .form-input:focus {
+    outline: 0;
+    border-color: #5bc0de;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6); }
+
+/* line 36, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+.form-group {
+  margin-bottom: 0.9375em; }
+
+/* line 40, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+label, input {
+  display: block; }
+
+/* line 45, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+.form-label {
+  margin: 0 0 0.3125em; }
+
+/* line 49, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+.sign-up-inputs-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+/* line 55, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+.sign-up-input {
+  flex: 1 1 28.125em; }
 
 /*# sourceMappingURL=style.css.map */

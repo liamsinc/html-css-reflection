@@ -23,14 +23,14 @@
 
 
 
-// auto margin mixin
+// auto margin
 
 @mixin am() {
     margin-left: auto;
     margin-right: auto;
 }
 
-// flex-wrap-center template
+// flex container template
 
 @mixin fwc() {
     display: flex;
