@@ -1,0 +1,17 @@
+.newsletter {
+    background-color: $steam;
+    color: $pauper;
+}
+
+.newsletter h2 {
+    font-weight: $font-weight--regular;
+}
+
+.newsletter label {
+    font-weight: $font-weight--bold;
+}
+
+.form-input {
+    height: em(47px);
+    padding: em(5px) em(15px)
+}

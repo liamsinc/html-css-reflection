@@ -8,7 +8,7 @@ footer {
 footer h4 {
     margin-top: 0;
     text-transform: uppercase;
-    margin-bottom: em(26px);
+    margin-bottom: em(26px); 
     font-size: em(16px);
 }
 
@@ -52,7 +52,44 @@ footer li {
     display: flex;
     padding-top: em(5px);
     justify-content: center;
-    
+}
+
+.social-links {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.socials i {
+    font-size: em(18px);
+    padding: em(7px) em(10px) em(10px);
+    border-radius: 50%;
+    text-align: center;
+    width: em(14.4px);
+}
+
+.fa-facebook-f {
+    &:hover {
+        background-color: $facebook;
+    }
+}
+
+.fa-twitter {
+    &:hover {
+        background-color: $twitter;
+    }
+}
+
+.fa-instagram {
+    &:hover {
+        background-color: $instagram;
+    }
+}
+
+.fa-linkedin-in {
+    &:hover {
+        background-color: $linkedin;
+    }
 }
 
 @include mq(small) {
