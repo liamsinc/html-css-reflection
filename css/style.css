@@ -208,6 +208,14 @@ a {
 h4 {
   font-weight: 400; }
 
+/* line 29, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+h1 {
+  margin: 0; }
+
+/* line 33, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+p {
+  margin: 0; }
+
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
 .container {
   margin-left: auto;
@@ -373,26 +381,58 @@ footer li {
     border-color: #5bc0de;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6); }
 
-/* line 43, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 41, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .form-group {
   margin-bottom: 0.9375em; }
 
-/* line 47, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
-label, input {
+/* line 45, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+.form-label, .form-input {
   display: block; }
 
-/* line 52, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 50, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .form-label {
   margin: 0 0 0.3125em; }
 
-/* line 56, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .sign-up-inputs-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
 
-/* line 62, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
+/* line 60, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
 .sign-up-input {
   flex: 1 1 28.125em; }
+
+/* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+.hero-img {
+  background-image: url("../../img/hero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 550px; }
+
+/* line 10, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; }
+
+/* line 19, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+.hero-text h1 {
+  font-size: 2.5em;
+  min-width: 500px;
+  margin: 0 0 20px;
+  text-align: center; }
+
+/* line 26, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+.hero-text p {
+  margin: 0 50px 0;
+  font-size: 1.25em;
+  font-weight: 600;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
