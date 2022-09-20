@@ -194,26 +194,36 @@ ul {
 
 /* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 li {
-  list-style: none;
-  font-size: 13px; }
+  list-style: none; }
 
-/* line 20, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 19, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 a {
-  color: #fff;
   text-decoration: none; }
 
-/* line 27, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 23, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 h4 {
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-bottom: 26px;
-  font-size: 16px; }
+  font-weight: 400; }
 
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
 .container {
   margin-left: auto;
   margin-right: auto;
   padding: 0 0.9375em; }
+
+@media (max-width: 767px) {
+  /* line 7, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
+  .container {
+    max-width: 750px; } }
+
+@media (min-width: 991px) {
+  /* line 13, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
+  .container {
+    max-width: 970px; } }
+
+@media (min-width: 1259px) {
+  /* line 19, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
+  .container {
+    max-width: 1200px; } }
 
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 footer {
@@ -223,24 +233,44 @@ footer {
   line-height: 1.375em; }
 
 /* line 8, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+footer h4 {
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 1.625em;
+  font-size: 1em; }
+
+/* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+footer a {
+  color: #fff; }
+  /* line 17, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  footer a:hover {
+    text-decoration: underline; }
+
+/* line 22, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+footer li {
+  font-size: 13px; }
+
+/* line 26, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .footer-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto; }
 
-/* line 14, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 31, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .services, .offices {
   display: flex;
-  min-width: 14.0625em;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  min-width: 14.0625em; }
 
-/* line 21, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 36, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .service, .office {
   min-width: 14.0625em;
   margin-bottom: 1.875em; }
 
-/* line 26, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 41, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .bottom {
   display: flex;
   border-top: 1px solid #888;
@@ -248,30 +278,28 @@ footer {
   padding-top: 0.625em;
   margin-top: 0.625em;
   font-size: 0.8125em;
-  max-width: 1200px;
-  flex-shrink: 1;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 39, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 51, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .license {
   display: flex;
   padding-top: 0.3125em;
   justify-content: center; }
 
 @media (max-width: 767px) {
-  /* line 47, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  /* line 59, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
   .visible-xs {
     display: block !important; } }
 
-@media (min-width: 767px) and (max-width: 991px) {
-  /* line 53, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+@media (min-width: 991px) {
+  /* line 65, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
   .visible-xs {
     display: none !important; } }
 
-@media (min-width: 991px) {
-  /* line 59, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
-  .visible-xs {
-    display: none !important; } }
+@media (min-width: 1259px) {
+  /* line 71, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  .footer-row {
+    justify-content: space-between; } }
 
 /*# sourceMappingURL=style.css.map */

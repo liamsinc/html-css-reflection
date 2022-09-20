@@ -7,16 +7,33 @@
 		}
 	}
 	@else if $break == "medium" {
-		@media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+		@media (min-width: $brkpoint-md) {
 			@content;
 		}
 	}
     @else if $break == "large" {
-		@media (min-width: $brkpoint-md) {
+		@media (min-width: $brkpoint-lg) {
 			@content;
 		}
 	}
 	@else {
 		@error "Error: No value could be retrieved from argument $break: '#{$break}'"
 	}
+}
+
+
+
+// auto margin mixin
+
+@mixin am() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// flex-wrap-center template
+
+@mixin fwc() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
