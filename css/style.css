@@ -182,28 +182,27 @@ template {
 
 /* line 3, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 body {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  letter-spacing: .4px;
+  color: #666; }
 
-/* line 7, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 10, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 ul {
   padding-left: 0; }
 
-/* line 11, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 14, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 li {
   list-style: none;
-  font-size: 13px; }
+  font-size: 13px;
+  line-height: 1.75em; }
 
-/* line 16, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 20, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 a {
   color: #fff;
   text-decoration: none; }
 
-/* line 21, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
-footer {
-  color: #fff;
-  background: #333645; }
-
-/* line 26, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 27, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 h4 {
   text-transform: uppercase;
   font-weight: 400;
@@ -214,5 +213,28 @@ h4 {
 .container {
   display: flex;
   margin: 0 15px; }
+
+/* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+footer {
+  color: #fff;
+  background: #333645; }
+
+/* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+.footer-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+/* line 13, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+.services, .offices {
+  display: flex;
+  min-width: 225px;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+/* line 20, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+.service, .office {
+  width: 225px; }
 
 /*# sourceMappingURL=style.css.map */

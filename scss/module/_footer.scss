@@ -1,0 +1,25 @@
+footer {
+    color: $white;
+    background: $pauper;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services, .offices {
+    display: flex;
+    min-width: 225px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service, .office {
+    width: 225px;
+
+}
+
+
