@@ -3,22 +3,22 @@
     padding: 0 em(15px);
 }
 
-@include mq(small) {
+@include mq(medium) {
     .container {
         max-width: 750px;
     }
 }
 
-@include mq(medium) {
+@include mq(large) {
     .container {
         max-width: 970px;
     }
 }
 
-@include mq(large) {
+@include mq(x-large) {
     .container {
         max-width: 1200px;
-    }
+    } 
 }
 
 .section {
