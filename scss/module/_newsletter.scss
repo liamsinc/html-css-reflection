@@ -22,6 +22,37 @@
     font-weight: $font-weight--bold;
 }
 
+.marketing-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    line-height: 2em;
+}
+
+.marketing-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: em(10px);
+}
+
+.pp-link {
+    color: $pauper;
+    text-decoration: underline;
+    &:hover {
+        color: $black;
+    }
+}
+
+.form-button {
+    background-color: $pauper;
+    border: 1px solid $pauper;
+    border-radius: 3px;
+    line-height: em(35px);
+    color: $white;
+    padding: em(5px) em(15px);
+}
+
 .form-input {
     height: em(47px);
     padding: em(5px) em(15px);
@@ -62,6 +93,8 @@
     flex: 1 1 em(450px);
 }
 
-@include mq(small) {
-
+@include mq(large) {
+    .marketing-text {
+        display: block;
+    }
 }

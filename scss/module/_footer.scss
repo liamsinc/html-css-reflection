@@ -103,7 +103,7 @@ footer li {
     }
 }
 
-@include mq(large) {
+@include mq(x-large) {
     .footer-row {
         justify-content: space-between;
     }
