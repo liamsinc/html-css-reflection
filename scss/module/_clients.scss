@@ -1,0 +1,58 @@
+// This section contains all styling for the clients section
+
+// Yet to be refactored / optimised!
+
+// Removes the section by default as is hidden on smaller screens
+
+.clients {
+    display: none;
+}
+
+// Creating a flex container that holds the images (clients)
+
+.clients-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+// For all images beginning with class "client-", sets height.
+
+[class^="client-"] {
+    height: em(45px);
+}
+
+// Displays clients section when medium breakpoint is reached
+
+@include mq(medium) {
+    .clients {
+        display: block;
+    }
+}
+
+// Clients on hover styles
+// 1. Changes images to their full colour variants when in hover state
+
+.partner-1 {
+    &:hover {
+       content: url(../../img/busseys-c.png);
+    }
+}
+
+.partner-2 {
+    &:hover {
+       content: url(../../img/crane-c.png);
+    }
+}
+
+.partner-3 {
+    &:hover {
+       content: url(../../img/beat-c.png) 
+    }
+}
+
+.partner-4 {
+    &:hover {
+       content: url(../../img/northern-diver-c.png) 
+    }
+}
