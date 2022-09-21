@@ -237,6 +237,11 @@ p {
   .container {
     max-width: 1200px; } }
 
+/* line 24, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
+.section {
+  padding-top: 3.125em;
+  padding-bottom: 3.125em; }
+
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 footer {
   color: #fff;
@@ -404,7 +409,7 @@ footer li {
   flex: 1 1 28.125em; }
 
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
-.hero-img {
+.hero-section {
   background-image: url("../../img/hero.jpeg");
   background-position: center;
   background-repeat: no-repeat;
@@ -434,5 +439,53 @@ footer li {
   font-size: 1.25em;
   font-weight: 600;
   text-align: center; }
+
+/* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.primary-services, .secondary-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  column-gap: 1.875em; }
+
+/* line 10, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.bs-service, .its-service, .dm-service,
+.ts-service, .wd-service, .cs-service, .dt-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  align-items: center;
+  text-align: center;
+  padding: 1.875em;
+  margin-top: 1.875em;
+  border-radius: 0.9375em;
+  height: 18.125em;
+  max-width: 45em;
+  text-decoration: none;
+  list-style: none;
+  color: #333645; }
+
+@media (min-width: 991px) {
+  /* line 30, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+  .primary-services {
+    flex-direction: row; }
+  /* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+  .secondary-services {
+    flex-direction: row; } }
+
+/* line 39, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.fa-solid {
+  font-size: 1.875em;
+  text-align: center;
+  color: #fff; }
+
+/* line 43, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+[class^="service-icon"] {
+  padding: 1.25em;
+  margin: 1.25em;
+  background-color: black;
+  vertical-align: middle; }
 
 /*# sourceMappingURL=style.css.map */

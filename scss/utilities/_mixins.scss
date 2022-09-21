@@ -36,5 +36,11 @@
     justify-content: center;
 }
 
-// content padding 
+// services icon formatting
+
+@mixin icon-format() {
+	font-size: em(30px);
+	text-align: center;
+    color: $white;
+}
 

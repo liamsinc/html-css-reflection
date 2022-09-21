@@ -1,0 +1,49 @@
+.primary-services, .secondary-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    column-gap: em(30px);
+}
+
+
+.bs-service, .its-service, .dm-service,
+.ts-service, .wd-service, .cs-service, .dt-service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $white;
+    border: 1px solid $cerebral-grey;
+    align-items: center;
+    text-align: center;
+    padding: em(30px);
+    margin-top: em(30px);
+    border-radius: em(15px);
+    height: em(290px);
+    max-width: em(720px);
+    text-decoration: none;
+    list-style: none;
+    color: $pauper;
+}
+
+@include mq(medium) {
+    .primary-services {
+        flex-direction: row;
+    }
+
+    .secondary-services {
+        flex-direction: row;
+    }
+}
+
+.fa-solid {
+    @include icon-format();
+}
+
+[class^="service-icon"] {
+    padding: em(20px);
+    margin: em(20px);
+    background-color: black;
+    vertical-align: middle;
+}
+
