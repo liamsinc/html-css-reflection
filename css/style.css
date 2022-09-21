@@ -651,4 +651,28 @@ footer li {
 .accolade-6:hover {
   content: url(../../img/F50-c.jpeg); }
 
+/* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.reviews-section {
+  background-color: #333645;
+  color: #fff; }
+
+/* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.review-wrapper, .welcome-wrapper {
+  display: flex;
+  flex-direction: column; }
+
+/* line 12, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.welcome-wrapper h1 {
+  margin-bottom: 1.5625em; }
+
+/* line 16, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.welcome-wrapper p {
+  margin-bottom: 1.5625em; }
+
+/* line 22, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.welcome-btn {
+  width: fit-content;
+  padding: 0.3125em 0.9375em;
+  justify-content: center; }
+
 /*# sourceMappingURL=style.css.map */

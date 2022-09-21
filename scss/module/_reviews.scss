@@ -1,0 +1,28 @@
+.reviews-section {
+    background-color: $pauper;
+    color: $white;
+}
+
+.review-wrapper, .welcome-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-wrapper {
+    & h1 {
+        margin-bottom: em(25px);
+    }
+
+    & p {
+        margin-bottom: em(25px);
+    }
+
+}
+
+.welcome-btn {
+    width: fit-content;
+    padding: em(5px) em(15px);
+    justify-content: center;
+}
+
+
