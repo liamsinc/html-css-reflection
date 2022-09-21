@@ -44,8 +44,25 @@
 // services icon formatting
 
 @mixin icon-format() {
-	font-size: em(30px);
+	font-size: em(20px);
 	text-align: center;
     color: $white;
+}
+
+// services box formatting
+
+@mixin service-format() {
+	display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border: 1px solid $cerebral-grey;
+    align-items: center;
+    text-align: center;
+    padding: em(30px);
+    margin-top: em(30px);
+    border-radius: em(15px);
+    min-height: em(300px);
+    max-width: em(720px);
+    color: $pauper;
 }
 

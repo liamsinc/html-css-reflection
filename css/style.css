@@ -482,15 +482,13 @@ footer li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   column-gap: 1.875em; }
 
-/* line 10, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 8, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .bs-service, .its-service, .dm-service,
 .ts-service, .wd-service, .cs-service, .dt-service {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: #fff;
   border: 1px solid #ccc;
   align-items: center;
@@ -498,32 +496,93 @@ footer li {
   padding: 1.875em;
   margin-top: 1.875em;
   border-radius: 0.9375em;
-  height: 18.125em;
+  min-height: 18.75em;
   max-width: 45em;
-  text-decoration: none;
-  list-style: none;
   color: #333645; }
 
 @media (min-width: 767px) {
-  /* line 30, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+  /* line 14, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
   .primary-services {
     flex-direction: row; }
-  /* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+  /* line 18, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
   .secondary-services {
     flex-direction: row; } }
 
-/* line 39, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 24, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .fa-solid {
-  font-size: 1.875em;
+  font-size: 1.25em;
   text-align: center;
   color: #fff; }
 
-/* line 43, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 28, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 [class^="service-icon"] {
   padding: 1.25em;
   margin: 1.25em;
-  background-color: black;
-  vertical-align: middle; }
+  vertical-align: middle;
+  border-radius: 50%; }
+
+/* line 35, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service-icon-1 {
+  background-color: #67809f; }
+
+/* line 39, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service-icon-2 {
+  background-color: #4183d7; }
+
+/* line 43, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service-icon-3 {
+  background-color: #2ecc71; }
+
+/* line 47, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service-icon-4 {
+  background-color: #d64541; }
+
+/* line 51, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service-icon-5 {
+  background-color: #926fb1; }
+
+/* line 55, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service-icon-6 {
+  background-color: #f62459; }
+
+/* line 59, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service-icon-7 {
+  background-color: #ce4125; }
+
+/* line 64, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.bs-service:hover {
+  background-color: #67809f;
+  color: #fff; }
+
+/* line 71, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.its-service:hover {
+  background-color: #4183d7;
+  color: #fff; }
+
+/* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.dm-service:hover {
+  background-color: #2ecc71;
+  color: #fff; }
+
+/* line 85, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.ts-service:hover {
+  background-color: #d64541;
+  color: #fff; }
+
+/* line 92, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.wd-service:hover {
+  background-color: #926fb1;
+  color: #fff; }
+
+/* line 99, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.cs-service:hover {
+  background-color: #f62459;
+  color: #fff; }
+
+/* line 106, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.dt-service:hover {
+  background-color: #ce4125;
+  color: #fff; }
 
 /* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .clients-section {
