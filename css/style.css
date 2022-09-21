@@ -347,7 +347,7 @@ footer li {
     justify-content: space-between; } }
 
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_newsletter.scss */
-.newsletter {
+.newsletter-section {
   background-color: #ddd;
   color: #333645; }
 
@@ -526,7 +526,7 @@ footer li {
   vertical-align: middle; }
 
 /* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.clients {
+.clients-section {
   display: none; }
 
 /* line 12, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
@@ -541,23 +541,23 @@ footer li {
 
 @media (min-width: 767px) {
   /* line 27, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-  .clients {
+  .clients-section {
     display: block; } }
 
 /* line 36, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.partner-1:hover {
+.client-1:hover {
   content: url(../../img/busseys-c.png); }
 
 /* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.partner-2:hover {
+.client-2:hover {
   content: url(../../img/crane-c.png); }
 
 /* line 48, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.partner-3:hover {
+.client-3:hover {
   content: url(../../img/beat-c.png); }
 
 /* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.partner-4:hover {
+.client-4:hover {
   content: url(../../img/northern-diver-c.png); }
 
 /* line 8, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */

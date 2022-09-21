@@ -3,7 +3,7 @@
 
 // Removes the section by default as is hidden on smaller screens
 
-.clients {
+.clients-section {
     display: none;
 }
 
@@ -24,7 +24,7 @@
 // Displays clients section when medium breakpoint is reached
 
 @include mq(medium) {
-    .clients {
+    .clients-section {
         display: block;
     }
 }
@@ -32,25 +32,25 @@
 // Styles in hover states
 // 1. Changes images to their full colour variants when in hover state
 
-.partner-1 {
+.client-1 {
     &:hover {
        content: url(../../img/busseys-c.png);
     }
 }
 
-.partner-2 {
+.client-2 {
     &:hover {
        content: url(../../img/crane-c.png);
     }
 }
 
-.partner-3 {
+.client-3 {
     &:hover {
        content: url(../../img/beat-c.png) 
     }
 }
 
-.partner-4 {
+.client-4 {
     &:hover {
        content: url(../../img/northern-diver-c.png) 
     }
