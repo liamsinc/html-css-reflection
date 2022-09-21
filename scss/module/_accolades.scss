@@ -1,0 +1,52 @@
+// This file contains all styling for the accolades section
+// For now instead of carousel just 6 static images. They still have their hover states.
+// Yet to be refactored / optimised!
+
+// Creates a flex container for the accolades to sit in. 
+// This make it fairly responsive for the time being until carousel is implemented using JS.
+
+.accolades-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 em(15px);
+    flex-wrap: wrap;
+    width: inherit;
+}
+
+// Controls the hover states of each accolade
+
+.accolade-1 {
+    &:hover {
+        content: url(../../img/GP-c.jpeg)
+    }
+}
+
+.accolade-2 {
+    &:hover {
+        content: url(../../img/IIFG-c.jpeg)
+    }
+}
+
+.accolade-3 {
+    &:hover {
+        content: url(../../img/PRTA-c.jpeg)
+    }
+}
+
+.accolade-4 {
+    &:hover {
+        content: url(../../img/ISO9001-c.jpeg)
+    }
+}
+
+.accolade-5 {
+    &:hover {
+        content: url(../../img/ISO27001-c.jpeg)
+    }
+}
+
+.accolade-6 {
+    &:hover {
+        content: url(../../img/F50-c.jpeg)
+    }
+}
