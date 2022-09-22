@@ -4,7 +4,7 @@
 }
 
 .form {
-    padding: em(50px) 0;
+    padding: em(40px) 0;
 }
 
 .required:after {
@@ -14,15 +14,15 @@
 
 .newsletter h2 {
     font-weight: $font-weight--regular;
-    margin: 0 0 em(15px);
+    margin-bottom: em(13px);
     font-size: em(32px);
 }
 
-.newsletter label {
+.checkbox-label {
     font-weight: $font-weight--bold;
 }
 
-.marketing-wrapper {
+.marketing__wrapper {
     display: flex;
     flex-direction: row;
     align-items: left;

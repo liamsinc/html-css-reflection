@@ -11,7 +11,7 @@ body {
     font-family: $font-family--primary;
     font-size: $base__font-size;
     letter-spacing: $letter-space;
-    color: $squant;
+    color: $pauper;
 }
 
 ul {
@@ -26,17 +26,3 @@ li {
 a{
     text-decoration: none;
 }
-
-h4 {
-    font-weight: $font-weight--regular;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-}
-
-p {
-    margin: 0;
-}
-
