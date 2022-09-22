@@ -93,7 +93,7 @@
     flex: 1 1 em(450px);
 }
 
-@include mq(large) {
+@include media-query(large) {
     .marketing-text {
         display: block;
     }

@@ -1,6 +1,6 @@
 // Media query mixin
 
-@mixin mq($break) {
+@mixin media-query($break) {
 	@if $break == "small" {
 		@media (min-width: $brkpoint-sm)  {
 			@content;
@@ -22,11 +22,11 @@
 		}
 	}
 	@else {
-		@error "Error: No value could be retrieved from argument $break: '#{$break}'"
+		@error "Error: No value could be retrieved from argument $break: '#{$break}'";
 	}
 }
 
-// auto margin
+// auto margin for site container
 
 @mixin am() {
     margin-left: auto;
@@ -35,7 +35,7 @@
 
 // flex container template
 
-@mixin fwc() {
+@mixin flex-wrap-center() {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -106,7 +106,7 @@
 	margin-top: em(5px);
 }
 
-// Footer mixins
+// Footer section
 
 @mixin footer-link-styles {
 	color: $white;

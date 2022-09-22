@@ -23,7 +23,7 @@
 
 // Displays clients section when medium breakpoint is reached
 
-@include mq(medium) {
+@include media-query(medium) {
     .clients-section {
         display: block;
     }

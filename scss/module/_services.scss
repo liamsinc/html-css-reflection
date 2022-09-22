@@ -16,7 +16,7 @@
         justify-content: center;
         
         // When breakpoint reached, change flex direction, add column gap
-        @include mq(large) {
+        @include media-query(large) {
             flex-direction: row;
             column-gap: em(30px);
         }
@@ -26,13 +26,13 @@
     
     &__secondary {
 
-        @include mq(medium) {
+        @include media-query(medium) {
             flex-direction: row;
             flex-wrap: wrap;
             column-gap: em(30px);
         }
 
-        @include mq(large) {
+        @include media-query(large) {
             flex-wrap: wrap;
         }
     }
@@ -91,12 +91,12 @@
         @include service-transition();
         @include service-format();
 
-        @include mq(large) {
+        @include media-query(large) {
             width: em(290px);
             height: em(335px)
         }
 
-        @include mq(x-large) {
+        @include media-query(x-large) {
             width: em(370px);
         }
     }
@@ -107,15 +107,15 @@
         @include service-transition();
         @include service-format();
 
-        @include mq(medium) {
+        @include media-query(medium) {
             width: em(345px);
         }
 
-        @include mq(large) {
+        @include media-query(large) {
             width: em(455px);
         }
 
-        @include mq(x-large) {
+        @include media-query(x-large) {
             width: em(270px);
         }
     }

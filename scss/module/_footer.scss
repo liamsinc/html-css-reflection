@@ -17,37 +17,27 @@
     // Handles the footer row (containing services and offices)
 
     &__row {
-        @include fwc();
-        @include mq(x-large) {
-            justify-content: space-between;
-        }
+        @include flex-wrap-center();
+        @include media-query(x-large) {justify-content: space-between;}
     }
 
     // Handles the 2 footer flex containers/items
 
     &__services, &__offices {
-        @include fwc();
+        @include flex-wrap-center();
         min-width: em(225px);
     }
 
     // Some breakpoint overrides for services and offices
 
     &__services {
-        @include mq(large) {
-            column-gap: em(165px);
-        }
-        @include mq(x-large) {
-            column-gap: normal; 
-        }
+        @include media-query(large) {column-gap: em(165px);}
+        @include media-query(x-large) {column-gap: normal;}
     }
 
     &__offices {
-        @include mq(large) {
-            column-gap: em(90px);
-        }
-        @include mq(x-large) {
-            column-gap: normal; 
-        }
+        @include media-query(large) {column-gap: em(90px);}
+        @include media-query(x-large) {column-gap: normal;}
     }
 
     // Individual service/office section within services/offices flex container
@@ -70,9 +60,7 @@
 
         & > ul > li {
             font-size: em(13px);
-            & > a  {
-                @include footer-link-styles();
-            }
+            & > a  {@include footer-link-styles();}
         }     
     }
 
@@ -94,9 +82,7 @@
 
         & > ul > li {
             font-size: em(16px);
-            & > a {
-                @include footer-link-styles();
-            }
+            & > a {@include footer-link-styles();}
         }
     }
 
@@ -141,10 +127,6 @@
 // Breaks license section onto a new line on smaller screens
 
 .visible-xs {
-    @include mq(small) {
-        display: block!important;
-    }
-    @include mq(medium) {
-        display: none!important;
-    }
+    @include media-query(small) {display: block!important;}
+    @include media-query(medium) {display: none!important;}
 }
