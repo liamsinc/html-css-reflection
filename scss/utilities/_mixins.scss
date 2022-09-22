@@ -106,4 +106,13 @@
 	margin-top: em(5px);
 }
 
+// Footer mixins
+
+@mixin footer-link-styles {
+	color: $white;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 

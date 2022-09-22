@@ -1,133 +1,150 @@
-footer {
+// This partial contains styles for the footer section
+// For any mixins used, please see _mixins.scss
+
+// Footer sections styling
+
+.footer-section {
     color: $white;
     background: $pauper;
     padding: em(47px) 0 em(43px);
     line-height: em(22px);
 }
 
-footer h4 {
-    margin-top: 0;
-    text-transform: uppercase;
-    margin-bottom: em(26px); 
-    font-size: em(16px);
-    font-weight: 400;
-}
+// Footer content styling
 
-footer a {
-    color: $white;
-    &:hover {
-        text-decoration: underline;
+.footer {
+
+    // Handles the footer row (containing services and offices)
+
+    &__row {
+        @include fwc();
+        @include mq(x-large) {
+            justify-content: space-between;
+        }
+    }
+
+    // Handles the 2 footer flex containers/items
+
+    &__services, &__offices {
+        @include fwc();
+        min-width: em(225px);
+    }
+
+    // Some breakpoint overrides for services and offices
+
+    &__services {
+        @include mq(large) {
+            column-gap: em(165px);
+        }
+        @include mq(x-large) {
+            column-gap: normal; 
+        }
+    }
+
+    &__offices {
+        @include mq(large) {
+            column-gap: em(90px);
+        }
+        @include mq(x-large) {
+            column-gap: normal; 
+        }
+    }
+
+    // Individual service/office section within services/offices flex container
+
+    &__service, &__office {
+        min-width: em(225px);
+        margin-bottom: em(30px);
+    }
+
+    // Styling of content using descendant selectors
+
+    &__service, &__office {
+        & > h4 {
+            margin-top: 0;
+            text-transform: uppercase;
+            margin-bottom: em(26px); 
+            font-size: em(16px);
+            font-weight: $font-weight--regular; 
+        }
+
+        & > ul > li {
+            font-size: em(13px);
+            & > a  {
+                @include footer-link-styles();
+            }
+        }     
+    }
+
+    // Handles the copyright and socials area underneath footer__row
+
+    &__bottom {
+        display: flex;
+        border-top: 1px solid $argent;
+        justify-content: space-between;
+        padding-top: em(10px);
+        margin-top: em(10px);
+        font-size: em(13px);
+    }
+
+    &__license {
+        display: flex;
+        padding-top: em(5px);
+        justify-content: center;
+
+        & > ul > li {
+            font-size: em(16px);
+            & > a {
+                @include footer-link-styles();
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
-footer li {
-    font-size: 13px;
-}
+// Styles the social links 
 
-.footer-row {
-    @include fwc();
-    @include am();
-}
-
-.services, .offices {
-    @include fwc();
-    min-width: em(225px);
-}
-
-.services {
-    @include mq(large) {
-        column-gap: em(165px);
+.social {
+    &__link {
+        &:hover {
+            text-decoration: none;
+            .siw {
+                &-1 {background-color: $facebook;}
+                &-2 {background-color: $twitter;}
+                &-3 {background-color: $instagram;}
+                &-4 {background-color: $linkedin;}
+            }
+        }
     }
-    @include mq(x-large) {
-        column-gap: normal; 
-    }
-}
 
-.offices {
-    @include mq(large) {
-        column-gap: em(90px);
-    }
-    @include mq(x-large) {
-        column-gap: normal; 
-    }
-}
+    &__icon {
+        font-size: em(17px);
+        padding: em(7px) em(10px) em(10px);
+        border-radius: 50%;
+        color: $white;
 
-.service, .office {
-    min-width: em(225px);
-    margin-bottom: em(30px);
-}
-
-.bottom {
-    display: flex;
-    border-top: 1px solid $argent;
-    justify-content: space-between;
-    padding-top: em(10px);
-    margin-top: em(10px);
-    font-size: em(13px);
-    @include am();
-}
-
-.license {
-    display: flex;
-    padding-top: em(5px);
-    justify-content: center;
-}
-
-.social-links {
-    &:hover {
-        text-decoration: none;
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: em(35px);
+            height: em(35px);
+            border-radius: 50%;
+        }
     }
 }
 
-.socials i {
-    font-size: em(17px);
-    padding: em(7px) em(10px) em(10px);
-    border-radius: 50%;
-    text-align: center;
-}
+// Breaks license section onto a new line on smaller screens
 
-.fa-facebook-f {
-    &:hover {
-        background-color: $facebook;
-    }
-}
-
-.fa-twitter {
-    &:hover {
-        background-color: $twitter;
-    }
-}
-
-.fa-instagram {
-    &:hover {
-        background-color: $instagram;
-    }
-}
-
-.fa-linkedin-in {
-    &:hover {
-        background-color: $linkedin;
-    }
-}
-
-@include mq(small) {
-    .visible-xs {
+.visible-xs {
+    @include mq(small) {
         display: block!important;
     }
-}
-
-@include mq(medium) {
-    .visible-xs {
+    @include mq(medium) {
         display: none!important;
     }
 }
-
-@include mq(x-large) {
-    .footer-row {
-        justify-content: space-between;
-    }
-}
-
-
-
-

@@ -1,6 +1,5 @@
 // This partial contains styles for the services section
 // For any mixins used, please see _mixins.scss
-// Refactored to a good standard (I think)
 
 
 .service {
@@ -24,6 +23,7 @@
     }
 
     //  When breakpoint reached, set the secondary services to wrap
+    
     &__secondary {
 
         @include mq(medium) {
@@ -38,13 +38,17 @@
     }
 
     // Overrides the default text colours within the link
+
     &__block {
         color: $pauper;
     }
 
     // Service icons
+
     &__icon {
+
         // Service icon wrapper common styles
+
         &__wrapper {
             display: flex;
             justify-content: center;
@@ -53,7 +57,9 @@
             width: em(65px);
             border-radius: 50%;
         }
-        // Service icon size and initial colour
+
+        // Service icons
+
         &-1, &-2, &-3, &-4, &-5, &-6, &-7 {
             font-size: em(30px);
             color: $white;
@@ -61,12 +67,14 @@
     }
 
     // Service title
+
     &__title {
         font-size: em(20.8px);
         font-weight: $font-weight--regular;
     }
 
     // Service description
+
     &__text {
         margin-bottom: em(11px);
         font-size: em(13px);
@@ -74,9 +82,11 @@
     }
 
     // Service buttons common styles
+
     &__btn {@include service-button-styles();}
 
     // Handles all 3 items in the primary container
+
     &__1, &__2, &__3 {
         @include service-transition();
         @include service-format();
@@ -92,6 +102,7 @@
     }
 
     // Handles all 4 items in the secondary container
+
     &__4, &__5, &__6, &__7  {
         @include service-transition();
         @include service-format();
@@ -110,6 +121,7 @@
     }
 
     // Hover states for all services
+
     &__1 {@include service-hover-styles($bay-view);}
     &__2 {@include service-hover-styles($magical-merlin);}
     &__3 {@include service-hover-styles($ufo-green);}   
