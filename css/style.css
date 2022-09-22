@@ -477,112 +477,144 @@ footer li {
   font-weight: 600;
   text-align: center; }
 
-/* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.primary-services, .secondary-services {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  column-gap: 1.875em; }
+/* line 7, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service__heading {
+  color: #333645;
+  font-size: 2.7em; }
 
-/* line 8, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.bs-service, .its-service, .dm-service,
-.ts-service, .wd-service, .cs-service, .dt-service {
+/* line 13, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service__primary, .service__secondary {
   display: flex;
   flex-direction: column;
+  justify-content: center; }
+  @media (min-width: 991px) {
+    /* line 13, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    .service__primary, .service__secondary {
+      flex-direction: row;
+      column-gap: 1.875em; } }
+
+@media (min-width: 991px) {
+  /* line 26, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+  .service__secondary {
+    flex-wrap: wrap; } }
+
+/* line 33, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service__block {
+  color: #333645; }
+
+/* line 40, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service__icon__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.0625em;
+  width: 4.0625em;
+  border-radius: 50%; }
+
+/* line 49, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service__icon-1, .service__icon-2, .service__icon-3, .service__icon-4, .service__icon-5, .service__icon-6, .service__icon-7 {
+  font-size: 1.25em;
+  color: #fff; }
+
+/* line 56, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service__title {
+  font-size: 1.3em;
+  font-weight: 400; }
+
+/* line 62, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service__text {
+  margin-bottom: 0.6875em;
+  font-size: 0.8125em; }
+
+/* line 68, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service__1, .service__2, .service__3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
-  border: 1px solid #ccc;
+  color: #333645;
+  border: 0.0625em solid #ccc;
+  border-radius: 0.9375em;
+  box-shadow: 0 0.1875em 2.1875em rgba(0, 0, 0, 0.1);
   align-items: center;
   text-align: center;
   padding: 1.875em;
   margin-top: 1.875em;
+  min-height: 18.125em;
+  max-width: 45em; }
+  @media (min-width: 991px) {
+    /* line 68, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    .service__1, .service__2, .service__3 {
+      width: 18.125em; } }
+  @media (min-width: 1259px) {
+    /* line 68, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    .service__1, .service__2, .service__3 {
+      width: 23.125em; } }
+
+/* line 84, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.service__4, .service__5, .service__6, .service__7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #333645;
+  border: 0.0625em solid #ccc;
   border-radius: 0.9375em;
-  min-height: 18.75em;
-  max-width: 45em;
-  color: #333645; }
-
-@media (min-width: 767px) {
-  /* line 14, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-  .primary-services {
-    flex-direction: row; }
-  /* line 18, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-  .secondary-services {
-    flex-direction: row; } }
-
-/* line 24, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.fa-solid {
-  font-size: 1.25em;
+  box-shadow: 0 0.1875em 2.1875em rgba(0, 0, 0, 0.1);
+  align-items: center;
   text-align: center;
-  color: #fff; }
+  padding: 1.875em;
+  margin-top: 1.875em;
+  min-height: 18.125em;
+  max-width: 45em; }
+  @media (min-width: 991px) {
+    /* line 84, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    .service__4, .service__5, .service__6, .service__7 {
+      width: 28.4375em; } }
+  @media (min-width: 1259px) {
+    /* line 84, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    .service__4, .service__5, .service__6, .service__7 {
+      width: 16.875em; } }
 
-/* line 28, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-[class^="service-icon"] {
-  padding: 1.25em;
-  margin: 1.25em;
-  vertical-align: middle;
-  border-radius: 50%; }
-
-/* line 35, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.service-icon-1 {
+/* line 103, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-1 {
   background-color: #67809f; }
 
-/* line 39, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.service-icon-2 {
+/* line 107, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-2 {
   background-color: #4183d7; }
 
-/* line 43, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.service-icon-3 {
+/* line 111, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-3 {
   background-color: #2ecc71; }
 
-/* line 47, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.service-icon-4 {
+/* line 115, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-4 {
   background-color: #d64541; }
 
-/* line 51, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.service-icon-5 {
+/* line 119, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-5 {
   background-color: #926fb1; }
 
-/* line 55, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.service-icon-6 {
+/* line 123, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-6 {
   background-color: #f62459; }
 
-/* line 59, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.service-icon-7 {
+/* line 127, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-7 {
   background-color: #ce4125; }
 
-/* line 64, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.bs-service:hover {
-  background-color: #67809f;
-  color: #fff; }
+/* line 134, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-1 {
+  background-color: #67809f; }
 
-/* line 71, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.its-service:hover {
-  background-color: #4183d7;
-  color: #fff; }
+/* line 138, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-2 {
+  background-color: #4183d7; }
 
-/* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.dm-service:hover {
-  background-color: #2ecc71;
-  color: #fff; }
-
-/* line 85, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.ts-service:hover {
-  background-color: #d64541;
-  color: #fff; }
-
-/* line 92, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.wd-service:hover {
-  background-color: #926fb1;
-  color: #fff; }
-
-/* line 99, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.cs-service:hover {
-  background-color: #f62459;
-  color: #fff; }
-
-/* line 106, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
-.dt-service:hover {
-  background-color: #ce4125;
-  color: #fff; }
+/* line 142, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+.sic-3 {
+  background-color: #2ecc71; }
 
 /* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .clients-section {

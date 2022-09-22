@@ -53,16 +53,24 @@
 
 @mixin service-format() {
 	display: flex;
-    flex-direction: column;
-    background-color: $white;
-    border: 1px solid $cerebral-grey;
-    align-items: center;
-    text-align: center;
-    padding: em(30px);
-    margin-top: em(30px);
-    border-radius: em(15px);
-    min-height: em(300px);
-    max-width: em(720px);
-    color: $pauper;
+	flex-direction: column;
+	justify-content: space-between;
+
+	background-color: $white;
+	color: $pauper;
+
+	border: em(1px) solid $cerebral-grey;
+	border-radius: em(15px);
+	box-shadow: 0 em(3px) em(35px) rgba($black, .1);
+
+	align-items: center;
+	text-align: center;
+
+	padding: em(30px);
+	margin-top: em(30px);
+	
+	min-height: em(290px);
+	max-width: em(720px);
+	
 }
 

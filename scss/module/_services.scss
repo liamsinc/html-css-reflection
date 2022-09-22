@@ -1,111 +1,257 @@
-.primary-services, .secondary-services {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    column-gap: em(30px);
-}
+// This partial contains styles for the services section
+// For any mixins used, please see _mixins.scss
 
-.bs-service, .its-service, .dm-service,
-.ts-service, .wd-service, .cs-service, .dt-service {
-    @include service-format();
-}
 
-@include mq(medium) {
-    .primary-services {
-        flex-direction: row;
+.service {
+    // "Our services" section heading
+    &__heading {
+        color: $pauper;
+        font-size: em(43.2px);
     }
 
-    .secondary-services {
-        flex-direction: row;
+    // The two flex containers holding 3 and 4 items respectively
+    &__primary, &__secondary {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        // When breakpoint reached, change flex direction, add column gap
+        @include mq(large) {
+            flex-direction: row;
+            column-gap: em(30px);
+        }
+    }
+
+    //  When breakpoint reached, set the secondary services to wrap
+    &__secondary {
+        @include mq(large) {
+            flex-wrap: wrap;
+        }
+    }
+
+    // Overrides the default text colours within the link
+    &__block {
+        color: $pauper;
+    }
+
+    // Service icons
+    &__icon {
+        // Service icon wrapper common styles
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: em(65px);
+            width: em(65px);
+            border-radius: 50%;
+        }
+        // Service icon size and initial colour
+        &-1, &-2, &-3, &-4, &-5, &-6, &-7 {
+            font-size: em(20px);
+            color: $white;
+        }
+    }
+
+    // Service title
+    &__title {
+        font-size: em(20.8px);
+        font-weight: $font-weight--regular;
+    }
+
+    // Service description
+    &__text {
+        margin-bottom: em(11px);
+        font-size: em(13px);
+    }
+
+    // Handles all 3 items in the primary container
+    &__1, &__2, &__3 {
+
+        // Apply default styles
+        @include service-format();
+
+        // When breakpoints reached, set the width of primary services
+        @include mq(large) {
+            width: em(290px)
+        }
+
+        @include mq(x-large) {
+            width: em(370px)
+        }
+    }
+
+    // Handles all 4 items in the secondary container
+    &__4, &__5, &__6, &__7  {
+
+        // Apply default styles
+        @include service-format();
+
+        // When breakpoints reached, set the width of secondary services
+        @include mq(large) {
+            width: em(455px);
+        }
+
+        @include mq(x-large) {
+            width: em(270px);
+        }
     }
 }
 
+// sic (service icon wrapper) individual stylings
 
-.fa-solid {
-    @include icon-format();
+.sic {
+    &-1 {
+        background-color: $bay-view;
+    }
+
+    &-2 {
+        background-color: $magical-merlin;
+    }
+
+    &-3 {
+        background-color: $ufo-green;
+    }
+
+    &-4 {
+        background-color: $cute-crab;
+    }
+
+    &-5 {
+        background-color: $violet-frog;
+    }
+
+    &-6 {
+        background-color: $red-pink;
+    }
+
+    &-7 {
+        background-color: $underpass-shrine;
+    }
+
+
 }
 
-[class^="service-icon"] {
-    padding: em(20px);
-    margin: em(20px);
-    vertical-align: middle;
-    border-radius: 50%;
-}
-
-.service-icon-1 {
+.sic-1 {
     background-color: $bay-view;
 }
 
-.service-icon-2 {
+.sic-2 {
     background-color: $magical-merlin;
 }
 
-.service-icon-3 {
+.sic-3 {
     background-color: $ufo-green;
 }
 
-.service-icon-4 {
-    background-color: $cute-crab;
-}
 
-.service-icon-5 {
-    background-color: $violet-frog;
-}
+// .primary-services, .secondary-services {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     column-gap: em(30px);
+// }
 
-.service-icon-6 {
-    background-color: $red-pink;
-}
+// .bs-service, .its-service, .dm-service,
+// .ts-service, .wd-service, .cs-service, .dt-service {
+//     @include service-format();
+// }
 
-.service-icon-7 {
-    background-color: $underpass-shrine;
-}
+// @include mq(medium) {
+//     .primary-services {
+//         flex-direction: row;
+//     }
 
-.bs-service {
-    &:hover {
-        background-color: $bay-view;
-        color: $white;
-    }
-}
+//     .secondary-services {
+//         flex-direction: row;
+//     }
+// }
 
-.its-service {
-    &:hover {
-        background-color: $magical-merlin;
-        color: $white;
-    }
-}
 
-.dm-service {
-    &:hover {
-        background-color: $ufo-green;
-        color: $white;
-    }
-}
+// .fa-solid {
+//     @include icon-format();
+// }
 
-.ts-service {
-    &:hover {
-        background-color: $cute-crab;
-        color: $white;
-    }
-}
+// [class^="service-icon"] {
+//     padding: em(20px);
+//     margin: em(20px);
+//     vertical-align: middle;
+//     border-radius: 50%;
+// }
 
-.wd-service {
-    &:hover {
-        background-color: $violet-frog;
-        color: $white;
-    }
-}
+// .service-icon-1 {
+//     background-color: $bay-view;
+// }
 
-.cs-service {
-    &:hover {
-        background-color: $red-pink;
-        color: $white;
-    }
-}
+// .service-icon-2 {
+//     background-color: $magical-merlin;
+// }
 
-.dt-service {
-    &:hover {
-        background-color: $underpass-shrine;
-        color: $white;
-    }
-}
+// .service-icon-3 {
+//     background-color: $ufo-green;
+// }
+
+// .service-icon-4 {
+//     background-color: $cute-crab;
+// }
+
+// .service-icon-5 {
+//     background-color: $violet-frog;
+// }
+
+// .service-icon-6 {
+//     background-color: $red-pink;
+// }
+
+// .service-icon-7 {
+//     background-color: $underpass-shrine;
+// }
+
+// .bs-service {
+//     &:hover {
+//         background-color: $bay-view;
+//         color: $white;
+//     }
+// }
+
+// .its-service {
+//     &:hover {
+//         background-color: $magical-merlin;
+//         color: $white;
+//     }
+// }
+
+// .dm-service {
+//     &:hover {
+//         background-color: $ufo-green;
+//         color: $white;
+//     }
+// }
+
+// .ts-service {
+//     &:hover {
+//         background-color: $cute-crab;
+//         color: $white;
+//     }
+// }
+
+// .wd-service {
+//     &:hover {
+//         background-color: $violet-frog;
+//         color: $white;
+//     }
+// }
+
+// .cs-service {
+//     &:hover {
+//         background-color: $red-pink;
+//         color: $white;
+//     }
+// }
+
+// .dt-service {
+//     &:hover {
+//         background-color: $underpass-shrine;
+//         color: $white;
+//     }
+// }
 
