@@ -62,6 +62,21 @@
     &__text {
         margin-bottom: em(11px);
         font-size: em(13px);
+        line-height: em(22px);
+    }
+
+    // Service buttons common styles
+    &__btn {
+        height: auto;
+        line-height: em(35px);
+        font-size: em(17px);
+        text-transform: uppercase;
+        padding: em(5px) em(15px);
+        color: $white;
+        border: em(1px) solid transparent;
+        border-radius: em(3px);
+        cursor: pointer;
+        margin-top: em(5px);
     }
 
     // Handles all 3 items in the primary container
@@ -72,12 +87,68 @@
 
         // When breakpoints reached, set the width of primary services
         @include mq(large) {
-            width: em(290px)
+            width: em(290px);
+            height: em(335px)
         }
 
         @include mq(x-large) {
-            width: em(370px)
+            width: em(370px);
         }
+    }
+
+    // Hover states for primary services
+    &__1 {
+        &:hover {
+            background-color: $bay-view;
+
+            &>button {
+                background-color: $white;
+                color: $bay-view;
+            }
+
+            &>div {
+                background-color: $white;
+                &>i {
+                    color: $bay-view;
+                }
+            }
+        } 
+    }
+
+    &__2 {
+        &:hover {
+            background-color: $magical-merlin;
+
+            &>button {
+                background-color: $white;
+                color: $magical-merlin;
+            }
+
+            &>div {
+                background-color: $white;
+                &>i {
+                    color: $magical-merlin;
+                }
+            }
+        } 
+    }
+
+    &__3 {
+        &:hover {
+            background-color: $ufo-green;
+
+            &>button {
+                background-color: $white;
+                color: $ufo-green;
+            }
+
+            &>div {
+                background-color: $white;
+                &>i {
+                    color: $ufo-green;
+                }
+            }
+        } 
     }
 
     // Handles all 4 items in the secondary container
@@ -97,9 +168,9 @@
     }
 }
 
-// sic (service icon wrapper) individual stylings
+// sic (service icon wrapper) and sb (service button) individual stylings
 
-.sic {
+.sic, .sb {
     &-1 {
         background-color: $bay-view;
     }
@@ -127,21 +198,11 @@
     &-7 {
         background-color: $underpass-shrine;
     }
-
-
 }
 
-.sic-1 {
-    background-color: $bay-view;
-}
+// sb (service buttons) individual stylings
 
-.sic-2 {
-    background-color: $magical-merlin;
-}
 
-.sic-3 {
-    background-color: $ufo-green;
-}
 
 
 // .primary-services, .secondary-services {
