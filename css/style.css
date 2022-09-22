@@ -184,35 +184,40 @@ template {
 * {
   box-sizing: border-box; }
 
-/* line 5, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+html {
+  line-height: 1.1; }
+
+/* line 10, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   letter-spacing: 0.4px;
   color: #666; }
 
-/* line 12, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 17, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 ul {
   padding-left: 0;
   margin: 0; }
 
-/* line 17, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 22, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 li {
   list-style: none; }
 
-/* line 21, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 26, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 a {
   text-decoration: none; }
 
-/* line 25, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 30, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 h4 {
   font-weight: 400; }
 
-/* line 29, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
-h1 {
-  margin: 0; }
+/* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
 
-/* line 33, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
+/* line 39, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/base/_base.scss */
 p {
   margin: 0; }
 
@@ -493,16 +498,23 @@ footer li {
       flex-direction: row;
       column-gap: 1.875em; } }
 
+@media (min-width: 767px) {
+  /* line 27, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+  .service__secondary {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.875em; } }
+
 @media (min-width: 991px) {
   /* line 27, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
   .service__secondary {
     flex-wrap: wrap; } }
 
-/* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 41, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .service__block {
   color: #333645; }
 
-/* line 41, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 48, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .service__icon__wrapper {
   display: flex;
   justify-content: center;
@@ -511,23 +523,23 @@ footer li {
   width: 4.0625em;
   border-radius: 50%; }
 
-/* line 50, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 57, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .service__icon-1, .service__icon-2, .service__icon-3, .service__icon-4, .service__icon-5, .service__icon-6, .service__icon-7 {
   font-size: 1.875em;
   color: #fff; }
 
-/* line 57, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 64, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .service__title {
   font-size: 1.3em;
   font-weight: 400; }
 
-/* line 63, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 70, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .service__text {
   margin-bottom: 0.6875em;
   font-size: 0.8125em;
   line-height: 1.375em; }
 
-/* line 70, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .service__btn {
   height: auto;
   line-height: 2.1875em;
@@ -540,7 +552,7 @@ footer li {
   cursor: pointer;
   margin-top: 0.3125em; }
 
-/* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 80, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .service__1, .service__2, .service__3 {
   transition-property: background-color, color, transform;
   transition-duration: 0.5s;
@@ -559,16 +571,16 @@ footer li {
   min-height: 18.125em;
   max-width: 45em; }
   @media (min-width: 991px) {
-    /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    /* line 80, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
     .service__1, .service__2, .service__3 {
       width: 18.125em;
       height: 20.9375em; } }
   @media (min-width: 1259px) {
-    /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    /* line 80, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
     .service__1, .service__2, .service__3 {
       width: 23.125em; } }
 
-/* line 88, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .service__4, .service__5, .service__6, .service__7 {
   transition-property: background-color, color, transform;
   transition-duration: 0.5s;
@@ -586,12 +598,16 @@ footer li {
   margin-top: 1.875em;
   min-height: 18.125em;
   max-width: 45em; }
+  @media (min-width: 767px) {
+    /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    .service__4, .service__5, .service__6, .service__7 {
+      width: 21.5625em; } }
   @media (min-width: 991px) {
-    /* line 88, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
     .service__4, .service__5, .service__6, .service__7 {
       width: 28.4375em; } }
   @media (min-width: 1259px) {
-    /* line 88, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+    /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
     .service__4, .service__5, .service__6, .service__7 {
       width: 16.875em; } }
 
@@ -756,31 +772,31 @@ footer li {
     .service__7:hover > div > i {
       color: #ce4125; }
 
-/* line 114, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 125, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .sic-1, .sb-1 {
   background-color: #67809f; }
 
-/* line 115, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 126, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .sic-2, .sb-2 {
   background-color: #4183d7; }
 
-/* line 116, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 127, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .sic-3, .sb-3 {
   background-color: #2ecc71; }
 
-/* line 117, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 128, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .sic-4, .sb-4 {
   background-color: #d64541; }
 
-/* line 118, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 129, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .sic-5, .sb-5 {
   background-color: #926fb1; }
 
-/* line 119, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 130, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .sic-6, .sb-6 {
   background-color: #f62459; }
 
-/* line 120, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
+/* line 131, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .sic-7, .sb-7 {
   background-color: #ce4125; }
 
@@ -837,7 +853,7 @@ footer li {
 
 /* line 31, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
 .accolade-3:hover {
-  content: url(../../img/PRTA-c.jpeg); }
+  content: url(../../img/PPC-c.jpeg); }
 
 /* line 37, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
 .accolade-4:hover {

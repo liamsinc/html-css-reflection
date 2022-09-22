@@ -25,6 +25,13 @@
 
     //  When breakpoint reached, set the secondary services to wrap
     &__secondary {
+
+        @include mq(medium) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: em(30px);
+        }
+
         @include mq(large) {
             flex-wrap: wrap;
         }
@@ -88,6 +95,10 @@
     &__4, &__5, &__6, &__7  {
         @include service-transition();
         @include service-format();
+
+        @include mq(medium) {
+            width: em(345px);
+        }
 
         @include mq(large) {
             width: em(455px);
