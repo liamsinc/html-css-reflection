@@ -287,12 +287,32 @@ footer li {
   justify-content: center;
   min-width: 14.0625em; }
 
-/* line 36, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+@media (min-width: 991px) {
+  /* line 36, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  .services {
+    column-gap: 10.3125em; } }
+
+@media (min-width: 1259px) {
+  /* line 36, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  .services {
+    column-gap: normal; } }
+
+@media (min-width: 991px) {
+  /* line 45, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  .offices {
+    column-gap: 5.625em; } }
+
+@media (min-width: 1259px) {
+  /* line 45, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  .offices {
+    column-gap: normal; } }
+
+/* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .service, .office {
   min-width: 14.0625em;
   margin-bottom: 1.875em; }
 
-/* line 41, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 59, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .bottom {
   display: flex;
   border-top: 1px solid #888;
@@ -303,51 +323,51 @@ footer li {
   margin-left: auto;
   margin-right: auto; }
 
-/* line 51, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 69, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .license {
   display: flex;
   padding-top: 0.3125em;
   justify-content: center; }
 
-/* line 58, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 76, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .social-links:hover {
   text-decoration: none; }
 
-/* line 63, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 81, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .socials i {
-  font-size: 1.125em;
+  font-size: 1.0625em;
   padding: 0.4375em 0.625em 0.625em;
   border-radius: 50%;
   text-align: center; }
 
-/* line 71, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .fa-facebook-f:hover {
   background-color: #4267b2; }
 
-/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .fa-twitter:hover {
   background-color: #1da1f2; }
 
-/* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 101, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .fa-instagram:hover {
   background-color: #bc2a8d; }
 
-/* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+/* line 107, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .fa-linkedin-in:hover {
   background-color: #0072b1; }
 
 @media (min-width: 576px) {
-  /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  /* line 113, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
   .visible-xs {
     display: block !important; } }
 
 @media (min-width: 767px) {
-  /* line 101, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  /* line 119, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
   .visible-xs {
     display: none !important; } }
 
 @media (min-width: 1259px) {
-  /* line 107, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
+  /* line 125, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
   .footer-row {
     justify-content: space-between; } }
 
@@ -611,164 +631,164 @@ footer li {
     .service__4, .service__5, .service__6, .service__7 {
       width: 16.875em; } }
 
-/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+/* line 69, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
 .service__1:hover {
   background-color: #67809f;
   transform: translate(0, -10px); }
-  /* line 81, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__1:hover > button {
     background-color: #fff;
     color: #67809f; }
-  /* line 86, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__1:hover > h2 {
     color: #fff; }
-  /* line 90, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 82, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__1:hover > p {
     transition-property: background-color, color, transform;
     transition-duration: 0.5s;
     color: #fff; }
-  /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 87, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__1:hover > div {
     background-color: #fff; }
-    /* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+    /* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
     .service__1:hover > div > i {
       color: #67809f; }
 
-/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+/* line 69, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
 .service__2:hover {
   background-color: #4183d7;
   transform: translate(0, -10px); }
-  /* line 81, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__2:hover > button {
     background-color: #fff;
     color: #4183d7; }
-  /* line 86, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__2:hover > h2 {
     color: #fff; }
-  /* line 90, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 82, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__2:hover > p {
     transition-property: background-color, color, transform;
     transition-duration: 0.5s;
     color: #fff; }
-  /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 87, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__2:hover > div {
     background-color: #fff; }
-    /* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+    /* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
     .service__2:hover > div > i {
       color: #4183d7; }
 
-/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+/* line 69, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
 .service__3:hover {
   background-color: #2ecc71;
   transform: translate(0, -10px); }
-  /* line 81, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__3:hover > button {
     background-color: #fff;
     color: #2ecc71; }
-  /* line 86, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__3:hover > h2 {
     color: #fff; }
-  /* line 90, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 82, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__3:hover > p {
     transition-property: background-color, color, transform;
     transition-duration: 0.5s;
     color: #fff; }
-  /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 87, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__3:hover > div {
     background-color: #fff; }
-    /* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+    /* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
     .service__3:hover > div > i {
       color: #2ecc71; }
 
-/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+/* line 69, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
 .service__4:hover {
   background-color: #d64541;
   transform: translate(0, -10px); }
-  /* line 81, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__4:hover > button {
     background-color: #fff;
     color: #d64541; }
-  /* line 86, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__4:hover > h2 {
     color: #fff; }
-  /* line 90, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 82, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__4:hover > p {
     transition-property: background-color, color, transform;
     transition-duration: 0.5s;
     color: #fff; }
-  /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 87, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__4:hover > div {
     background-color: #fff; }
-    /* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+    /* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
     .service__4:hover > div > i {
       color: #d64541; }
 
-/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+/* line 69, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
 .service__5:hover {
   background-color: #926fb1;
   transform: translate(0, -10px); }
-  /* line 81, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__5:hover > button {
     background-color: #fff;
     color: #926fb1; }
-  /* line 86, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__5:hover > h2 {
     color: #fff; }
-  /* line 90, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 82, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__5:hover > p {
     transition-property: background-color, color, transform;
     transition-duration: 0.5s;
     color: #fff; }
-  /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 87, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__5:hover > div {
     background-color: #fff; }
-    /* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+    /* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
     .service__5:hover > div > i {
       color: #926fb1; }
 
-/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+/* line 69, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
 .service__6:hover {
   background-color: #f62459;
   transform: translate(0, -10px); }
-  /* line 81, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__6:hover > button {
     background-color: #fff;
     color: #f62459; }
-  /* line 86, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__6:hover > h2 {
     color: #fff; }
-  /* line 90, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 82, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__6:hover > p {
     transition-property: background-color, color, transform;
     transition-duration: 0.5s;
     color: #fff; }
-  /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 87, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__6:hover > div {
     background-color: #fff; }
-    /* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+    /* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
     .service__6:hover > div > i {
       color: #f62459; }
 
-/* line 77, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+/* line 69, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
 .service__7:hover {
   background-color: #ce4125;
   transform: translate(0, -10px); }
-  /* line 81, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__7:hover > button {
     background-color: #fff;
     color: #ce4125; }
-  /* line 86, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__7:hover > h2 {
     color: #fff; }
-  /* line 90, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 82, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__7:hover > p {
     transition-property: background-color, color, transform;
     transition-duration: 0.5s;
     color: #fff; }
-  /* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+  /* line 87, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
   .service__7:hover > div {
     background-color: #fff; }
-    /* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
+    /* line 89, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/utilities/_mixins.scss */
     .service__7:hover > div > i {
       color: #ce4125; }
 

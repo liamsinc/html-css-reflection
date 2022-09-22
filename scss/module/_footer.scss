@@ -33,6 +33,24 @@ footer li {
     min-width: em(225px);
 }
 
+.services {
+    @include mq(large) {
+        column-gap: em(165px);
+    }
+    @include mq(x-large) {
+        column-gap: normal; 
+    }
+}
+
+.offices {
+    @include mq(large) {
+        column-gap: em(90px);
+    }
+    @include mq(x-large) {
+        column-gap: normal; 
+    }
+}
+
 .service, .office {
     min-width: em(225px);
     margin-bottom: em(30px);
@@ -61,7 +79,7 @@ footer li {
 }
 
 .socials i {
-    font-size: em(18px);
+    font-size: em(17px);
     padding: em(7px) em(10px) em(10px);
     border-radius: 50%;
     text-align: center;

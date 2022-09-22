@@ -41,14 +41,6 @@
     justify-content: center;
 }
 
-// services icon formatting
-
-@mixin icon-format() {
-	font-size: em(20px);
-	text-align: center;
-    color: $white;
-}
-
 // services section
 
 @mixin service-format() {
