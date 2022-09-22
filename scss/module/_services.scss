@@ -1,5 +1,6 @@
 // This partial contains styles for the services section
 // For any mixins used, please see _mixins.scss
+// Refactored to a good standard (I think)
 
 
 .service {
@@ -47,7 +48,7 @@
         }
         // Service icon size and initial colour
         &-1, &-2, &-3, &-4, &-5, &-6, &-7 {
-            font-size: em(20px);
+            font-size: em(30px);
             color: $white;
         }
     }
@@ -66,26 +67,13 @@
     }
 
     // Service buttons common styles
-    &__btn {
-        height: auto;
-        line-height: em(35px);
-        font-size: em(17px);
-        text-transform: uppercase;
-        padding: em(5px) em(15px);
-        color: $white;
-        border: em(1px) solid transparent;
-        border-radius: em(3px);
-        cursor: pointer;
-        margin-top: em(5px);
-    }
+    &__btn {@include service-button-styles();}
 
     // Handles all 3 items in the primary container
     &__1, &__2, &__3 {
-
-        // Apply default styles
+        @include service-transition();
         @include service-format();
 
-        // When breakpoints reached, set the width of primary services
         @include mq(large) {
             width: em(290px);
             height: em(335px)
@@ -96,68 +84,11 @@
         }
     }
 
-    // Hover states for primary services
-    &__1 {
-        &:hover {
-            background-color: $bay-view;
-
-            &>button {
-                background-color: $white;
-                color: $bay-view;
-            }
-
-            &>div {
-                background-color: $white;
-                &>i {
-                    color: $bay-view;
-                }
-            }
-        } 
-    }
-
-    &__2 {
-        &:hover {
-            background-color: $magical-merlin;
-
-            &>button {
-                background-color: $white;
-                color: $magical-merlin;
-            }
-
-            &>div {
-                background-color: $white;
-                &>i {
-                    color: $magical-merlin;
-                }
-            }
-        } 
-    }
-
-    &__3 {
-        &:hover {
-            background-color: $ufo-green;
-
-            &>button {
-                background-color: $white;
-                color: $ufo-green;
-            }
-
-            &>div {
-                background-color: $white;
-                &>i {
-                    color: $ufo-green;
-                }
-            }
-        } 
-    }
-
     // Handles all 4 items in the secondary container
     &__4, &__5, &__6, &__7  {
-
-        // Apply default styles
+        @include service-transition();
         @include service-format();
 
-        // When breakpoints reached, set the width of secondary services
         @include mq(large) {
             width: em(455px);
         }
@@ -166,153 +97,25 @@
             width: em(270px);
         }
     }
+
+    // Hover states for all services
+    &__1 {@include service-hover-styles($bay-view);}
+    &__2 {@include service-hover-styles($magical-merlin);}
+    &__3 {@include service-hover-styles($ufo-green);}   
+    &__4 {@include service-hover-styles($cute-crab);}
+    &__5 {@include service-hover-styles($violet-frog);}
+    &__6 {@include service-hover-styles($red-pink);}
+    &__7 {@include service-hover-styles($underpass-shrine);}
 }
 
 // sic (service icon wrapper) and sb (service button) individual stylings
 
 .sic, .sb {
-    &-1 {
-        background-color: $bay-view;
-    }
-
-    &-2 {
-        background-color: $magical-merlin;
-    }
-
-    &-3 {
-        background-color: $ufo-green;
-    }
-
-    &-4 {
-        background-color: $cute-crab;
-    }
-
-    &-5 {
-        background-color: $violet-frog;
-    }
-
-    &-6 {
-        background-color: $red-pink;
-    }
-
-    &-7 {
-        background-color: $underpass-shrine;
-    }
+    &-1 {background-color: $bay-view;}
+    &-2 {background-color: $magical-merlin;}
+    &-3 {background-color: $ufo-green;}
+    &-4 {background-color: $cute-crab;}
+    &-5 {background-color: $violet-frog;}
+    &-6 {background-color: $red-pink;}
+    &-7 {background-color: $underpass-shrine;}
 }
-
-// sb (service buttons) individual stylings
-
-
-
-
-// .primary-services, .secondary-services {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     column-gap: em(30px);
-// }
-
-// .bs-service, .its-service, .dm-service,
-// .ts-service, .wd-service, .cs-service, .dt-service {
-//     @include service-format();
-// }
-
-// @include mq(medium) {
-//     .primary-services {
-//         flex-direction: row;
-//     }
-
-//     .secondary-services {
-//         flex-direction: row;
-//     }
-// }
-
-
-// .fa-solid {
-//     @include icon-format();
-// }
-
-// [class^="service-icon"] {
-//     padding: em(20px);
-//     margin: em(20px);
-//     vertical-align: middle;
-//     border-radius: 50%;
-// }
-
-// .service-icon-1 {
-//     background-color: $bay-view;
-// }
-
-// .service-icon-2 {
-//     background-color: $magical-merlin;
-// }
-
-// .service-icon-3 {
-//     background-color: $ufo-green;
-// }
-
-// .service-icon-4 {
-//     background-color: $cute-crab;
-// }
-
-// .service-icon-5 {
-//     background-color: $violet-frog;
-// }
-
-// .service-icon-6 {
-//     background-color: $red-pink;
-// }
-
-// .service-icon-7 {
-//     background-color: $underpass-shrine;
-// }
-
-// .bs-service {
-//     &:hover {
-//         background-color: $bay-view;
-//         color: $white;
-//     }
-// }
-
-// .its-service {
-//     &:hover {
-//         background-color: $magical-merlin;
-//         color: $white;
-//     }
-// }
-
-// .dm-service {
-//     &:hover {
-//         background-color: $ufo-green;
-//         color: $white;
-//     }
-// }
-
-// .ts-service {
-//     &:hover {
-//         background-color: $cute-crab;
-//         color: $white;
-//     }
-// }
-
-// .wd-service {
-//     &:hover {
-//         background-color: $violet-frog;
-//         color: $white;
-//     }
-// }
-
-// .cs-service {
-//     &:hover {
-//         background-color: $red-pink;
-//         color: $white;
-//     }
-// }
-
-// .dt-service {
-//     &:hover {
-//         background-color: $underpass-shrine;
-//         color: $white;
-//     }
-// }
-

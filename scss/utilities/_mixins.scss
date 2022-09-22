@@ -49,28 +49,69 @@
     color: $white;
 }
 
-// services box formatting
+// services section
 
 @mixin service-format() {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-
 	background-color: $white;
 	color: $pauper;
-
 	border: em(1px) solid $cerebral-grey;
 	border-radius: em(15px);
 	box-shadow: 0 em(3px) em(35px) rgba($black, .1);
-
 	align-items: center;
 	text-align: center;
-
 	padding: em(30px);
 	margin-top: em(30px);
-	
 	min-height: em(290px);
 	max-width: em(720px);
-	
 }
+
+@mixin service-transition() {
+	transition-property: background-color, color, transform;
+	transition-duration: 0.5s;
+}
+
+@mixin service-hover-styles($service-color) {
+	&:hover {
+		background-color: $service-color;
+		transform: translate(0, -10px);
+
+		&>button {
+			background-color: $white;
+			color: $service-color;
+		}
+
+		&>h2{
+			color: $white;
+		}
+		
+		&>p {
+			@include service-transition();
+			color: $white;
+		}
+
+		&>div {
+			background-color: $white;
+			&>i {
+				color: $service-color;
+			}
+		}
+	} 
+}
+
+@mixin service-button-styles {
+	height: auto;
+	line-height: em(35px);
+	font-size: em(17px);
+	text-transform: uppercase;
+	padding: em(5px) em(15px);
+	color: $white;
+	border: em(1px) solid transparent;
+	border-radius: em(3px);
+	cursor: pointer;
+	margin-top: em(5px);
+}
+
 
