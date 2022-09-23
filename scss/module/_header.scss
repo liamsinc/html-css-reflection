@@ -1,0 +1,62 @@
+
+
+.header {
+    height: em(170px);
+    margin-top: em(15px);
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: em(20px) 0;
+        flex-shrink: 1;
+    }
+
+    &__btn__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    &__logo {
+        display: flex;
+        flex-shrink: 1;
+    }
+
+    &__phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: em(30px);
+        width: em(30px);
+        padding: em(20px);
+
+        &:hover {
+            border-bottom: 1px solid $pauper;
+        }
+
+        & > a {
+            color: $pauper;
+
+            & > i {
+                font-size: em(30px);
+            }
+        }
+    }
+
+    &__hamburger {
+        @include button-styles();
+        margin: 0 0 0 em(20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: em(55px);
+        height: em(55px);
+        background-color: $pauper;
+        & > i {
+            color: $white;
+            font-size: em(30px);
+        }
+    }
+}
