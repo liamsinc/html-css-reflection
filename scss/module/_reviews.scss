@@ -1,28 +1,151 @@
 .reviews-section {
     background-color: $pauper;
     color: $white;
+    margin-bottom: em(10px);
+    padding-top: em(50px);
+    padding-bottom: em(25px);
+
+    @include media-query (large) {
+        padding-bottom: 0;
+    }
 }
 
-.review-wrapper, .welcome-wrapper {
-    display: flex;
-    flex-direction: column;
+.reviews {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include media-query (large) {
+            flex-direction: row;
+            column-gap: em(30px)
+        }
+    }
+
+    &__btn {
+        &-1, &-2, &-3 {
+            @include button-styles();
+            font-size: em(20px); 
+        }
+
+        &-2, &-3 {
+            width: fit-content;
+        }
+
+        &-1 {
+            background-color: $sky-captain;
+            width: em(170px);
+            margin-bottom: em(40px);
+        }
+
+        &-2 {
+            background-color: $seljuk-blue;
+        }
+
+        &-3 {
+            background-color: $fennel-fiesta;
+        }
+        
+    }
 }
 
-.welcome-wrapper {
-    & h1 {
+.welcome {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: em(36px);
+        margin-bottom: em(20px);
+    }
+
+    &__text {
+        &-1, &-2, &-3 {
+            line-height: em(30px);
+            font-size: em(16px);
+            margin-bottom: em(25px);
+        }
+
+        &-1 {
+            font-weight: $font-weight--bold;
+            & > a {
+               color: $white;
+               &:hover {
+                text-decoration: underline;
+               } 
+            }
+        } 
+    }
+}
+
+.review {
+
+    &__btn__container {
+        display: flex;
+        column-gap: em(20px);
+
+        @include media-query (large) {
+            flex-direction: column;
+            row-gap: em(20px);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        & > h1 {
+            font-size: em(36px);
+            margin-bottom: em(20px);
+        }
+
+        & > div {
+            margin-bottom: (25px);
+            & > i {
+                font-size: em(45px);
+                color: $orange;
+            }
+        }
+    }
+
+    &__text {
+        font-size: em(20.8px);
+        font-style: italic;
+        font-weight: $font-weight--bold;
+        line-height: em(25px);
         margin-bottom: em(25px);
     }
 
-    & p {
+    &__author {
+        font-size: em(17.6px);
+        color: $ironbreaker-metal;
+        font-weight: $font-weight--bold;
         margin-bottom: em(25px);
     }
 
+    
 }
 
-.welcome-btn {
-    width: fit-content;
-    padding: em(5px) em(15px);
-    justify-content: center;
-}
+
+// .review-wrapper, .welcome-wrapper {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .welcome-wrapper {
+//     & h1 {
+//         margin-bottom: em(25px);
+//     }
+
+//     & p {
+//         margin-bottom: em(25px);
+//     }
+
+// }
+
+// .welcome-btn {
+//     width: fit-content;
+//     padding: em(5px) em(15px);
+//     justify-content: center;
+// }
 
 

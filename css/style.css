@@ -927,26 +927,123 @@ h1, h2, h3, h4, h4, h6, p {
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
 .reviews-section {
   background-color: #333645;
-  color: #fff; }
+  color: #fff;
+  margin-bottom: 0.625em;
+  padding-top: 3.125em;
+  padding-bottom: 1.5625em; }
+  @media (min-width: 991px) {
+    /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+    .reviews-section {
+      padding-bottom: 0; } }
 
-/* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
-.review-wrapper, .welcome-wrapper {
+/* line 14, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 991px) {
+    /* line 14, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+    .reviews__wrapper {
+      flex-direction: row;
+      column-gap: 1.875em; } }
+
+/* line 25, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.reviews__btn-1, .reviews__btn-2, .reviews__btn-3 {
+  height: auto;
+  line-height: 2.1875em;
+  font-size: 1.0625em;
+  text-transform: uppercase;
+  padding: 0.3125em 0.9375em;
+  color: #fff;
+  border: 0.0625em solid transparent;
+  border-radius: 0.1875em;
+  cursor: pointer;
+  margin-top: 0.3125em;
+  font-size: 1.25em; }
+
+/* line 30, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.reviews__btn-2, .reviews__btn-3 {
+  width: fit-content; }
+
+/* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.reviews__btn-1 {
+  background-color: #272936;
+  width: 10.625em;
+  margin-bottom: 2.5em; }
+
+/* line 40, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.reviews__btn-2 {
+  background-color: #4387f6; }
+
+/* line 44, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.reviews__btn-3 {
+  background-color: #00b67b; }
+
+/* line 52, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.welcome__wrapper {
   display: flex;
   flex-direction: column; }
 
-/* line 12, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
-.welcome-wrapper h1 {
+/* line 57, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.welcome__title {
+  font-size: 2.25em;
+  margin-bottom: 1.25em; }
+
+/* line 63, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.welcome__text-1, .welcome__text-2, .welcome__text-3 {
+  line-height: 1.875em;
+  font-size: 1em;
   margin-bottom: 1.5625em; }
 
-/* line 16, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
-.welcome-wrapper p {
+/* line 69, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.welcome__text-1 {
+  font-weight: 600; }
+  /* line 71, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+  .welcome__text-1 > a {
+    color: #fff; }
+    /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+    .welcome__text-1 > a:hover {
+      text-decoration: underline; }
+
+/* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.review__btn__container {
+  display: flex;
+  column-gap: 1.25em; }
+  @media (min-width: 991px) {
+    /* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+    .review__btn__container {
+      flex-direction: column;
+      row-gap: 1.25em; } }
+
+/* line 93, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.review__wrapper {
+  display: flex;
+  flex-direction: column; }
+  /* line 96, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+  .review__wrapper > h1 {
+    font-size: 2.25em;
+    margin-bottom: 1.25em; }
+  /* line 101, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+  .review__wrapper > div {
+    margin-bottom: 25px; }
+    /* line 103, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+    .review__wrapper > div > i {
+      font-size: 2.8125em;
+      color: #ffa500; }
+
+/* line 110, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.review__text {
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.5625em;
   margin-bottom: 1.5625em; }
 
-/* line 22, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
-.welcome-btn {
-  width: fit-content;
-  padding: 0.3125em 0.9375em;
-  justify-content: center; }
+/* line 118, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+.review__author {
+  font-size: 1.1em;
+  color: #a3a8ac;
+  font-weight: 600;
+  margin-bottom: 1.5625em; }
 
 /* line 7, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__heading {
