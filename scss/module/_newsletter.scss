@@ -3,98 +3,128 @@
     color: $pauper;
 }
 
+// Main form styles
+
 .form {
-    padding: em(40px) 0;
+    & > h2 {
+        font-weight: $font-weight--regular;
+        margin-bottom: em(13px);
+        font-size: em(32px);
+    }
+
+    &__input {
+        height: em(50px);
+        padding: em(5px) em(15px);
+        border: 1px solid $silver-medal;
+        border-color: $cerebral-grey;
+        border-radius: 2px;
+        width: 100%;
+        color: $stone-cold;
+        font-size: em(14px);
+        
+        &:focus {
+            outline: 0;
+            border-color: $input-border;
+            box-shadow: inset 0 1px 1px rgba($black, .075), 0 0 8px rgba($input-border, .6);
+        }
+
+        &__wrapper {
+            @include media-query(large) {
+                display: flex;
+                column-gap: em(30px);
+            }
+        }   
+    }
+
+    &__group {
+        margin-bottom: em(15px);
+        @include media-query(large) {
+            min-width: em(455px);
+        }
+        @include media-query(x-large) {
+            min-width: em(570px);
+        }
+    }
+
+    &__label {
+        font-weight: $font-weight--bold;
+        display: block;
+        margin: 0 0 em(5px);
+    }
+
+    &__link {
+        color: $pauper;
+        text-decoration: underline;
+        &:hover {
+            color: $black;
+        }     
+    }
+
+    &__button {
+        background-color: $pauper;
+        border: 1px solid $pauper;
+        border-radius: em(3px);
+        line-height: em(35px);
+        color: $white;
+        padding: em(5px) em(15px);
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__checkbox {
+        width: em(30px);
+        height: em(30px);
+        appearance: none;
+        border: 3px solid $pauper;
+        border-radius: 3px;
+        color: $white;
+        &:checked {
+            background-color: $pauper;
+            appearance: auto;
+        }
+    }
+}
+
+.marketing {
+    &__wrapper {
+        display: flex;
+        @include media-query(large) {
+            width: 100%;
+        }
+    }
+
+    &__label {
+        font-weight: $font-weight--bold;
+        margin: 0 0 em(5px);
+        line-height: em(30px);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-left: em(10px);
+        @include media-query(large) {
+            display: block;
+            width: em(1170px);
+        }
+    }
+
+    &__checkbox {
+        display: flex;
+        width: em(30px);
+        height: em(30px);
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:checked {
+            background-color: $pauper;
+        }
+    }
 }
 
 .required:after {
     content: ' *';
     color: red;
-}
-
-.newsletter h2 {
-    font-weight: $font-weight--regular;
-    margin-bottom: em(13px);
-    font-size: em(32px);
-}
-
-.checkbox-label {
-    font-weight: $font-weight--bold;
-}
-
-.marketing__wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    line-height: 2em;
-}
-
-.marketing-text {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: em(10px);
-}
-
-.pp-link {
-    color: $pauper;
-    text-decoration: underline;
-    &:hover {
-        color: $black;
-    }
-}
-
-.form-button {
-    background-color: $pauper;
-    border: 1px solid $pauper;
-    border-radius: 3px;
-    line-height: em(35px);
-    color: $white;
-    padding: em(5px) em(15px);
-}
-
-.form-input {
-    height: em(47px);
-    padding: em(5px) em(15px);
-    border: 1px solid $silver-medal;
-    border-color: $cerebral-grey;
-    border-radius: 2px;
-    width: 100%;
-    color: $stone-cold;
-    font-size: em(14px);
-    &:focus {
-        outline: 0;
-        border-color: $input-border;
-        box-shadow: inset 0 1px 1px rgba($black, .075), 0 0 8px rgba($input-border, .6);
-    }
-}
-
-.form-group {
-    margin-bottom: em(15px);
-}
-
-.form-label, .form-input {
-    display: block;
-}
-
-
-.form-label {
-    margin: 0 0 em(5px);
-}
-
-.sign-up-inputs-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: em(30px);
-}
-
-.sign-up-input {
-    flex: 1 1 em(450px);
-}
-
-@include media-query(large) {
-    .marketing-text {
-        display: block;
-    }
 }
