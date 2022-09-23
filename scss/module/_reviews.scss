@@ -88,6 +88,10 @@
             flex-direction: column;
             row-gap: em(20px);
         }
+
+        @include media-query (x-large) {
+            flex-direction: row;
+        }
     }
 
     &__wrapper {
