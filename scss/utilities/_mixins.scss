@@ -115,4 +115,20 @@
 	}
 }
 
+@mixin news-view-styles {
+	& > a {
+		font-size: em(26px);
+		color: $pauper;
+		font-weight: $font-weight--bold;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		& > i {
+			margin-left: em(5px);
+		}
+	}
+}
+
 

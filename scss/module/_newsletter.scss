@@ -21,7 +21,7 @@
         width: 100%;
         color: $stone-cold;
         font-size: em(14px);
-        
+
         &:focus {
             outline: 0;
             border-color: $input-border;
@@ -85,6 +85,8 @@
     }
 }
 
+// Marketing section styles
+
 .marketing {
     &__wrapper {
         display: flex;
@@ -118,11 +120,14 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        margin-right: em(10px);
         &:checked {
             background-color: $pauper;
         }
     }
 }
+
+// Displays the red asterisk after required form field labels
 
 .required:after {
     content: ' *';

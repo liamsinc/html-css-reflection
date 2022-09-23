@@ -1,57 +1,54 @@
-// This file contains all styling for the clients section
-// Yet to be refactored / optimised!
+// This partial contains all styling for the clients section
 
 // Removes the section by default as is hidden on smaller screens
 
 .clients-section {
     display: none;
-}
-
-// Creating a flex container that holds the images (clients)
-
-.clients-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-// For all images beginning with class "client-", sets height.
-
-[class^="client-"] {
-    height: em(45px);
-}
-
-// Displays clients section when medium breakpoint is reached
-
-@include media-query(medium) {
-    .clients-section {
+    @include media-query(medium) {
         display: block;
     }
 }
 
-// Styles in hover states
-// 1. Changes images to their full colour variants when in hover state
+// Creating a flex container that holds the images (clients)
 
-.client-1 {
-    &:hover {
-       content: url(../../img/busseys-c.png);
-    }
-}
+.client {
+    &__wrapper {
+        height: em(45px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
-.client-2 {
-    &:hover {
-       content: url(../../img/crane-c.png);
+        @include media-query(large) {
+            height: em(50px);
+        }
+        @include media-query(x-large) {
+            height: em(70px);
+        }
     }
-}
 
-.client-3 {
-    &:hover {
-       content: url(../../img/beat-c.png) 
+    &-1 {
+        &:hover {
+            content: url(../../img/busseys-c.png);
+        }
     }
-}
 
-.client-4 {
-    &:hover {
-       content: url(../../img/northern-diver-c.png) 
+    &-2 {
+        &:hover {
+            content: url(../../img/crane-c.png);
+        }
     }
+
+    &-3 {
+        &:hover {
+            content: url(../../img/beat-c.png) 
+        }
+    }
+
+    &-4 {
+        &:hover {
+            content: url(../../img/northern-diver-c.png) 
+        }
+    }
+ 
+
 }
