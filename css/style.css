@@ -1218,7 +1218,8 @@ h1, h2, h3, h4, h4, h6, p {
     font-size: 0.875em; }
   /* line 159, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .news__author__msg__date {
-    font-size: 0.875em; }
+    font-size: 0.875em;
+    color: #666; }
 
 /* line 167, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__footer {
