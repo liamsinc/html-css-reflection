@@ -1,9 +1,14 @@
+// This partial contains styling for the latest news section
+// For any mixins used please see _mixins.scss
 
+// Main styles
 
 .news {
     &__heading {
         color: $pauper;
         font-size: em(43.2px);
+
+        // Wraps the section heading and view all link in a flex container
 
         &__wrapper {
             display: flex;
@@ -11,6 +16,8 @@
             align-items: center;
         }
     }
+
+    // Main news item flex container
 
     &__wrapper {
         display: flex;
@@ -21,6 +28,8 @@
             column-gap: em(30px);
         }
     }
+
+    // Controls the view all link 
 
     &__view-all {
         @include news-view-styles();
@@ -48,8 +57,9 @@
                 display: none;
             }
         }
-    }
+    }   
 
+    // Defines image size for consistency across breakpoints
 
     &__img__container {
         & > img {
@@ -67,6 +77,8 @@
             }
         }
     }
+
+    // Main news item styling
 
     &__item {
         @include service-transition();
@@ -93,6 +105,8 @@
         }
     }
 
+    // New item content styling
+
     &__content {
         padding: em(30px);
         & > h3 {
@@ -113,9 +127,11 @@
     }
 
     &__button {
-        @include service-button-styles();
+        @include button-styles();
         background-color: $violet-frog;
     }
+
+    // forms the grey line underneath the button
 
     &__separator {
         border-top: 1px solid $cerebral-grey;
