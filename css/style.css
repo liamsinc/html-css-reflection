@@ -1007,34 +1007,39 @@ h1, h2, h3, h4, h4, h6, p {
 /* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
 .review__btn__container {
   display: flex;
+  flex-direction: column;
+  row-gap: 0.9375em;
   column-gap: 1.25em; }
+  @media (min-width: 576px) {
+    /* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+    .review__btn__container {
+      flex-direction: row; } }
   @media (min-width: 991px) {
     /* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
     .review__btn__container {
-      flex-direction: column;
-      row-gap: 1.25em; } }
+      flex-direction: column; } }
   @media (min-width: 1259px) {
     /* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
     .review__btn__container {
       flex-direction: row; } }
 
-/* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+/* line 102, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
 .review__wrapper {
   display: flex;
   flex-direction: column; }
-  /* line 100, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+  /* line 105, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
   .review__wrapper > h1 {
     font-size: 2.25em;
     margin-bottom: 1.25em; }
-  /* line 105, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+  /* line 110, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
   .review__wrapper > div {
     margin-bottom: 25px; }
-    /* line 107, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+    /* line 112, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
     .review__wrapper > div > i {
       font-size: 2.8125em;
       color: #ffa500; }
 
-/* line 114, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+/* line 119, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
 .review__text {
   font-size: 1.3em;
   font-style: italic;
@@ -1042,7 +1047,7 @@ h1, h2, h3, h4, h4, h6, p {
   line-height: 1.5625em;
   margin-bottom: 1.5625em; }
 
-/* line 122, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
+/* line 127, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
 .review__author {
   font-size: 1.1em;
   color: #a3a8ac;

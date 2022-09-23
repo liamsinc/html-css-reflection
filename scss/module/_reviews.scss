@@ -82,11 +82,16 @@
 
     &__btn__container {
         display: flex;
+        flex-direction: column;
+        row-gap: em(15px);
         column-gap: em(20px);
+
+        @include media-query (small) {
+            flex-direction: row;
+        }
 
         @include media-query (large) {
             flex-direction: column;
-            row-gap: em(20px);
         }
 
         @include media-query (x-large) {
