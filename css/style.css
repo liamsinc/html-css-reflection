@@ -505,35 +505,51 @@ h1, h2, h3, h4, h4, h6, p {
 
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
 .hero-section {
-  background-image: url("../../img/hero.jpeg");
+  background-image: linear-gradient(to right, #000, transparent), url("../../img/hero.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   height: 550px; }
 
-/* line 10, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
-.hero-text {
+/* line 12, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10.9375em 0;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white; }
+  color: #fff; }
+  @media (min-width: 991px) {
+    /* line 12, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+    .hero__wrapper {
+      text-align: left;
+      padding: 6.25em 0; } }
+  @media (min-width: 1259px) {
+    /* line 12, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+    .hero__wrapper {
+      padding: 9.375em 0; } }
 
-/* line 19, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
-.hero-text h1 {
+/* line 32, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+.hero__title {
   font-size: 2.5em;
-  min-width: 500px;
-  margin: 0 0 20px;
-  text-align: center; }
+  margin-bottom: 0.3125em; }
+  @media (min-width: 991px) {
+    /* line 32, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+    .hero__title {
+      font-size: 4em;
+      margin-bottom: 0.625em; } }
 
-/* line 26, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
-.hero-text p {
-  margin: 0 50px 0;
+/* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+.hero__subtitle {
   font-size: 1.25em;
-  font-weight: 600;
-  text-align: center; }
+  font-weight: 600; }
+  @media (min-width: 991px) {
+    /* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_hero.scss */
+    .hero__subtitle {
+      font-size: 1.625em;
+      width: 100%; } }
 
 /* line 7, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_services.scss */
 .service__heading {
