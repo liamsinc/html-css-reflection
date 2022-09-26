@@ -1,0 +1,117 @@
+
+
+
+.navigation {
+    display: none;
+    background-color: $pauper;
+    color: $white;
+    height: em(100px);
+
+    @include media-query (large) {
+        display: block;
+    }
+}
+
+.nav {
+    &__wrapper {    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        background-color: $pauper;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: em(170px);
+        height: em(100px);
+        color: $white;
+
+        &:hover {
+            & > i {
+                color: $white;
+            }
+        }
+
+        & > i {
+            font-size: em(20px);
+            margin-bottom: em(10px);
+        }
+
+        & > h2 {
+            font-size: em(10px);
+            text-transform: uppercase;
+        }
+
+        & > p {
+            font-size: em(18px);
+            text-transform: uppercase;
+        }
+
+        &-1 {
+            & > i {
+                color: $bay-view;
+            }
+            &:hover {
+                background-color: $bay-view;
+            }
+        }
+
+        &-2 {
+            & > i {
+                color: $magical-merlin;
+            }
+            &:hover {
+                background-color: $magical-merlin;
+            }
+        }
+
+        &-3 {
+            & > i {
+                color: $ufo-green;
+            }
+            &:hover {
+                background-color: $ufo-green;
+            }
+        }
+
+        &-4 {
+            & > i {
+                color: $cute-crab;
+            }
+            &:hover {
+                background-color: $cute-crab;
+            }
+        }
+
+        &-5 {
+            & > i {
+                color: $violet-frog;
+            }
+            &:hover {
+                background-color: $violet-frog;
+            }
+        }
+
+        &-6 {
+            & > i {
+                color: $red-pink;
+            }
+            &:hover {
+                background-color: $red-pink;
+            }
+        }
+
+        &-7 {
+            & > i {
+                color: $underpass-shrine;
+            }
+            &:hover {
+                background-color: $underpass-shrine;
+            }
+        }
+    }
+}
