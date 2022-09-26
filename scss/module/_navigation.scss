@@ -22,17 +22,63 @@
         background-color: $pauper;
     }
 
+    &__dropdown {
+        display: none;
+        margin-top: em(22px);
+        z-index: 1;
+        border-bottom-left-radius: em(10px);
+        border-bottom-right-radius: em(10px);
+
+        &-1 {
+            background-color: darken($bay-view, 10%);
+        }
+        &-2 {
+            background-color: darken($magical-merlin, 10%);
+        }
+        &-3 {
+            background-color: darken($ufo-green, 10%);
+        }
+        &-4 {
+            background-color: darken($cute-crab, 10%);
+        }
+        &-5 {
+            background-color: darken($violet-frog, 10%);
+        }
+        &-6 {
+            background-color: darken($red-pink, 10%);
+        }
+        &-7 {
+            background-color: darken($underpass-shrine, 10%);
+        }
+
+        & > ul > li {
+            padding: em(10px) em(15px);
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
     &__item {
+        padding-top: em(15px);
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        width: em(170px);
+        width: em(135px);
         height: em(100px);
         color: $white;
+
+        @include media-query (x-large) {
+            width: em(170px);
+        }
 
         &:hover {
             & > i {
                 color: $white;
+            }
+            .nav__dropdown {
+                display: flex;
+                justify-content: center;
             }
         }
 
