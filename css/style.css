@@ -1350,7 +1350,11 @@ h1, h2, h3, h4, h4, h6, p {
 .header {
   height: 10.625em;
   margin-top: 0.9375em; }
-  /* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  @media (min-width: 991px) {
+    /* line 3, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+    .header {
+      height: 6.875em; } }
+  /* line 13, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
   .header__wrapper {
     display: flex;
     flex-direction: row;
@@ -1358,17 +1362,17 @@ h1, h2, h3, h4, h4, h6, p {
     justify-content: space-between;
     margin-bottom: 1.25em 0;
     flex-shrink: 1; }
-  /* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  /* line 22, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
   .header__btn__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0; }
-  /* line 22, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  /* line 29, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
   .header__logo {
     display: flex;
     flex-shrink: 1; }
-  /* line 27, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  /* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
   .header__phone {
     display: flex;
     justify-content: center;
@@ -1376,16 +1380,16 @@ h1, h2, h3, h4, h4, h6, p {
     height: 1.875em;
     width: 1.875em;
     padding: 1.25em; }
-    /* line 35, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+    /* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
     .header__phone:hover {
       border-bottom: 1px solid #333645; }
-    /* line 39, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+    /* line 46, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
     .header__phone > a {
       color: #333645; }
-      /* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+      /* line 49, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
       .header__phone > a > i {
         font-size: 1.875em; }
-  /* line 48, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  /* line 55, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
   .header__hamburger {
     height: auto;
     line-height: 2.1875em;
@@ -1404,7 +1408,7 @@ h1, h2, h3, h4, h4, h6, p {
     width: 3.4375em;
     height: 3.4375em;
     background-color: #333645; }
-    /* line 57, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+    /* line 64, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
     .header__hamburger > i {
       color: #fff;
       font-size: 1.875em; }
