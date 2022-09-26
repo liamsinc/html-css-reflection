@@ -38,14 +38,13 @@
             .client__info {
                 display: flex;
                 flex-direction: column;
-                margin-bottom: em(200px);
+                // margin-bottom: em(200px);
                 padding: em(10px);
+                
+                
             }
 
             .client__img {
-                position: absolute;
-                top: initial;
-                left: initial;
                 &-1 {
                     &:hover {
                         content: url(../../img/busseys-c.png);
@@ -73,7 +72,7 @@
     &__info {
         width: em(200px);
         display: none;
-        // z-index: 10;
+        z-index: 10;
         background-color: $pauper;
         color: $white;
         // flex-direction: column;

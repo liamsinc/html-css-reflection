@@ -903,30 +903,25 @@ h1, h2, h3, h4, h4, h6, p {
   .client__container:hover .client__info {
     display: flex;
     flex-direction: column;
-    margin-bottom: 12.5em;
     padding: 0.625em; }
-  /* line 45, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-  .client__container:hover .client__img {
-    position: absolute;
-    top: initial;
-    left: initial; }
-    /* line 50, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-    .client__container:hover .client__img-1:hover {
-      content: url(../../img/busseys-c.png); }
-    /* line 55, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-    .client__container:hover .client__img-2:hover {
-      content: url(../../img/crane-c.png); }
-    /* line 60, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-    .client__container:hover .client__img-3:hover {
-      content: url(../../img/beat-c.png); }
-    /* line 65, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-    .client__container:hover .client__img-4:hover {
-      content: url(../../img/northern-diver-c.png); }
+  /* line 49, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+  .client__container:hover .client__img-1:hover {
+    content: url(../../img/busseys-c.png); }
+  /* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+  .client__container:hover .client__img-2:hover {
+    content: url(../../img/crane-c.png); }
+  /* line 59, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+  .client__container:hover .client__img-3:hover {
+    content: url(../../img/beat-c.png); }
+  /* line 64, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+  .client__container:hover .client__img-4:hover {
+    content: url(../../img/northern-diver-c.png); }
 
-/* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 72, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__info {
   width: 12.5em;
   display: none;
+  z-index: 10;
   background-color: #333645;
   color: #fff; }
 
