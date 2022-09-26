@@ -16,7 +16,7 @@
         height: em(45px);
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
 
         @include media-query(large) {
             height: em(50px);
@@ -26,29 +26,64 @@
         }
     }
 
-    &-1 {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        
+
         &:hover {
-            content: url(../../img/busseys-c.png);
+            .client__info {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: em(200px);
+                padding: em(10px);
+            }
+
+            .client__img {
+                position: absolute;
+                top: initial;
+                left: initial;
+                &-1 {
+                    &:hover {
+                        content: url(../../img/busseys-c.png);
+                    }
+                }
+                &-2 {
+                    &:hover {
+                        content: url(../../img/crane-c.png);
+                    }
+                }
+                &-3 {
+                    &:hover {
+                        content: url(../../img/beat-c.png);
+                    }
+                }
+                &-4 {
+                    &:hover {
+                        content: url(../../img/northern-diver-c.png);
+                    }
+                }
+            }
         }
     }
 
-    &-2 {
-        &:hover {
-            content: url(../../img/crane-c.png);
-        }
+    &__info {
+        width: em(200px);
+        display: none;
+        // z-index: 10;
+        background-color: $pauper;
+        color: $white;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        // text-align: center;
     }
 
-    &-3 {
-        &:hover {
-            content: url(../../img/beat-c.png) 
-        }
-    }
-
-    &-4 {
-        &:hover {
-            content: url(../../img/northern-diver-c.png) 
-        }
-    }
- 
 
 }
+    
+
+
