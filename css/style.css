@@ -891,17 +891,29 @@ h1, h2, h3, h4, h4, h6, p {
 .client__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  column-gap: 1.875em; }
+  justify-content: space-between; }
 
-/* line 33, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 32, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client-1, .client-2, .client-3, .client-4 {
+  height: 2.5em; }
+  @media (min-width: 991px) {
+    /* line 32, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    .client-1, .client-2, .client-3, .client-4 {
+      height: 3.125em; } }
+  @media (min-width: 1259px) {
+    /* line 32, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    .client-1, .client-2, .client-3, .client-4 {
+      height: 4.375em; } }
+
+/* line 45, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__1, .client__2, .client__3, .client__4 {
   display: flex;
+  flex-shrink: 1;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   z-index: 1; }
-  /* line 40, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+  /* line 53, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
   .client__1-info, .client__2-info, .client__3-info, .client__4-info {
     display: flex;
     flex-direction: column;
@@ -911,63 +923,63 @@ h1, h2, h3, h4, h4, h6, p {
     color: #fff;
     text-align: center;
     padding: 0.9375em; }
-    /* line 50, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    /* line 63, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
     .client__1-info > h3, .client__2-info > h3, .client__3-info > h3, .client__4-info > h3 {
       font-size: 1.125em; }
-    /* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    /* line 67, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
     .client__1-info > h6, .client__2-info > h6, .client__3-info > h6, .client__4-info > h6 {
       font-size: 1.875em; }
-    /* line 58, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    /* line 71, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
     .client__1-info > p, .client__2-info > p, .client__3-info > p, .client__4-info > p {
       font-size: 0.8125em;
       line-height: 1.375em;
       font-weight: 600; }
 
-/* line 67, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 80, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__1:hover .client__1-info {
   visibility: visible; }
 
-/* line 70, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__1:hover .client-1 {
   content: url(../../img/busseys-c.png); }
 
-/* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 86, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__1:hover .info__square-1 {
   visibility: visible; }
 
-/* line 79, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 92, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__2:hover .client__2-info {
   visibility: visible; }
 
-/* line 82, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__2:hover .client-2 {
   content: url(../../img/crane-c.png); }
 
-/* line 85, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 98, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__2:hover .info__square-2 {
   visibility: visible; }
 
-/* line 91, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 104, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__3:hover .client__3-info {
   visibility: visible; }
 
-/* line 94, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 107, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__3:hover .client-3 {
   content: url(../../img/beat-c.png); }
 
-/* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 110, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__3:hover .info__square-3 {
   visibility: visible; }
 
-/* line 103, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 116, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__4:hover .client__4-info {
   visibility: visible; }
 
-/* line 106, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 119, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__4:hover .client-4 {
   content: url(../../img/northern-diver-c.png); }
 
-/* line 109, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 122, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__4:hover .info__square-4 {
   visibility: visible; }
 
@@ -1153,8 +1165,16 @@ h1, h2, h3, h4, h4, h6, p {
     .news__wrapper {
       flex-direction: row;
       column-gap: 1.875em; } }
+  @media (min-width: 991px) {
+    /* line 22, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    .news__wrapper {
+      column-gap: 3.125em; } }
+  @media (min-width: 1259px) {
+    /* line 22, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    .news__wrapper {
+      column-gap: 1.875em; } }
 
-/* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+/* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__view-all {
   display: none;
   padding-right: 0.3125em; }
@@ -1170,18 +1190,18 @@ h1, h2, h3, h4, h4, h6, p {
     .news__view-all > a > i {
       margin-left: 0.3125em; }
   @media (min-width: 767px) {
-    /* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__view-all {
       display: inline; } }
   @media (min-width: 991px) {
-    /* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__view-all {
       padding-right: 1.25em; } }
   @media (min-width: 1259px) {
-    /* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__view-all {
       padding-right: 0.3125em; } }
-  /* line 51, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+  /* line 59, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .news__view-all-xs {
     margin-top: 3.125em;
     text-align: center; }
@@ -1197,27 +1217,27 @@ h1, h2, h3, h4, h4, h6, p {
       .news__view-all-xs > a > i {
         margin-left: 0.3125em; }
     @media (min-width: 767px) {
-      /* line 51, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+      /* line 59, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
       .news__view-all-xs {
         display: none; } }
 
-/* line 65, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+/* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__img__container > img {
   width: 100%; }
   @media (min-width: 767px) {
-    /* line 65, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__img__container > img {
       height: 12.5em; } }
   @media (min-width: 991px) {
-    /* line 65, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__img__container > img {
       height: 16.5625em; } }
   @media (min-width: 1259px) {
-    /* line 65, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__img__container > img {
       height: 13.4375em; } }
 
-/* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+/* line 91, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__item {
   transition-property: background-color, color, transform;
   transition-duration: 0.5s;
@@ -1226,41 +1246,41 @@ h1, h2, h3, h4, h4, h6, p {
   margin-top: 1.875em;
   border: 1px solid #ccc;
   border-radius: 3px; }
-  /* line 91, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+  /* line 99, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .news__item:hover {
     transform: translate(0, -10px); }
   @media (min-width: 767px) {
-    /* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 91, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__item {
       width: 21.5625em; } }
   @media (min-width: 991px) {
-    /* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 91, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__item {
       width: 27.8125em; } }
   @media (min-width: 1259px) {
-    /* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 91, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__item {
       width: 23.125em; } }
 
-/* line 110, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+/* line 118, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__content {
   padding: 1.875em; }
-  /* line 112, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+  /* line 120, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .news__content > h3 {
     line-height: 1.5em;
     font-size: 1em;
     margin-bottom: 0.9375em; }
-    /* line 116, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+    /* line 124, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
     .news__content > h3 > a {
       color: #926fb1; }
-  /* line 121, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+  /* line 129, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .news__content > p {
     margin-bottom: 1.5625em;
     font-size: 0.8125em;
     line-height: 1.275em;
     color: #666; }
 
-/* line 129, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+/* line 137, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__button {
   height: auto;
   line-height: 2.1875em;
@@ -1274,33 +1294,33 @@ h1, h2, h3, h4, h4, h6, p {
   margin-top: 0.3125em;
   background-color: #926fb1; }
 
-/* line 136, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+/* line 144, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__separator {
   border-top: 1px solid #ccc;
   margin-top: 1.875em; }
 
-/* line 142, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+/* line 150, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__author__img {
   width: 2.9375em;
   height: 2.9375em; }
-  /* line 145, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+  /* line 153, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .news__author__img > img {
     border-radius: 50%; }
 
-/* line 150, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+/* line 158, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__author__msg {
   padding-left: 1.25em;
   line-height: 1.375em; }
-  /* line 154, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+  /* line 162, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .news__author__msg__head {
     font-weight: 600;
     font-size: 0.875em; }
-  /* line 159, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+  /* line 167, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .news__author__msg__date {
     font-size: 0.875em;
     color: #666; }
 
-/* line 167, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+/* line 175, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
 .news__footer {
   display: flex;
   justify-content: left;
@@ -1308,12 +1328,12 @@ h1, h2, h3, h4, h4, h6, p {
   padding-top: 1.875em; }
 
 @media (min-width: 767px) {
-  /* line 188, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+  /* line 196, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .ni-3 {
     display: none; } }
 
 @media (min-width: 1259px) {
-  /* line 188, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
+  /* line 196, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_news.scss */
   .ni-3 {
     display: block; } }
 

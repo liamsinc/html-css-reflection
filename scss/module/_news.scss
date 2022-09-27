@@ -27,6 +27,14 @@
             flex-direction: row;
             column-gap: em(30px);
         }
+
+        @include media-query(large) {
+            column-gap: em(50px)
+        }
+
+        @include media-query (x-large) {
+            column-gap: em(30px)
+        }
     }
 
     // Controls the view all link 
