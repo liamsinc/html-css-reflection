@@ -871,59 +871,105 @@ h1, h2, h3, h4, h4, h6, p {
 
 /* line 5, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .clients-section {
+  margin-top: -12.5em;
   display: none; }
   @media (min-width: 767px) {
     /* line 5, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
     .clients-section {
       display: block; } }
 
-/* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 14, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.info__square-1, .info__square-2, .info__square-3, .info__square-4 {
+  visibility: hidden;
+  background-color: #333645;
+  width: 3.125em;
+  height: 3.125em;
+  transform: rotate(45deg) translate(-20px, -20px);
+  z-index: -1; }
+
+/* line 26, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__wrapper {
-  height: 2.8125em;
   display: flex;
   flex-direction: row;
-  justify-content: space-around; }
-  @media (min-width: 991px) {
-    /* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-    .client__wrapper {
-      height: 3.125em; } }
-  @media (min-width: 1259px) {
-    /* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-    .client__wrapper {
-      height: 4.375em; } }
+  justify-content: space-between;
+  column-gap: 1.875em; }
 
-/* line 29, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.client__container {
+/* line 33, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__1, .client__2, .client__3, .client__4 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
-  text-align: center; }
-  /* line 38, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-  .client__container:hover .client__info {
+  z-index: 1; }
+  /* line 40, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+  .client__1-info, .client__2-info, .client__3-info, .client__4-info {
     display: flex;
     flex-direction: column;
-    padding: 0.625em; }
-  /* line 49, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-  .client__container:hover .client__img-1:hover {
-    content: url(../../img/busseys-c.png); }
-  /* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-  .client__container:hover .client__img-2:hover {
-    content: url(../../img/crane-c.png); }
-  /* line 59, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-  .client__container:hover .client__img-3:hover {
-    content: url(../../img/beat-c.png); }
-  /* line 64, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-  .client__container:hover .client__img-4:hover {
-    content: url(../../img/northern-diver-c.png); }
+    align-items: center;
+    visibility: hidden;
+    background-color: #333645;
+    color: #fff;
+    text-align: center;
+    padding: 0.9375em; }
+    /* line 50, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    .client__1-info > h3, .client__2-info > h3, .client__3-info > h3, .client__4-info > h3 {
+      font-size: 1.125em; }
+    /* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    .client__1-info > h6, .client__2-info > h6, .client__3-info > h6, .client__4-info > h6 {
+      font-size: 1.875em; }
+    /* line 58, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    .client__1-info > p, .client__2-info > p, .client__3-info > p, .client__4-info > p {
+      font-size: 0.8125em;
+      line-height: 1.375em;
+      font-weight: 600; }
 
-/* line 72, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.client__info {
-  width: 12.5em;
-  display: none;
-  z-index: 10;
-  background-color: #333645;
-  color: #fff; }
+/* line 67, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__1:hover .client__1-info {
+  visibility: visible; }
+
+/* line 70, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__1:hover .client-1 {
+  content: url(../../img/busseys-c.png); }
+
+/* line 73, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__1:hover .info__square-1 {
+  visibility: visible; }
+
+/* line 79, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__2:hover .client__2-info {
+  visibility: visible; }
+
+/* line 82, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__2:hover .client-2 {
+  content: url(../../img/crane-c.png); }
+
+/* line 85, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__2:hover .info__square-2 {
+  visibility: visible; }
+
+/* line 91, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__3:hover .client__3-info {
+  visibility: visible; }
+
+/* line 94, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__3:hover .client-3 {
+  content: url(../../img/beat-c.png); }
+
+/* line 97, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__3:hover .info__square-3 {
+  visibility: visible; }
+
+/* line 103, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__4:hover .client__4-info {
+  visibility: visible; }
+
+/* line 106, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__4:hover .client-4 {
+  content: url(../../img/northern-diver-c.png); }
+
+/* line 109, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+.client__4:hover .info__square-4 {
+  visibility: visible; }
 
 /* line 8, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
 .accolades-wrapper {

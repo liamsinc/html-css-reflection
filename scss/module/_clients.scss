@@ -3,86 +3,114 @@
 // Removes the section by default as is hidden on smaller screens
 
 .clients-section {
+    margin-top: em(-200px);
     display: none;
     @include media-query(medium) {
         display: block;
     }
 }
 
-// Creating a flex container that holds the images (clients)
+.info__square {
+    &-1, &-2, &-3, &-4 {
+        visibility: hidden;
+        background-color: $pauper;
+        width: em(50px);
+        height: em(50px);
+        transform: rotate(45deg) translate(-20px, -20px);
+        z-index: -1;
+    }
+}
+
 
 .client {
     &__wrapper {
-        height: em(45px);
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-
-        @include media-query(large) {
-            height: em(50px);
-        }
-        @include media-query(x-large) {
-            height: em(70px);
-        }
+        justify-content: space-between;
+        column-gap: em(30px);
     }
 
-    &__container {
+    &__1, &__2, &__3, &__4 {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-end;
         align-items: center;
-        text-align: center;
-        
+        z-index: 1;
 
-        &:hover {
-            .client__info {
-                display: flex;
-                flex-direction: column;
-                // margin-bottom: em(200px);
-                padding: em(10px);
-                
-                
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            visibility: hidden;
+            background-color: $pauper;
+            color: $white;
+            text-align: center;
+            padding: em(15px);
+
+            & > h3 {
+                font-size: em(18px);
             }
 
-            .client__img {
-                &-1 {
-                    &:hover {
-                        content: url(../../img/busseys-c.png);
-                    }
-                }
-                &-2 {
-                    &:hover {
-                        content: url(../../img/crane-c.png);
-                    }
-                }
-                &-3 {
-                    &:hover {
-                        content: url(../../img/beat-c.png);
-                    }
-                }
-                &-4 {
-                    &:hover {
-                        content: url(../../img/northern-diver-c.png);
-                    }
-                }
+            & > h6 {
+                font-size: em(30px);
+            }
+
+            & > p {
+                font-size: em(13px);
+                line-height: em(22px);
+                font-weight: $font-weight--bold;
             }
         }
     }
 
-    &__info {
-        width: em(200px);
-        display: none;
-        z-index: 10;
-        background-color: $pauper;
-        color: $white;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-        // text-align: center;
+    &__1:hover {
+        .client__1-info {
+            visibility: visible;
+        }
+        .client-1 {
+            content: url(../../img/busseys-c.png);
+        }
+        .info__square-1 {
+            visibility: visible;
+        }
+    }
+
+    &__2:hover {
+        .client__2-info {
+            visibility: visible;
+        }
+        .client-2 {
+            content: url(../../img/crane-c.png);
+        }
+        .info__square-2 {
+            visibility: visible;
+        }
+    }
+
+    &__3:hover {
+        .client__3-info {
+            visibility: visible;
+        }
+        .client-3 {
+            content: url(../../img/beat-c.png);
+        }
+        .info__square-3 {
+            visibility: visible;
+        }
+    }
+
+    &__4:hover {
+        .client__4-info {
+            visibility: visible;
+        }
+        .client-4 {
+            content: url(../../img/northern-diver-c.png);
+        }
+        .info__square-4 {
+            visibility: visible;
+        }
     }
 
 
 }
-    
-
 
