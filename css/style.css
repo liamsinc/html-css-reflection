@@ -895,7 +895,13 @@ h1, h2, h3, h4, h4, h6, p {
 
 /* line 32, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client-1, .client-2, .client-3, .client-4 {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
   height: 2.5em; }
+  /* line 37, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+  .client-1:hover, .client-2:hover, .client-3:hover, .client-4:hover {
+    -webkit-filter: grayscale(0);
+    filter: none; }
   @media (min-width: 991px) {
     /* line 32, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
     .client-1, .client-2, .client-3, .client-4 {
@@ -905,7 +911,7 @@ h1, h2, h3, h4, h4, h6, p {
     .client-1, .client-2, .client-3, .client-4 {
       height: 4.375em; } }
 
-/* line 45, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 52, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__1, .client__2, .client__3, .client__4 {
   display: flex;
   flex-shrink: 1;
@@ -913,7 +919,7 @@ h1, h2, h3, h4, h4, h6, p {
   justify-content: flex-end;
   align-items: center;
   z-index: 1; }
-  /* line 53, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+  /* line 60, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
   .client__1-info, .client__2-info, .client__3-info, .client__4-info {
     display: flex;
     flex-direction: column;
@@ -923,63 +929,47 @@ h1, h2, h3, h4, h4, h6, p {
     color: #fff;
     text-align: center;
     padding: 0.9375em; }
-    /* line 63, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    /* line 70, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
     .client__1-info > h3, .client__2-info > h3, .client__3-info > h3, .client__4-info > h3 {
       font-size: 1.125em; }
-    /* line 67, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    /* line 74, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
     .client__1-info > h6, .client__2-info > h6, .client__3-info > h6, .client__4-info > h6 {
       font-size: 1.875em; }
-    /* line 71, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+    /* line 78, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
     .client__1-info > p, .client__2-info > p, .client__3-info > p, .client__4-info > p {
       font-size: 0.8125em;
       line-height: 1.375em;
       font-weight: 600; }
 
-/* line 80, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 87, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__1:hover .client__1-info {
   visibility: visible; }
 
-/* line 83, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.client__1:hover .client-1 {
-  content: url(../../img/busseys-c.png); }
-
-/* line 86, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 90, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__1:hover .info__square-1 {
   visibility: visible; }
 
-/* line 92, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 96, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__2:hover .client__2-info {
   visibility: visible; }
 
-/* line 95, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.client__2:hover .client-2 {
-  content: url(../../img/crane-c.png); }
-
-/* line 98, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 99, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__2:hover .info__square-2 {
   visibility: visible; }
 
-/* line 104, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 105, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__3:hover .client__3-info {
   visibility: visible; }
 
-/* line 107, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.client__3:hover .client-3 {
-  content: url(../../img/beat-c.png); }
-
-/* line 110, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 108, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__3:hover .info__square-3 {
   visibility: visible; }
 
-/* line 116, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 114, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__4:hover .client__4-info {
   visibility: visible; }
 
-/* line 119, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
-.client__4:hover .client-4 {
-  content: url(../../img/northern-diver-c.png); }
-
-/* line 122, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
+/* line 117, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_clients.scss */
 .client__4:hover .info__square-4 {
   visibility: visible; }
 

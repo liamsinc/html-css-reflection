@@ -30,7 +30,14 @@
     }
 
     &-1, &-2, &-3, &-4 {
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
         height: em(40px);
+
+        &:hover {
+            -webkit-filter: grayscale(0);
+            filter: none;
+        }
 
         @include media-query (large) {
             height: em(50px)
@@ -80,9 +87,6 @@
         .client__1-info {
             visibility: visible;
         }
-        .client-1 {
-            content: url(../../img/busseys-c.png);
-        }
         .info__square-1 {
             visibility: visible;
         }
@@ -91,9 +95,6 @@
     &__2:hover {
         .client__2-info {
             visibility: visible;
-        }
-        .client-2 {
-            content: url(../../img/crane-c.png);
         }
         .info__square-2 {
             visibility: visible;
@@ -104,9 +105,6 @@
         .client__3-info {
             visibility: visible;
         }
-        .client-3 {
-            content: url(../../img/beat-c.png);
-        }
         .info__square-3 {
             visibility: visible;
         }
@@ -115,9 +113,6 @@
     &__4:hover {
         .client__4-info {
             visibility: visible;
-        }
-        .client-4 {
-            content: url(../../img/northern-diver-c.png);
         }
         .info__square-4 {
             visibility: visible;
