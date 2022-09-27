@@ -990,60 +990,14 @@ h1, h2, h3, h4, h4, h6, p {
   margin: 0 0.9375em;
   flex-wrap: wrap;
   width: inherit; }
-
-/* line 18, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-.accolade-1 {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
-  /* line 21, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-  .accolade-1:hover {
-    -webkit-filter: grayscale(0);
-    filter: none; }
-
-/* line 27, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-.accolade-2 {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
-  /* line 30, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-  .accolade-2:hover {
-    -webkit-filter: grayscale(0);
-    filter: none; }
-
-/* line 36, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-.accolade-3 {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
-  /* line 39, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-  .accolade-3:hover {
-    -webkit-filter: grayscale(0);
-    filter: none; }
-
-/* line 45, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-.accolade-4 {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
-  /* line 48, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-  .accolade-4:hover {
-    -webkit-filter: grayscale(0);
-    filter: none; }
-
-/* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-.accolade-5 {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
-  /* line 57, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-  .accolade-5:hover {
-    -webkit-filter: grayscale(0);
-    filter: none; }
-
-/* line 63, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-.accolade-6 {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
-  /* line 66, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-  .accolade-6:hover {
-    -webkit-filter: grayscale(0);
-    filter: none; }
+  /* line 15, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
+  .accolades-wrapper > img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1); }
+    /* line 19, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
+    .accolades-wrapper > img:hover {
+      -webkit-filter: grayscale(0);
+      filter: none; }
 
 /* line 1, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_reviews.scss */
 .reviews-section {
