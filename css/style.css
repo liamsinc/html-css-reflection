@@ -991,27 +991,32 @@ h1, h2, h3, h4, h4, h6, p {
   flex-wrap: wrap;
   width: inherit; }
 
-/* line 19, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
-.accolade-1:hover {
-  content: url(../img/GP-c.jpeg); }
+/* line 18, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
+.accolade-1 {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1); }
+  /* line 21, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
+  .accolade-1:hover {
+    -webkit-filter: grayscale(0);
+    filter: none; }
 
-/* line 25, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
+/* line 29, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
 .accolade-2:hover {
   content: url(../img/IIFG-c.jpeg); }
 
-/* line 31, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
+/* line 35, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
 .accolade-3:hover {
   content: url(../img/PPC-c.jpeg); }
 
-/* line 37, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
+/* line 41, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
 .accolade-4:hover {
   content: url(../img/ISO9001-c.jpeg); }
 
-/* line 43, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
+/* line 47, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
 .accolade-5:hover {
   content: url(../img/ISO27001-c.jpeg); }
 
-/* line 49, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
+/* line 53, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_accolades.scss */
 .accolade-6:hover {
   content: url(../img/F50-c.jpeg); }
 
