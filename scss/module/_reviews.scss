@@ -35,14 +35,23 @@
             background-color: $sky-captain;
             width: em(170px);
             margin-bottom: em(40px);
+            &:hover {
+                background-color: darken($sky-captain, 10%);
+            }
         }
 
         &-2 {
             background-color: $seljuk-blue;
+            &:hover {
+                background-color: darken($seljuk-blue, 10%);
+            }
         }
 
         &-3 {
             background-color: $fennel-fiesta;
+            &:hover {
+                background-color: darken($fennel-fiesta, 10%);
+            }
         }
         
     }
@@ -134,27 +143,5 @@
     
 }
 
-
-// .review-wrapper, .welcome-wrapper {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .welcome-wrapper {
-//     & h1 {
-//         margin-bottom: em(25px);
-//     }
-
-//     & p {
-//         margin-bottom: em(25px);
-//     }
-
-// }
-
-// .welcome-btn {
-//     width: fit-content;
-//     padding: em(5px) em(15px);
-//     justify-content: center;
-// }
 
 
