@@ -1,3 +1,5 @@
+// This file contains mixins used throughout project
+
 // Media query mixin
 
 @mixin media-query($break) {
@@ -93,6 +95,8 @@
 	} 
 }
 
+// Generic button styles (not associated with a single section)
+
 @mixin button-styles {
 	height: auto;
 	line-height: em(35px);
@@ -115,6 +119,8 @@
 	}
 }
 
+// News section
+
 @mixin news-view-styles {
 	& > a {
 		font-size: em(26px);
@@ -128,6 +134,37 @@
 		& > i {
 			margin-left: em(5px);
 		}
+	}
+}
+
+// Navigation section
+
+@mixin nav-custom-colours($color) {
+	& > i {
+		color: $color;
+	}
+	&:hover {
+		background-color: $color;
+	}
+}
+
+// Reviews section
+
+@mixin review-custom-colours($color) {
+	background-color: $color;
+	&:hover {
+		background-color: darken($color, 10%);
+	}
+}
+
+// Clients section
+
+@mixin client-info-visible($client) {
+	.client__#{$client}-info {
+		visibility: visible;
+	}
+	.info__square-#{$client} {
+		visibility: visible;
 	}
 }
 

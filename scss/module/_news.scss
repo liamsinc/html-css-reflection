@@ -1,5 +1,5 @@
-// This partial contains styling for the latest news section
-// For any mixins used please see _mixins.scss
+// This file contains styling for the latest news section
+// For mixins used please see _mixins.scss
 
 // Main styles
 
@@ -16,6 +16,8 @@
             align-items: center;
         }
     }
+
+    // Styles the news category banner over the image
 
     &__type {
         color: $white;

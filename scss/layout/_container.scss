@@ -1,27 +1,27 @@
+// This file contains rules which apply across most sections
+// Each section's immediate child will be a div with the class container
+// This gives each section left and right margin, and defines the max width
+// at certain breakpoints
+
 .container {
     @include am();
     padding: 0 em(15px);
-}
 
-@include media-query(medium) {
-    .container {
+    @include media-query (medium) {
         max-width: 750px;
     }
-}
 
-@include media-query(large) {
-    .container {
+    @include media-query (large) {
         max-width: 970px;
+    }
+
+    @include media-query (x-large) {
+        max-width: 1200px;
     }
 }
 
-@include media-query(x-large) {
-    .container {
-        max-width: 1200px;
-    } 
-}
+// Where used, applied top and bottom padding to sections
 
 .section {
-    padding-top: em(50px);
-    padding-bottom: em(50px);
+    padding: em(50px) 0;
 }

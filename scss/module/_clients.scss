@@ -1,4 +1,5 @@
 // This partial contains all styling for the clients section
+// For mixins used please see _mixins.scss
 
 // Removes the section by default as is hidden on smaller screens
 
@@ -9,6 +10,8 @@
         display: block;
     }
 }
+
+// Styling for the div which represents the arrow underneath client info div
 
 .info__square {
     &-1, &-2, &-3, &-4 {
@@ -21,13 +24,17 @@
     }
 }
 
-
 .client {
+
+    // Container for clients
+
     &__wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+
+    // Styling for client images
 
     &-1, &-2, &-3, &-4 {
         -webkit-filter: grayscale(1);
@@ -48,6 +55,8 @@
         }
     
     }
+
+    // Styling for client containers (holding both image and info div)
 
     &__1, &__2, &__3, &__4 {
         display: flex;
@@ -83,42 +92,11 @@
         }
     }
 
-    &__1:hover {
-        .client__1-info {
-            visibility: visible;
-        }
-        .info__square-1 {
-            visibility: visible;
-        }
-    }
+    // When hovered over, show the client information
 
-    &__2:hover {
-        .client__2-info {
-            visibility: visible;
-        }
-        .info__square-2 {
-            visibility: visible;
-        }
-    }
-
-    &__3:hover {
-        .client__3-info {
-            visibility: visible;
-        }
-        .info__square-3 {
-            visibility: visible;
-        }
-    }
-
-    &__4:hover {
-        .client__4-info {
-            visibility: visible;
-        }
-        .info__square-4 {
-            visibility: visible;
-        }
-    }
-
-
+    &__1:hover {@include client-info-visible(1);}
+    &__2:hover {@include client-info-visible(2);}
+    &__3:hover {@include client-info-visible(3);}
+    &__4:hover {@include client-info-visible(4);}
 }
 

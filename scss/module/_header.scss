@@ -1,4 +1,4 @@
-
+// This file contains styling for the header section
 
 .header {
     padding-top: em(20px);
@@ -9,6 +9,7 @@
         height: em(110px);
     }
 
+    // Container that holds the logo, buttons and search bar 
 
     &__top-row {
         margin-bottom: em(8px);
@@ -27,10 +28,14 @@
         }
     }
 
+    // Container for the logo
+
     &__logo-link {
         margin-right: auto;
         align-self: center;
     }
+
+    // Container for the phone icon
 
     &__phone-link {
         display: flex;
@@ -57,6 +62,8 @@
         }
     }
 
+    // Common styles for the support and contact buttons
+
     &__contact-btn, &__support-btn {
         display: none;
         height: em(50px);
@@ -82,6 +89,8 @@
         }
     }
 
+    // Indvidial colour styling for support and contact buttons
+
     &__contact-btn {
         background-color: $smokey-stone;
 
@@ -97,6 +106,8 @@
             background-color: darken($magical-merlin, 10%);
         }
     }
+
+    // Container for the large search bar on mobile devices
 
     &__bottom-row {
         position: relative;
@@ -115,7 +126,12 @@
         }
     }
 
+    // Styling for search bars and buttons
+
     &__search {
+
+        // Styles large search bar (bottom row)
+
         &-lg {
             width: 100%;
             height: em(53px);
@@ -135,6 +151,8 @@
                 display: none;
             }
         }
+
+        // Styles small search bar (top row)
 
         &-sm {
             display: none;
@@ -166,6 +184,8 @@
                 margin-left: em(25px);
                 width: em(275px);
             }
+
+            // Styles small search bar button (top row)
 
             &-btn {
                 display: none;
@@ -207,7 +227,9 @@
             }
             
         }
-    }  
+    }
+    
+    // Styles hamburger menu button
     
     &__menu-btn {
         height: em(56px);

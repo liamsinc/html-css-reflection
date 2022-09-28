@@ -1,5 +1,7 @@
+// This file contains styling for the navigation section
+// For mixins used please see _mixins.scss
 
-
+// Sets base styles for navigation bar and hides on smaller screen sizes
 
 .navigation {
     display: none;
@@ -12,7 +14,12 @@
     }
 }
 
+// Styles for the navigation elements
+
 .nav {
+
+    // Container for the nav bar
+
     &__wrapper {    
         display: flex;
         flex-direction: row;
@@ -22,6 +29,8 @@
         background-color: $pauper;
     }
 
+    // Styles the drop down menu when hovered over
+
     &__dropdown {
         display: none;
         margin-top: em(22px);
@@ -29,27 +38,13 @@
         border-bottom-left-radius: em(10px);
         border-bottom-right-radius: em(10px);
 
-        &-1 {
-            background-color: darken($bay-view, 10%);
-        }
-        &-2 {
-            background-color: darken($magical-merlin, 10%);
-        }
-        &-3 {
-            background-color: darken($ufo-green, 10%);
-        }
-        &-4 {
-            background-color: darken($cute-crab, 10%);
-        }
-        &-5 {
-            background-color: darken($violet-frog, 10%);
-        }
-        &-6 {
-            background-color: darken($red-pink, 10%);
-        }
-        &-7 {
-            background-color: darken($underpass-shrine, 10%);
-        }
+        &-1 {background-color: darken($bay-view, 10%);}
+        &-2 {background-color: darken($magical-merlin, 10%);}
+        &-3 {background-color: darken($ufo-green, 10%);}
+        &-4 {background-color: darken($cute-crab, 10%);}
+        &-5 {background-color: darken($violet-frog, 10%);}
+        &-6 {background-color: darken($red-pink, 10%);}
+        &-7 {background-color: darken($underpass-shrine, 10%);}
 
         & > ul > li {
             padding: em(10px) em(15px);
@@ -59,6 +54,8 @@
             }
         }
     }
+
+    // Styles nav menu items
 
     &__item {
         padding-top: em(15px);
@@ -97,67 +94,12 @@
             text-transform: uppercase;
         }
 
-        &-1 {
-            & > i {
-                color: $bay-view;
-            }
-            &:hover {
-                background-color: $bay-view;
-            }
-        }
-
-        &-2 {
-            & > i {
-                color: $magical-merlin;
-            }
-            &:hover {
-                background-color: $magical-merlin;
-            }
-        }
-
-        &-3 {
-            & > i {
-                color: $ufo-green;
-            }
-            &:hover {
-                background-color: $ufo-green;
-            }
-        }
-
-        &-4 {
-            & > i {
-                color: $cute-crab;
-            }
-            &:hover {
-                background-color: $cute-crab;
-            }
-        }
-
-        &-5 {
-            & > i {
-                color: $violet-frog;
-            }
-            &:hover {
-                background-color: $violet-frog;
-            }
-        }
-
-        &-6 {
-            & > i {
-                color: $red-pink;
-            }
-            &:hover {
-                background-color: $red-pink;
-            }
-        }
-
-        &-7 {
-            & > i {
-                color: $underpass-shrine;
-            }
-            &:hover {
-                background-color: $underpass-shrine;
-            }
-        }
+        &-1 {@include nav-custom-colours($bay-view);}
+        &-2 {@include nav-custom-colours($magical-merlin);}
+        &-3 {@include nav-custom-colours($ufo-green);}
+        &-4 {@include nav-custom-colours($cute-crab);}
+        &-5 {@include nav-custom-colours($violet-frog);}
+        &-6 {@include nav-custom-colours($red-pink);}
+        &-7 {@include nav-custom-colours($underpass-shrine);}
     }
 }

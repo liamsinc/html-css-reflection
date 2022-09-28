@@ -1,3 +1,8 @@
+// This file contains styling for the hero section
+// For mixins used please see _mixins.scss
+
+// Styles the section with the background image
+
 .hero-section {
     background-image: linear-gradient(to right, $black, transparent), url("../img/hero.jpeg");
     background-position: center;
@@ -7,7 +12,11 @@
     height: 550px;
 }
 
+// Styles the text on top of the image
+
 .hero {
+
+    // Container for the hero text
 
     &__wrapper {
         display: flex;
@@ -28,6 +37,7 @@
         }
     }
 
+    // Styles the title
 
     &__title {
         font-size: em(40px);
@@ -38,6 +48,8 @@
             margin-bottom: em(10px);
         }
     }
+
+    // Styles the subtitle
 
     &__subtitle {
         font-size: em(20px);

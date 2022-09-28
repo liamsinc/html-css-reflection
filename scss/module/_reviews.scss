@@ -1,3 +1,8 @@
+// This file contains styling for the review section
+// For mixins used please see _mixins.scss
+
+// Basic styling for review section
+
 .reviews-section {
     background-color: $pauper;
     color: $white;
@@ -10,7 +15,12 @@
     }
 }
 
+// Content styling
+
 .reviews {
+
+    // Container for the reviews section content
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -20,6 +30,8 @@
             column-gap: em(30px)
         }
     }
+
+    // Review button stylings
 
     &__btn {
         &-1, &-2, &-3 {
@@ -32,30 +44,23 @@
         }
 
         &-1 {
-            background-color: $sky-captain;
+            @include review-custom-colours($sky-captain);
             width: em(170px);
             margin-bottom: em(40px);
-            &:hover {
-                background-color: darken($sky-captain, 10%);
-            }
         }
 
         &-2 {
-            background-color: $seljuk-blue;
-            &:hover {
-                background-color: darken($seljuk-blue, 10%);
-            }
+            @include review-custom-colours($seljuk-blue);
         }
 
         &-3 {
-            background-color: $fennel-fiesta;
-            &:hover {
-                background-color: darken($fennel-fiesta, 10%);
-            }
+            @include review-custom-colours($fennel-fiesta);
         }
         
     }
 }
+
+// Content styling
 
 .welcome {
     &__wrapper {
@@ -87,7 +92,11 @@
     }
 }
 
+// Content styling
+
 .review {
+
+    // Styles buttons under the client review
 
     &__btn__container {
         display: flex;
@@ -108,6 +117,8 @@
         }
     }
 
+    // Container for the review
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -125,6 +136,8 @@
         }
     }
 
+    // Styles review text
+
     &__text {
         font-size: em(20.8px);
         font-style: italic;
@@ -133,15 +146,12 @@
         margin-bottom: em(25px);
     }
 
+    // Styles review author
+
     &__author {
         font-size: em(17.6px);
         color: $ironbreaker-metal;
         font-weight: $font-weight--bold;
         margin-bottom: em(25px);
-    }
-
-    
+    } 
 }
-
-
-
