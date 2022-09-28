@@ -2,7 +2,11 @@
 
 .header {
     padding-top: em(20px);
-    padding-bottom: em(20px);
+    padding-bottom: em(18px);
+
+    @include media-query (large) {
+        height: em(110px);
+    }
 
 
     &__top-row {
@@ -11,12 +15,73 @@
         flex-direction: row;
 
         & > a {
-            
-
             & > img {
                 @include media-query (medium) {
                     max-height: em(60.2px);
                 }
+                @include media-query (large) {
+                    max-height: em(66px);
+                }
+            }
+        }
+    }
+
+    &__contact-btn, &__support-btn {
+        display: none;
+        height: em(50px);
+        width: em(135px);
+        margin-top: em(6.5px);
+        margin-left: em(18px);
+        text-transform: uppercase;
+        font-size: em(18px);
+        padding: 0;
+        border: none;
+        border-radius: 3px;
+        color: $white;
+
+        @include media-query(large) {
+            display: block;
+        }
+
+        & > i {
+            color: $white;
+            font-size: em(20px);
+            transform: translateY(2px);
+        }
+    }
+
+    &__contact-btn {
+        background-color: $smokey-stone;
+
+        &:hover {
+            background-color: darken($smokey-stone, 10%);
+        }
+    }
+
+    &__support-btn {
+        background-color: $magical-merlin;
+
+        &:hover {
+            background-color: darken($magical-merlin, 10%);
+        }
+    }
+
+    
+    
+
+    &__bottom-row {
+        position: relative;
+        & > a {
+            color: $pauper;
+
+            @include media-query (medium) {
+                display: none;
+            }
+            & > i {
+                position: absolute;
+                right: 0;
+                transform: translate(-10px, 13px);
+                font-size: em(20px);
             }
         }
     }
@@ -88,6 +153,16 @@
                 display: block;
             }
 
+            @include media-query (large) {
+                display: none;
+            }
+
+            @include media-query (x-large) {
+                display: block;
+                margin-left: em(25px);
+                width: em(275px);
+            }
+
             &-btn {
                 display: none;
                 height: em(56px);
@@ -102,6 +177,18 @@
 
                 @include media-query (medium) {
                     display: block;
+                }
+
+                @include media-query (large) {
+                    border-radius: 3px;
+                    margin-left: em(20px);
+                }
+
+                @include media-query (x-large) {
+                    margin-left: 0;
+                    border-radius: 0;
+                    border-bottom-right-radius: em(3px);
+                    border-top-right-radius: em(3px);
                 }
 
                 &:hover {
