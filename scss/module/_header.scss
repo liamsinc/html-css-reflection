@@ -3,8 +3,9 @@
 .header {
     padding-top: em(20px);
     padding-bottom: em(18px);
+    height: em(170px);
 
-    @include media-query (large) {
+    @include media-query (medium) {
         height: em(110px);
     }
 
@@ -13,14 +14,18 @@
         margin-bottom: em(8px);
         display: flex;
         flex-direction: row;
+        justify-content: center;
 
         & > a {
+            
             & > img {
+                
+                max-width: 100%;
                 @include media-query (medium) {
                     max-height: em(60.2px);
                 }
                 @include media-query (large) {
-                    max-height: em(66px);
+                    max-height: em(65px);
                 }
             }
         }
@@ -29,8 +34,8 @@
     &__contact-btn, &__support-btn {
         display: none;
         height: em(50px);
-        width: em(135px);
-        margin-top: em(6.5px);
+        width: em(130px);
+        margin-top: em(6px);
         margin-left: em(18px);
         text-transform: uppercase;
         font-size: em(18px);
@@ -46,6 +51,7 @@
         & > i {
             color: $white;
             font-size: em(20px);
+            margin-right: em(5px);
             transform: translateY(2px);
         }
     }
@@ -89,6 +95,8 @@
 
     &__logo-link {
         margin-right: auto;
+        align-self: center;
+        
     }
 
     &__phone-link {
@@ -96,6 +104,7 @@
         justify-content: center;
         align-items: center;
         margin-top: em(10px);
+        margin-left: em(20px);
         height: em(40px);
         width: em(35px);
 
@@ -126,6 +135,10 @@
             box-shadow: inset 0 1px 1px rgba($color: $black, $alpha: 0.08);
             font-size: em(14px);
             line-height: 1.42857143;
+
+            &:focus {
+                outline: 0;
+            }
 
             @include media-query (medium) {
                 display: none;
@@ -213,6 +226,7 @@
         border-radius: em(3px);
         margin-top: em(7px);
         margin-left: em(20px);
+        margin-bottom: em(15px);
         padding: em(5px) em(15px);
 
         &:hover {
