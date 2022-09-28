@@ -1,69 +1,140 @@
 
 
 .header {
-    height: em(170px);
-    margin-top: em(15px);
+    padding-top: em(20px);
+    padding-bottom: em(20px);
 
 
-    @include media-query (large) {
-        height: em(110px);
-    }
-
-
-    &__wrapper {
+    &__top-row {
+        margin-bottom: em(8px);
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: em(20px) 0;
-        flex-shrink: 1;
-    }
-
-    &__btn__wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-    }
-
-    &__logo {
-        display: flex;
-        flex-shrink: 1;
-    }
-
-    &__phone {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: em(30px);
-        width: em(30px);
-        padding: em(20px);
-
-        &:hover {
-            border-bottom: 1px solid $pauper;
-        }
 
         & > a {
-            color: $pauper;
+            
 
-            & > i {
-                font-size: em(30px);
+            & > img {
+                @include media-query (medium) {
+                    max-height: em(60.2px);
+                }
             }
         }
     }
 
-    &__hamburger {
-        @include button-styles();
-        margin: 0 0 0 em(20px);
+
+    &__logo-link {
+        margin-right: auto;
+    }
+
+    &__phone-link {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: em(55px);
-        height: em(55px);
+        margin-top: em(10px);
+        height: em(40px);
+        width: em(35px);
+
+        &:hover {
+            border-bottom: 1px solid $pauper;
+            height: em(41px);
+        }
+
+        & > i {
+            color: $pauper;
+            font-size: em(25px);
+            transform: rotate(-45deg);
+        }
+
+        @include media-query (medium) {
+            display: none;
+        }
+    }
+
+    &__search {
+        &-lg {
+            width: 100%;
+            height: em(53px);
+            background-color: $silver-medal;
+            padding: em(5px) em(40px) em(5px) em(15px);
+            border: 2px solid $cerebral-grey;
+            color: $squant;
+            box-shadow: inset 0 1px 1px rgba($color: $black, $alpha: 0.08);
+            font-size: em(14px);
+            line-height: 1.42857143;
+
+            @include media-query (medium) {
+                display: none;
+            }
+        }
+
+        &-sm {
+            display: none;
+            width: em(198px);
+            height: em(64px);
+            padding: em(5px) em(15px);
+            margin-top: em(8px);
+            border: 1px solid $cerebral-grey;
+            box-shadow: inset 0 1px 1px rgba($color: $black, $alpha: 0.08);
+            background-color: $white;
+            font-size: em(14px);
+
+            &:focus {
+                outline: 0;
+                border-color: $input-border;
+                box-shadow: 0 0 8px rgba($color: $input-border, $alpha: 0.6);
+            }
+
+            @include media-query (medium) {
+                display: block;
+            }
+
+            &-btn {
+                display: none;
+                height: em(56px);
+                width: em(63px);
+                margin-top: em(7px);
+                border: none;
+                background-color: $smokey-stone;
+                border-bottom-right-radius: em(3px);
+                border-top-right-radius: em(3px);
+                padding-left: em(5px);
+                cursor: pointer;
+
+                @include media-query (medium) {
+                    display: block;
+                }
+
+                &:hover {
+                    background-color: darken($smokey-stone, 10%);
+                }
+                
+                & > i {
+                    color: $white;
+                    font-size: em(23px);
+                }
+                
+            }
+            
+        }
+    }  
+    
+    &__menu-btn {
+        height: em(56px);
+        width: em(63px);
         background-color: $pauper;
+        border: none;
+        border-radius: em(3px);
+        margin-top: em(7px);
+        margin-left: em(20px);
+        padding: em(5px) em(15px);
+
+        &:hover {
+            background-color: darken($pauper, 10%);
+        }
+
         & > i {
             color: $white;
-            font-size: em(30px);
+            font-size: em(36px);
         }
     }
 }

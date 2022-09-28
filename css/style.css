@@ -1466,69 +1466,115 @@ h1, h2, h3, h4, h4, h6, p {
 
 /* line 3, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
 .header {
-  height: 10.625em;
-  margin-top: 0.9375em; }
-  @media (min-width: 991px) {
-    /* line 3, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-    .header {
-      height: 6.875em; } }
-  /* line 13, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-  .header__wrapper {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em; }
+  /* line 8, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  .header__top-row {
+    margin-bottom: 0.5em;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.25em 0;
-    flex-shrink: 1; }
-  /* line 22, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-  .header__btn__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0; }
+    flex-direction: row; }
+    @media (min-width: 767px) {
+      /* line 16, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+      .header__top-row > a > img {
+        max-height: 3.7625em; } }
+  /* line 25, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  .header__logo-link {
+    margin-right: auto; }
   /* line 29, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-  .header__logo {
-    display: flex;
-    flex-shrink: 1; }
-  /* line 34, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-  .header__phone {
+  .header__phone-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1.875em;
-    width: 1.875em;
-    padding: 1.25em; }
+    margin-top: 0.625em;
+    height: 2.5em;
+    width: 2.1875em; }
+    /* line 37, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+    .header__phone-link:hover {
+      border-bottom: 1px solid #333645;
+      height: 2.5625em; }
     /* line 42, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-    .header__phone:hover {
-      border-bottom: 1px solid #333645; }
-    /* line 46, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-    .header__phone > a {
-      color: #333645; }
-      /* line 49, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-      .header__phone > a > i {
-        font-size: 1.875em; }
-  /* line 55, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-  .header__hamburger {
-    height: auto;
-    line-height: 2.1875em;
-    font-size: 1.0625em;
-    text-transform: uppercase;
+    .header__phone-link > i {
+      color: #333645;
+      font-size: 1.5625em;
+      transform: rotate(-45deg); }
+    @media (min-width: 767px) {
+      /* line 29, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+      .header__phone-link {
+        display: none; } }
+  /* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  .header__search-lg {
+    width: 100%;
+    height: 3.3125em;
+    background-color: #e5e5e5;
+    padding: 0.3125em 2.5em 0.3125em 0.9375em;
+    border: 2px solid #ccc;
+    color: #666;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+    font-size: 0.875em;
+    line-height: 1.42857143; }
+    @media (min-width: 767px) {
+      /* line 54, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+      .header__search-lg {
+        display: none; } }
+  /* line 70, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  .header__search-sm {
+    display: none;
+    width: 12.375em;
+    height: 4em;
     padding: 0.3125em 0.9375em;
-    color: #fff;
-    border: 0.0625em solid transparent;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    font-size: 0.875em; }
+    /* line 81, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+    .header__search-sm:focus {
+      outline: 0;
+      border-color: #5bc0de;
+      box-shadow: 0 0 8px rgba(91, 192, 222, 0.6); }
+    @media (min-width: 767px) {
+      /* line 70, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+      .header__search-sm {
+        display: block; } }
+    /* line 91, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+    .header__search-sm-btn {
+      display: none;
+      height: 3.5em;
+      width: 3.9375em;
+      margin-top: 0.4375em;
+      border: none;
+      background-color: #999aa2;
+      border-bottom-right-radius: 0.1875em;
+      border-top-right-radius: 0.1875em;
+      padding-left: 0.3125em;
+      cursor: pointer; }
+      @media (min-width: 767px) {
+        /* line 91, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+        .header__search-sm-btn {
+          display: block; } }
+      /* line 107, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+      .header__search-sm-btn:hover {
+        background-color: #7e808a; }
+      /* line 111, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+      .header__search-sm-btn > i {
+        color: #fff;
+        font-size: 1.4375em; }
+  /* line 121, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+  .header__menu-btn {
+    height: 3.5em;
+    width: 3.9375em;
+    background-color: #333645;
+    border: none;
     border-radius: 0.1875em;
-    cursor: pointer;
-    margin-top: 0.3125em;
-    margin: 0 0 0 1.25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3.4375em;
-    height: 3.4375em;
-    background-color: #333645; }
-    /* line 64, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
-    .header__hamburger > i {
+    margin-top: 0.4375em;
+    margin-left: 1.25em;
+    padding: 0.3125em 0.9375em; }
+    /* line 131, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+    .header__menu-btn:hover {
+      background-color: #1d1f28; }
+    /* line 135, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_header.scss */
+    .header__menu-btn > i {
       color: #fff;
-      font-size: 1.875em; }
+      font-size: 2.25em; }
 
 /*# sourceMappingURL=style.css.map */
