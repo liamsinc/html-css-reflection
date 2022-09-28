@@ -16,18 +16,44 @@
         flex-direction: row;
         justify-content: center;
 
-        & > a {
-            
-            & > img {
-                
-                max-width: 100%;
-                @include media-query (medium) {
-                    max-height: em(60.2px);
-                }
-                @include media-query (large) {
-                    max-height: em(65px);
-                }
+        & > a > img {   
+            max-width: 100%;
+            @include media-query (medium) {
+                max-height: em(60.2px);
             }
+            @include media-query (large) {
+                max-height: em(65px);
+            }
+        }
+    }
+
+    &__logo-link {
+        margin-right: auto;
+        align-self: center;
+    }
+
+    &__phone-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: em(10px);
+        margin-left: em(20px);
+        height: em(40px);
+        width: em(35px);
+
+        &:hover {
+            border-bottom: 1px solid $pauper;
+            height: em(41px);
+        }
+
+        & > i {
+            color: $pauper;
+            font-size: em(25px);
+            transform: rotate(-45deg);
+        }
+
+        @include media-query (medium) {
+            display: none;
         }
     }
 
@@ -72,9 +98,6 @@
         }
     }
 
-    
-    
-
     &__bottom-row {
         position: relative;
         & > a {
@@ -89,38 +112,6 @@
                 transform: translate(-10px, 13px);
                 font-size: em(20px);
             }
-        }
-    }
-
-
-    &__logo-link {
-        margin-right: auto;
-        align-self: center;
-        
-    }
-
-    &__phone-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: em(10px);
-        margin-left: em(20px);
-        height: em(40px);
-        width: em(35px);
-
-        &:hover {
-            border-bottom: 1px solid $pauper;
-            height: em(41px);
-        }
-
-        & > i {
-            color: $pauper;
-            font-size: em(25px);
-            transform: rotate(-45deg);
-        }
-
-        @include media-query (medium) {
-            display: none;
         }
     }
 
