@@ -218,22 +218,26 @@ h1, h2, h3, h4, h4, h6, p {
   margin-left: auto;
   margin-right: auto;
   padding: 0 0.9375em; }
-  @media (min-width: 767px) {
-    /* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
-    .container {
-      max-width: 750px; } }
-  @media (min-width: 991px) {
-    /* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
-    .container {
-      max-width: 970px; } }
-  @media (min-width: 1259px) {
-    /* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
-    .container {
-      max-width: 1200px; } }
 
-/* line 25, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
+@media (min-width: 767px) {
+  /* line 12, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
+  .container {
+    max-width: 750px; } }
+
+@media (min-width: 991px) {
+  /* line 18, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
+  .container {
+    max-width: 970px; } }
+
+@media (min-width: 1259px) {
+  /* line 24, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
+  .container {
+    max-width: 1200px; } }
+
+/* line 31, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/layout/_container.scss */
 .section {
-  padding: 3.125em 0; }
+  padding-top: 3.125em;
+  padding-bottom: 3.125em; }
 
 /* line 6, ../../../Documents/Netmatters/HTML_CSS_Reflection/scss/module/_footer.scss */
 .footer-section {
