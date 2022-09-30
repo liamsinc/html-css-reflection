@@ -77,17 +77,25 @@
     }
 
     &__checkbox {
+        position: absolute;
         width: em(30px);
         height: em(30px);
         appearance: none;
         border: 3px solid $pauper;
         border-radius: 3px;
         color: $white;
+        cursor: pointer;
         &:checked {
             background-color: $pauper;
-            appearance: auto;
         }
     }
+}
+
+.checkbox-tick {
+    position: absolute;
+    transform: translate(5px, 4px);
+    font-size: em(20px);
+    color: $steam;
 }
 
 // Marketing section styles
@@ -101,9 +109,16 @@
     }
 
     &__label {
-        font-weight: $font-weight--bold;
-        margin: 0 0 em(5px);
-        line-height: em(30px);
+        &-1, &-2 {
+            font-weight: $font-weight--bold;
+            margin: 0 0 em(5px);
+            line-height: em(30px);
+            user-select: none;
+        }
+
+        &-1 {
+            cursor: pointer;
+        }
     }
 
     &__text {
@@ -117,18 +132,16 @@
         }
     }
 
+    // Div container for checkbox
+
     &__checkbox {
-        display: flex;
+        position: relative;
         width: em(30px);
         height: em(30px);
-        flex-shrink: 0;
         justify-content: center;
         align-items: center;
         cursor: pointer;
         margin-right: em(10px);
-        &:checked {
-            background-color: $pauper;
-        }
     }
 }
 
