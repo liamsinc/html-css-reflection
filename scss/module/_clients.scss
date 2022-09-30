@@ -4,7 +4,7 @@
 // Removes the section by default as is hidden on smaller screens
 
 .clients-section {
-    margin-top: em(-200px);
+    margin-top: em(-230px);
     display: none;
     @include media-query(medium) {
         display: block;
