@@ -133,10 +133,18 @@
     // New item content styling
 
     &__content {
+        display: flex;
+        flex-direction: column;
         padding: em(30px);
+
+        &:nth-child(3) button {
+            margin-bottom: em(30px);
+        }
+
         & > h3 {
             line-height: em(24px);
             font-size: em(16px);
+            height: em(40px);
             margin-bottom: em(15px);
             & > a {
                 color: $violet-frog;
@@ -154,13 +162,7 @@
     &__button {
         @include button-styles();
         background-color: $violet-frog;
-    }
-
-    // forms the grey line underneath the button
-
-    &__separator {
-        border-top: 1px solid $cerebral-grey;
-        margin-top: em(30px);
+        width: fit-content;
     }
 
     &__author {
@@ -193,6 +195,7 @@
         display: flex;
         justify-content: left;
         align-items: center;
+        border-top: 1px solid $cerebral-grey;
         padding-top: em(30px);
     }
 }
