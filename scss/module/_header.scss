@@ -73,6 +73,7 @@
         text-transform: uppercase;
         font-size: em(18px);
         padding: 0;
+        cursor: pointer;
         border: none;
         border-radius: 3px;
         color: $white;
@@ -236,6 +237,7 @@
         width: em(63px);
         background-color: $pauper;
         border: none;
+        cursor: pointer;
         border-radius: em(3px);
         margin-top: em(7px);
         margin-left: em(20px);
