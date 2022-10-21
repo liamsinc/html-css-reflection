@@ -163,6 +163,11 @@
         @include button-styles();
         background-color: $violet-frog;
         width: fit-content;
+        margin-bottom: em(30px);
+    }
+
+    &__title {
+        color: $violet-frog;
     }
 
     &__author {

@@ -14,7 +14,7 @@
         <header class="header">
             <div class="container">
                 <div class="header__top-row">
-                    <a class="header__logo-link"href="#">
+                    <a class="header__logo-link" href="#">
                         <img src="img/logo.png" alt="Netmatters">
                     </a>
                     <button class="header__support-btn" type="button">
@@ -32,7 +32,7 @@
                     <a class="header__phone-link" href="#">
                         <i class="fa-solid fa-phone-volume"></i>
                     </a>
-                    <button class="header__menu-btn" type="menu">
+                    <button class="header__menu-btn" type="button">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
@@ -171,7 +171,7 @@
                 <div class="services__wrapper">
                     <h1 class="service__heading">Our Services</h1>
                     <div class="service__primary">
-                        <a class="service__block" href="#">
+                        <div class="service__block">
                             <div class="service__1">
                                 <div class="service__icon__wrapper sic-1">
                                     <i class="fa-solid fa-table-cells service__icon-1"></i>
@@ -180,8 +180,8 @@
                                 <p class="service__text">Tailored software solutions to improve business productivity and online profits.</p>
                                 <button class="service__btn sb-1" type="button">Read More</button>
                             </div>
-                        </a>
-                        <a class="service__block" href="#">
+                        </div>
+                        <div class="service__block">
                             <div class="service__2">
                                 <div class="service__icon__wrapper sic-2">
                                     <i class="fa-solid fa-desktop service__icon-2"></i>
@@ -190,8 +190,8 @@
                                 <p class="service__text">Remotely managed IT services that are catered to your businesses needs, adds value & reduces costs.</p>
                                 <button class="service__btn sb-2" type="button">Read More</button>
                             </div>
-                        </a>
-                        <a class="service__block" href="#">
+                        </div>
+                        <div class="service__block">
                             <div class="service__3">
                                 <div class="service__icon__wrapper sic-3">
                                     <i class="fa-solid fa-chart-simple service__icon-3"></i>
@@ -200,10 +200,10 @@
                                 <p class="service__text">Driven brand awareness & ROI through creative digital marketing campaigns.</p>
                                 <button class="service__btn sb-3" type="button">Read More</button>
                             </div>
-                        </a>  
+                        </div>  
                     </div>
                     <div class="service__secondary">
-                        <a class="service__block" href="#">
+                        <div class="service__block">
                             <div class="service__4">
                                 <div class="service__icon__wrapper sic-4">
                                     <i class="fa-solid fa-phone-volume service__icon-4"></i>
@@ -212,8 +212,8 @@
                                 <p class="service__text">Stay connected with bespoke telecoms solutions when you need it most.</p>
                                 <button class="service__btn sb-4" type="button">Read More</button>
                             </div>
-                        </a>
-                        <a class="service__block" href="#">
+                        </div>
+                        <div class="service__block">
                             <div class="service__5">
                                 <div class="service__icon__wrapper sic-5">
                                     <i class="fa-solid fa-code service__icon-5"></i>
@@ -222,8 +222,8 @@
                                 <p class="service__text">User-centric design for businesses looking to make a lasting impression.</p>
                                 <button class="service__btn sb-5" type="button">Read More</button>
                             </div>
-                        </a>
-                        <a class="service__block" href="#">
+                        </div>
+                        <div class="service__block">
                             <div class="service__6">
                                 <div class="service__icon__wrapper sic-6">
                                     <i class="fa-solid fa-shield-halved service__icon-6"></i>
@@ -232,8 +232,8 @@
                                 <p class="service__text">Ensuring your online business stays secure 24/7 365 days of the year.</p>
                                 <button class="service__btn sb-6" type="button">Read More</button>
                             </div>
-                        </a>
-                        <a class="service__block" href="#">
+                        </div>
+                        <div class="service__block">
                             <div class="service__7">
                                 <div class="service__icon__wrapper sic-7">
                                     <i class="fa-solid fa-graduation-cap service__icon-7"></i>
@@ -242,24 +242,24 @@
                                 <p class="service__text">Have you considered a career in web development but you aren't sure where to start?</p>
                                 <button class="service__btn sb-7" type="button">Read More</button>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="accolades-section">
+        <div class="accolades-section">
             <div class="section">
                 <div class="accolades-wrapper">
                     <img src="img/GP-c.jpeg" alt="Google Partners">
                     <img src="img/IIFG-c.jpeg" alt="Investing In Future Growth">
                     <img src="img/PPC-c.jpeg" alt="Princess Royal Training Award">
-                    <img src="img/ISO9001-c.jpeg" alt="Google Partners">
-                    <img src="img/ISO27001-c.jpeg" alt="Google Partners">
-                    <img src="img/F50-c.jpeg" alt="Google Partners">
+                    <img src="img/ISO9001-c.jpeg" alt="ISO9001">
+                    <img src="img/ISO27001-c.jpeg" alt="ISO27001">
+                    <img src="img/F50-c.jpeg" alt="Future 50">
                 </div>
             </div>
-        </section>
+        </div>
 
         <section class="reviews-section">
             <div class="container">
@@ -315,13 +315,13 @@
                         <div class="news__type">
                             <p>Careers</p>
                         </div>
-                        <a href="#">
+                        <div>
                             <div class="news__img__container">
-                                <img src="img/news-1.jpg">
+                                <img src="img/news-1.jpg" alt="news item">
                             </div>
                             <div class="news__content">
-                                <h3>
-                                    <a href="#">Experienced Web Developer / Team Leader</a>
+                                <h3 class="news__title">
+                                    Experienced Web Developer / Team Leader
                                 </h3>
                                 <p>
                                     Salary Range £28-50K DOE + Bonus + Benefits 
@@ -330,7 +330,7 @@
                                 <button class="news__button">Read More</button>
                                 <div class="news__footer">
                                     <div class="news__author__img">
-                                        <img src="img/news-1-author-img.jpg">
+                                        <img src="img/news-1-author-img.jpg" alt="news author">
                                     </div>
                                     <div class="news__author__msg">
                                         <p class="news__author__msg__head">Posted by Simon Wright</p>
@@ -338,21 +338,18 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="news__item ni-2">
                         <div class="news__type">
                             <p>Technologies</p>
                         </div>
-                        <a href="#">
+                        <div>
                             <div class="news__img__container">
-                                <img src="img/news-2.jpg">
-                                
+                                <img src="img/news-2.jpg" alt="news image">
                             </div>
                             <div class="news__content">
-                                <h3>
-                                    <a href="#">Shopify Explained: Why You Should Be Building...</a>
-                                </h3>
+                                <h3 class="news__title">Shopify Explained: Why You Should Be Building...</h3>
                                 <p>
                                     Shopify is an all-in-one eCommerce website-building platform 
                                     that allows users to run, start and gro...
@@ -360,7 +357,7 @@
                                 <button class="news__button">Read More</button>
                                 <div class="news__footer">
                                     <div class="news__author__img">
-                                        <img src="img/NM-icon.png">
+                                        <img src="img/NM-icon.png" alt="news author">
                                     </div>
                                     <div class="news__author__msg">
                                         <p class="news__author__msg__head">Posted by Netmatters</p>
@@ -368,20 +365,18 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="news__item ni-3">
                         <div class="news__type">
                             <p>News</p>
                         </div>
-                        <a class="news__link" href="#">
+                        <div>
                             <div class="news__img__container">
-                                <img src="img/news-3.jpg">
+                                <img src="img/news-3.jpg" alt="news image">
                             </div>
                             <div class="news__content">
-                                <h3>
-                                    <a href="#">Chris Waldie - Netmatters 5 Year Legend</a>
-                                </h3>
+                                <h3 class="news__title">Chris Waldie - Netmatters 5 Year Legend</h3>
                                 <p>
                                     The Netmatters team would like to congratulate Chris Waldie on joining  
                                     our ever-growing list of 'Leg...
@@ -389,7 +384,7 @@
                                 <button class="news__button">Read More</button>
                                 <div class="news__footer">
                                     <div class="news__author__img">
-                                        <img src="img/NM-icon.png">
+                                        <img src="img/NM-icon.png" alt="news author">
                                     </div>
                                     <div class="news__author__msg">
                                         <p class="news__author__msg__head">Posted by Netmatters</p>
@@ -397,7 +392,7 @@
                                     </div>
                                 </div>
                             </div> 
-                        </a>
+                        </div>
                     </div>
                     <div class="news__view-all-xs">
                         <a href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
