@@ -5,7 +5,7 @@ This repository contains the source code and other notes and resources produced 
 # FOR THE COMMON USER:
 
 You are viewing my repository, which holds the source code for my netmatters reflection.
-If you wish to view the website, follow eother option below:
+If you wish to view the website, follow either option below:
 A) 
 Visit https://netmatters.liam-sinclair.netmatters-scs.co.uk/ (easiest option)
 OR
