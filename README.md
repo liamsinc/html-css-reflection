@@ -3,6 +3,8 @@
 This repository contains the source code and other notes and resources produced throughout the assignment.
 I used HTML combined with SCSS/SASS to build this imitation website. I also used a HTML validator to check my markup.
 Using SCSS allowed me to seperate styling rules into partials, which keep code organised and maintainable.
+I reinforced and built upon the web development knowledge I learnt at university.
+Some examples of newly learnt concepts include flexbox and the BEM (block__element-modifier) naming convention.
 
 # FOR THE COMMON USER:
 
