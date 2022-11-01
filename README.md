@@ -2,6 +2,21 @@
 
 This repository contains the source code and other notes and resources produced throughout the assignment.
 
+# FOR THE COMMON USER:
+
+You are viewing my repository, which holds the source code for my netmatters reflection.
+If you wish to view the website, follow eother option below:
+A) 
+Visit https://netmatters.liam-sinclair.netmatters-scs.co.uk/ (easiest option)
+OR
+B) 
+1. Navigate to Environments (right side of the page) and click the "github-pages" link.
+2. On the deployments page, next to the most recent deployment there will an option to "view deployment".
+3. This will take you to the site hosted by github pages.
+   
+
+# FOR THE DEVELOPER/EMPLOYER:
+
 Folder structure:
 ----------------------------------------------------------------------------------
 CSS - Contains the compiled stylesheet and stylesheet map.
