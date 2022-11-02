@@ -17,20 +17,18 @@ If you wish to view the website, click on either link below:
 # FOR THE DEVELOPER:
 
 Folder structure:
-
+----------------------------------------------------------------------------------
 CSS - Contains the compiled stylesheet and stylesheet map.
 ----------------------------------------------------------------------------------
 IMG - Contains the assets used throughout the site.
 ----------------------------------------------------------------------------------
 SCSS - Contains 4 sub-directories: base, layout, module and utilities
 ----------------------------------------------------------------------------------
-
-Base folder -> Contains the normalize CSS and base styles.
-Layout folder -> Contains the container styles.
-Module folder -> Contains partials for each section of the web page (header, navigation, hero etc.).
-Utilities folder -> Contains helper partials (mixins, functions, variables).
-
-style.scss file -> Imports the _index.scss files from each subdirectory.
+1. Base folder -> Contains the normalize CSS and base styles.
+2. Layout folder -> Contains the container styles.
+3. Module folder -> Contains partials for each section of the web page (header, navigation, hero etc.).
+4. Utilities folder -> Contains helper partials (mixins, functions, variables).
+5. style.scss file -> Imports the _index.scss files from each subdirectory.
 ----------------------------------------------------------------------------------
 
 
