@@ -9,16 +9,11 @@ Some examples of newly learnt concepts include flexbox and the BEM (block__eleme
 # FOR THE COMMON USER:
 
 You are viewing my repository, which holds the source code for my netmatters reflection.
-If you wish to view the website, follow either option below:
-A) 
-Visit https://netmatters.liam-sinclair.netmatters-scs.co.uk/ (easiest option)
-OR
-B) 
-1. Navigate to Environments (right side of the page) and click the "github-pages" link.
-2. On the deployments page, next to the most recent deployment there will an option to "view deployment".
-3. This will take you to the site hosted by github pages.
-   
 
+If you wish to view the website, click on either link below:
+1. https://netmatters.liam-sinclair.netmatters-scs.co.uk/ (easiest option)) 
+2. https://liamsinc.github.io/html-css-reflection/
+   
 # FOR THE DEVELOPER/EMPLOYER:
 
 Folder structure:
