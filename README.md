@@ -14,10 +14,10 @@ If you wish to view the website, click on either link below:
 1. https://netmatters.liam-sinclair.netmatters-scs.co.uk/
 2. https://liamsinc.github.io/html-css-reflection/
    
-# FOR THE DEVELOPER/EMPLOYER:
+# FOR THE DEVELOPER:
 
 Folder structure:
-----------------------------------------------------------------------------------
+
 CSS - Contains the compiled stylesheet and stylesheet map.
 ----------------------------------------------------------------------------------
 IMG - Contains the assets used throughout the site.
