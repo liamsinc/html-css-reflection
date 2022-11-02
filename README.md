@@ -11,7 +11,7 @@ Some examples of newly learnt concepts include flexbox and the BEM (block__eleme
 You are viewing my repository, which holds the source code for my netmatters reflection.
 
 If you wish to view the website, click on either link below:
-1. https://netmatters.liam-sinclair.netmatters-scs.co.uk/ (easiest option)) 
+1. https://netmatters.liam-sinclair.netmatters-scs.co.uk/
 2. https://liamsinc.github.io/html-css-reflection/
    
 # FOR THE DEVELOPER/EMPLOYER:
