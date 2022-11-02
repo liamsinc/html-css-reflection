@@ -23,6 +23,7 @@ CSS - Contains the compiled stylesheet and stylesheet map.
 IMG - Contains the assets used throughout the site.
 ----------------------------------------------------------------------------------
 SCSS - Contains 4 sub-directories: base, layout, module and utilities
+----------------------------------------------------------------------------------
 
 Base folder -> Contains the normalize CSS and base styles.
 Layout folder -> Contains the container styles.
