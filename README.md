@@ -6,7 +6,7 @@ Using SCSS allowed me to seperate styling rules into partials, which keep code o
 I reinforced and built upon the web development knowledge I learnt at university.
 Some examples of newly learnt concepts include flexbox and the BEM (block__element-modifier) naming convention.
 
-# FOR THE COMMON USER:
+# FOR THE USER:
 
 You are viewing my repository, which holds the source code for my netmatters reflection.
 
@@ -30,8 +30,6 @@ Module folder -> Contains partials for each section of the web page (header, nav
 Utilities folder -> Contains helper partials (mixins, functions, variables).
 
 style.scss file -> Imports the _index.scss files from each subdirectory.
-
-Note: In each subdirectory inside SCSS folder, there is a file called _index.scss. This file imports all other partials in that sub-directory.
 ----------------------------------------------------------------------------------
 
 
