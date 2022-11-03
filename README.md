@@ -10,10 +10,10 @@ Some examples of newly learnt concepts include flexbox and the BEM (block__eleme
 
 You are viewing my repository, which holds the source code for my netmatters reflection.
 
-If you wish to view the website, click on either link below:
+Click the link below to visit the site.
+
 1. https://netmatters.liam-sinclair.netmatters-scs.co.uk/
-2. https://liamsinc.github.io/html-css-reflection/
-   
+
 # FOR THE DEVELOPER:
 
 Folder structure:
@@ -30,5 +30,4 @@ SCSS - Contains 4 sub-directories: base, layout, module and utilities
 4. Utilities folder -> Contains helper partials (mixins, functions, variables).
 5. style.scss file -> Imports the _index.scss files from each subdirectory.
 ----------------------------------------------------------------------------------
-
 
