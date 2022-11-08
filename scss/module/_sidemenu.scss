@@ -1,31 +1,32 @@
 .sidemenu {
     display: none;
     color: $white;
-    background-color: $pauper;
+    background-color: $white;
     min-width: em(350px);
     height: 100vh;
     overflow-y: scroll;
     text-transform: uppercase;
 
     &__list {
+        & > li, a {
+            color: white;
+        }
     }
 
     &__category {
+        background-color: $pauper;
         padding: em(20px);
-        border-top: 1px solid rgba(0, 0, 255, .1);
-        border-bottom: 1px solid rgba(0, 0, 0, .25);
+        box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 1);
     }
 
     &__item {
-        font-size: em(14px);
-        background-color: rgba(0,0,0, .25);
-        padding: em(15px) em(20px);
-        border-top: 1px solid rgba(0, 0, 255, .1);
+        font-size: em(14.5px);
+        background-color: darken($pauper, 5%);
+        padding: em(20px);
+        box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 1);
         &::before {
             content: '\BB';
             padding-right: em(15px);
         }
     }
-
-    
 }
