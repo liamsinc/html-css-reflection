@@ -4,6 +4,7 @@
     padding-top: em(20px);
     padding-bottom: em(18px);
     height: em(170px);
+    background-color: $white;
 
     @include media-query (medium) {
         height: em(110px);
@@ -253,4 +254,8 @@
             font-size: em(36px);
         }
     }
+}
+
+.header__wrapper {
+    z-index: 2;
 }
