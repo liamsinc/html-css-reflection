@@ -1,3 +1,7 @@
+// -------------------------------------------------------------------------------
+// Side Menu
+// -------------------------------------------------------------------------------
+
 $('.header__menu-btn').on('click', function() {
     if ($('.sidemenu').is(':hidden')) {
         $('.sidemenu').show();
@@ -7,6 +11,12 @@ $('.header__menu-btn').on('click', function() {
         $('.container').css({marginLeft: 'auto'})
     } 
 });
+
+// -------------------------------------------------------------------------------
+// Sticky Header
+// -------------------------------------------------------------------------------
+
+let oldScrollY = window.scrollY;
 
 const stickyHeaderStyles = {
     position: 'fixed',
@@ -28,21 +38,16 @@ const heroStyles = {
     marginTop: '0px'
 }
 
-
-
-let oldScrollY = window.scrollY;
-
-$(window).on('scroll', getScrollDirection);
-
-function getScrollDirection() {
+function toggleStickyHeader() {
     if(oldScrollY < window.scrollY){
         $('.hero-section').css(heroStyles);
         $('.header__wrapper').css(headerStyles);
-        console.log("Scrolling Down");
     } else {
         $('.hero-section').css(stickyHeroStyles);
         $('.header__wrapper').css(stickyHeaderStyles);
-        console.log("Scrolling Up");
     }
     oldScrollY = window.scrollY;
 }
+
+$(window).on('scroll', toggleStickyHeader);
+
