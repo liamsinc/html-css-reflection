@@ -1,32 +1,44 @@
 .sidemenu {
     display: none;
-    color: $white;
     background-color: $white;
     min-width: em(350px);
     height: 100vh;
     overflow-y: scroll;
     text-transform: uppercase;
 
-    &__list {
-        & > li, a {
-            color: white;
+
+    &__main {
+        color: $white;
+        padding: em(20px);
+        background-color: $pauper;
+        border-top: .5px solid hsla(0,0%,100%,.05);
+        box-shadow: inset 0px -1px 1px $black;
+    }
+
+    &__item {
+        border-top: .5px solid hsla(0,0%,100%,.05);
+        box-shadow: inset 0px -1px 1px $black;
+        color: $white;
+        padding: em(20px) em(20px);
+        background-color: darken($pauper, 5%);
+        font-size: em(14.5px);
+        &::before {
+            content: '\BB';
+            padding-right: em(20px);
         }
     }
 
     &__category {
-        background-color: $pauper;
-        padding: em(20px);
-        box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 1);
-    }
+        &-1:hover { .m-1 { background-color: lighten($pauper, 5%); } }
+        &-2:hover { .m-2 { background-color: lighten($pauper, 5%); } }
+        &-3:hover { .m-3 { background-color: lighten($pauper, 5%); } }
+        &-4:hover { .m-4 { background-color: lighten($pauper, 5%); } }
+        &-5:hover { .m-5 { background-color: lighten($pauper, 5%); } }
+        &-6:hover { .m-6 { background-color: lighten($pauper, 5%); } }
+        &-7:hover { .m-7 { background-color: lighten($pauper, 5%); } }
+        &-8:hover { .m-8 { background-color: lighten($pauper, 5%); } }
 
-    &__item {
-        font-size: em(14.5px);
-        background-color: darken($pauper, 5%);
-        padding: em(20px);
-        box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 1);
-        &::before {
-            content: '\BB';
-            padding-right: em(15px);
-        }
     }
+    
 }
+
