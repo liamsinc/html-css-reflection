@@ -1,14 +1,26 @@
 // -------------------------------------------------------------------------------
 // Side Menu
 // -------------------------------------------------------------------------------
+const enableScroll = {
+    overflow: 'auto',
+    height: 'auto' 
+}
+
+const disableScroll = {
+    overflow: 'hidden',
+    height: '100%' 
+}
+
 
 $('.header__menu-btn').on('click', function() {
     if ($('.sidemenu').is(':hidden')) {
         $('.sidemenu').show();
         $('.container').css({marginLeft: '16px'})
+        $('html, body').css(disableScroll);
     } else {
         $('.sidemenu').hide();
         $('.container').css({marginLeft: 'auto'})
+        $('html, body').css(enableScroll);
     } 
 });
 
@@ -17,18 +29,6 @@ $('.header__menu-btn').on('click', function() {
 // -------------------------------------------------------------------------------
 
 let oldScrollY = window.scrollY;
-
-const stickyHeaderStyles = {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    width: '100%',
-}
-
-const headerStyles = {
-    position: 'static',
-}
 
 const stickyHeroStyles = {
     marginTop: '210px'
@@ -39,12 +39,13 @@ const heroStyles = {
 }
 
 function toggleStickyHeader() {
-    if(oldScrollY < window.scrollY){
+    $('.header__wrapper').removeAttr('style');
+    if(window.scrollY === 0 || oldScrollY < window.scrollY){
         $('.hero-section').css(heroStyles);
-        $('.header__wrapper').css(headerStyles);
+        $('.header__wrapper').removeClass('sticky__wrapper');
     } else {
         $('.hero-section').css(stickyHeroStyles);
-        $('.header__wrapper').css(stickyHeaderStyles);
+        $('.header__wrapper').addClass('sticky__wrapper');
     }
     oldScrollY = window.scrollY;
 }
