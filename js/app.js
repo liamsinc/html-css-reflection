@@ -146,6 +146,16 @@ function intializeCarousel() {
     });
 };
 
+// Funtion which intitialises the cookie popup:
+
+function initialiseCookies() {
+    window.start.init({
+        Palette:"palette6",
+        Mode:"banner bottom",
+        Time:"1"
+    });
+};
+
 // -------------------------------------------------------------------------------
 // SIDE MENU
 // -------------------------------------------------------------------------------
@@ -162,11 +172,16 @@ $($menuButton).on('click', function () {
 $(window).on('scroll', toggleStickyHeader);
 
 // ----------------------------------------------------------------
-// ACCOLADES CAROUSEL
+// ACCOLADES CAROUSEL AND COOKIE POPUP
 // ----------------------------------------------------------------
 
-// Shorthand for on document load(ready event), initialise the carousel:
+//initialise the accolades carousel:
+
 $(intializeCarousel);
+
+// initialise the cookie popup:
+
+$(initialiseCookies);
 
 // ----------------------------------------------------------------
 // UTILITY
