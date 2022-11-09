@@ -52,6 +52,12 @@ let oldScrollY = window.scrollY;
 
 let mainContentWidth;
 
+// Variables for storing 2 values. Used to check if window.innerWidth is in range
+// See function scrollSideMenu for usage.
+
+let medBreakLowLimit = breakpoints[2] - 10;
+let medBreakHighLimit = breakpoints[2] + 10;
+
 // ----------------------------------------------------------------
 // FUNCTIONS
 // ----------------------------------------------------------------
@@ -156,6 +162,13 @@ function initialiseCookies() {
     });
 };
 
+function scrollSideMenu() {
+    let width = window.innerWidth;
+    if (width >= medBreakLowLimit && width <= medBreakHighLimit) {
+        $($sideMenu).scrollTop(0);
+    }
+}
+
 // -------------------------------------------------------------------------------
 // SIDE MENU
 // -------------------------------------------------------------------------------
@@ -187,5 +200,8 @@ $(initialiseCookies);
 // UTILITY
 // ----------------------------------------------------------------
 
-$(window).on('resize', calculateMainContentWidth);
+$(window).on('resize', function () {
+    scrollSideMenu();
+    calculateMainContentWidth();
+});
 
