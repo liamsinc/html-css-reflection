@@ -22,7 +22,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            padding: em(20px);
+            padding: 0 em(20px);
             align-items: center;
             background-color: $pauper;
             @include media-query(large) { display: none; };
@@ -68,12 +68,14 @@
     &__button {
         @include sidemenu-mobile-styles();
         width: em(208px);
+        margin-top: em(18px);
         font-size: em(18px);
     }
 
     &__service {
         @include sidemenu-mobile-styles();
         width: em(232px);
+        cursor: pointer;
 
         &-wrapper {
             margin-bottom: em(18px);
@@ -82,7 +84,6 @@
         & > i {
             font-size: em(20px);
             padding-bottom: em(10px);
-            color: $bay-view;
         }
 
         &-p1 {
@@ -95,23 +96,33 @@
         }
 
         &-item {
-            & > ul > a > li{
+            & > ul > a > li {
                 border-top: .5px solid hsla(0,0%,100%,.05);
                 box-shadow: inset 0px -1px 1px $black;
                 color: $white;
                 text-align: center;
                 width: em(232px);
-                padding: em(15px);
+                padding: em(13px);
                 background-color: darken($pauper, 5%);
-            }
-
-            &:hover {
-                .ssbs {
-                    background-color: lighten($pauper, 5%);
-                }
             }
         }
     }
-    
 }
+
+.ssw1:hover { .ssbs { background-color: lighten($pauper, 5%); } }
+.ssw2:hover { .ssit { background-color: lighten($pauper, 5%); } }
+.ssw3:hover { .ssdm { background-color: lighten($pauper, 5%); } }
+.ssw4:hover { .ssts { background-color: lighten($pauper, 5%); } }
+.ssw5:hover { .sswd { background-color: lighten($pauper, 5%); } }
+.ssw6:hover { .sscs { background-color: lighten($pauper, 5%); } }
+.ssw7:hover { .ssdc { background-color: lighten($pauper, 5%); } }
+
+
+.ssbs > i { color: $bay-view }
+.ssit > i { color: $magical-merlin }
+.ssdm > i { color: $ufo-green }
+.ssts > i { color: $cute-crab }
+.sswd > i { color: $violet-frog }
+.sscs > i { color: $red-pink }
+.ssdc > i { color: $underpass-shrine }
 
