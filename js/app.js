@@ -1,6 +1,6 @@
-// ----------------------------------------------------------------
+// -------------------------------------------------------------------------------
 // VARIABLES AND CONSTANTS
-// ----------------------------------------------------------------
+// -------------------------------------------------------------------------------
 
 // JQuery selectors stored in constants:
 
@@ -58,9 +58,9 @@ let mainContentWidth;
 let medBreakLowLimit = breakpoints[2] - 10;
 let medBreakHighLimit = breakpoints[2] + 10;
 
-// ----------------------------------------------------------------
+// -------------------------------------------------------------------------------
 // FUNCTIONS
-// ----------------------------------------------------------------
+// -------------------------------------------------------------------------------
 
 // Function which calculates how wide the main content should be:
 
@@ -162,6 +162,8 @@ function initialiseCookies() {
     });
 };
 
+// Function that scrolls the side menu when the medium breakpoint is crossed:
+
 function scrollSideMenu() {
     let width = window.innerWidth;
     if (width >= medBreakLowLimit && width <= medBreakHighLimit) {
@@ -184,9 +186,9 @@ $($menuButton).on('click', function () {
 
 $(window).on('scroll', toggleStickyHeader);
 
-// ----------------------------------------------------------------
-// ACCOLADES CAROUSEL AND COOKIE POPUP
-// ----------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// ACCOLADES/AWARDS CAROUSEL AND COOKIE POPUP
+// -------------------------------------------------------------------------------
 
 //initialise the accolades carousel:
 
@@ -196,9 +198,9 @@ $(intializeCarousel);
 
 $(initialiseCookies);
 
-// ----------------------------------------------------------------
+// -------------------------------------------------------------------------------
 // UTILITY
-// ----------------------------------------------------------------
+// -------------------------------------------------------------------------------
 
 $(window).on('resize', function () {
     scrollSideMenu();
