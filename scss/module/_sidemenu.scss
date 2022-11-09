@@ -1,11 +1,31 @@
 .sidemenu {
     display: none;
     background-color: $white;
-    min-width: em(350px);
+    min-width: em(275px);
     height: 100vh;
     overflow-y: scroll;
+    z-index: 1;
     text-transform: uppercase;
+    
 
+    @include media-query(large) {
+        min-width: em(350px);
+    }
+
+    &__content {
+        &-large { 
+            display: none;
+            @include media-query(large) { display: block; };
+        }
+
+        &-small {
+            @include media-query(large) { display: none; };
+        }
+    }
+
+    &__contact {
+        background-color: $pauper;
+    }
 
     &__main {
         color: $white;
@@ -19,7 +39,7 @@
         border-top: .5px solid hsla(0,0%,100%,.05);
         box-shadow: inset 0px -1px 1px $black;
         color: $white;
-        padding: em(20px) em(20px);
+        padding: em(20px);
         background-color: darken($pauper, 5%);
         font-size: em(14.5px);
         &::before {
@@ -37,7 +57,10 @@
         &-6:hover { .m-6 { background-color: lighten($pauper, 5%); } }
         &-7:hover { .m-7 { background-color: lighten($pauper, 5%); } }
         &-8:hover { .m-8 { background-color: lighten($pauper, 5%); } }
+    }
 
+    &__button {
+        
     }
     
 }
