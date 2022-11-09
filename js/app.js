@@ -26,12 +26,16 @@ const $hamburgerClass = 'is-active';
 const smallMenuWidth = 275;
 const largeMenuWidth = 350;
 
-const smallBreakpoint = 576;
-const mediumBreakpoint = 767;
-const largeBreakpoint = 991;
-const xLargeBreakpoint = 1259;
+// Breakpoint array:
 
-// CSS Objects
+const breakpoints = [
+    576,
+    767,
+    991,
+    1259
+];
+
+// CSS objects:
 
 const stickyHero = { marginTop: '210px' };
 const stickyContainer = { marginLeft: '10px' };
@@ -39,7 +43,6 @@ const disableScroll = {
     overflow: 'hidden',
     height: '100%' 
 };
-
 
 // Variable which holds the y position of the page:
 
@@ -58,7 +61,7 @@ let mainContentWidth;
 function calculateMainContentWidth() {
     let windowWidth = $(window).width();
     if ($($sideMenu).is($visible)) {
-        if (windowWidth < largeBreakpoint) {
+        if (windowWidth < breakpoints[2]) {
             mainContentWidth = windowWidth - smallMenuWidth;
             $($mainContent).css({width: mainContentWidth});
         } else {
@@ -68,7 +71,7 @@ function calculateMainContentWidth() {
     } else {
         $($mainContent).removeAttr($style);
     }
-}
+};
 
 // Function which toggles the sticky header:
 
@@ -83,9 +86,9 @@ function toggleStickyHeader() {
         $($headerWrapper).addClass($stickyClass);
     }
     oldScrollY = currentScrollY;
-}
+};
 
-// Function which toggles the side menu and calls a function:
+// Function which toggles the side menu and calls calculateMainContentWidth:
 
 function toggleSideMenu() {
     if ($($sideMenu).is($hidden)) {
@@ -108,7 +111,7 @@ function toggleHamburger() {
     } else {
         $($menuButton).removeClass($hamburgerClass);
     }
-}
+};
 
 // Function that initialises the accolades carousel:
 
@@ -124,24 +127,24 @@ function intializeCarousel() {
         mobileFirst: true,
         responsive: [
             {
-                breakpoint: smallBreakpoint,
+                breakpoint: breakpoints[0],
                 settings: { slidesToShow: 2 }
             },
             {
-                breakpoint: mediumBreakpoint,
+                breakpoint: breakpoints[1],
                 settings: { slidesToShow: 3 }
             },
             {
-                breakpoint: largeBreakpoint,
+                breakpoint: breakpoints[2],
                 settings: { slidesToShow: 4 }
             },
             {
-                breakpoint: xLargeBreakpoint,
+                breakpoint: breakpoints[3],
                 settings: { slidesToShow: 5 }
             },
         ]
     });
-}
+};
 
 // -------------------------------------------------------------------------------
 // SIDE MENU
@@ -159,9 +162,10 @@ $($menuButton).on('click', function () {
 $(window).on('scroll', toggleStickyHeader);
 
 // ----------------------------------------------------------------
-// Accolades Carousel
+// ACCOLADES CAROUSEL
 // ----------------------------------------------------------------
 
+// Shorthand for on document load(ready event), initialise the carousel:
 $(intializeCarousel);
 
 // ----------------------------------------------------------------
