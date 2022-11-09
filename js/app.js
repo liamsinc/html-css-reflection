@@ -33,12 +33,13 @@ const xLargeBreakpoint = 1259;
 
 // CSS Objects
 
+const stickyHero = { marginTop: '210px' };
+const stickyContainer = { marginLeft: '10px' };
 const disableScroll = {
     overflow: 'hidden',
     height: '100%' 
 };
-const stickyHero = { marginTop: '210px' };
-const stickyContainer = { marginLeft: '10px' };
+
 
 // Variable which holds the y position of the page:
 
@@ -139,7 +140,7 @@ function intializeCarousel() {
                 settings: { slidesToShow: 5 }
             },
         ]
-    })
+    });
 }
 
 // -------------------------------------------------------------------------------
