@@ -12,6 +12,13 @@ const $container = '.container';
 const $headerWrapper = '.header__wrapper';
 const $heroSection = '.hero-section';
 const $accolades = '.accolades-wrapper';
+const $sideMenuLinks = '.sidemenu__service-item > ul > a > li, \
+                        .sidemenu__service-wrapper, \
+                        .sidemenu__service-item, \
+                        .sidemenu__main, \
+                        .sidemenu__item, \
+                        .sidemenu__button'
+;
 
 // JQuery helper constants:
 
@@ -171,14 +178,18 @@ function scrollSideMenu() {
     }
 }
 
+// Helper function that helps me adhere to DRY principles:
+
+function toggleMenu() {
+    toggleHamburger();
+    toggleSideMenu();
+}
+
 // -------------------------------------------------------------------------------
 // SIDE MENU
 // -------------------------------------------------------------------------------
 
-$($menuButton).on('click', function () {
-    toggleHamburger();
-    toggleSideMenu();
-});
+$($menuButton).on('click', toggleMenu);
 
 // -------------------------------------------------------------------------------
 // STICKY HEADER
@@ -206,4 +217,9 @@ $(window).on('resize', function () {
     scrollSideMenu();
     calculateMainContentWidth();
 });
+
+// Close the side menu when a link is clicked
+
+$($sideMenuLinks).on('click', toggleMenu);
+
 
