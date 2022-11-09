@@ -11,6 +11,7 @@ const $htmlBody = 'html, body';
 const $container = '.container';
 const $headerWrapper = '.header__wrapper';
 const $heroSection = '.hero-section';
+const $accolades = '.accolades-wrapper';
 
 // JQuery helper constants:
 
@@ -24,7 +25,11 @@ const $hamburgerClass = 'is-active';
 
 const smallMenuWidth = 275;
 const largeMenuWidth = 350;
+
+const smallBreakpoint = 576;
+const mediumBreakpoint = 767;
 const largeBreakpoint = 991;
+const xLargeBreakpoint = 1259;
 
 // CSS Objects
 
@@ -94,12 +99,47 @@ function toggleSideMenu() {
     calculateMainContentWidth();
 }
 
+// Function which toggles the hamburger animation:
+
 function toggleHamburger() {
     if (!$($menuButton).hasClass($hamburgerClass)) {
         $($menuButton).addClass($hamburgerClass);
     } else {
         $($menuButton).removeClass($hamburgerClass);
     }
+}
+
+// Function that initialises the accolades carousel:
+
+function intializeCarousel() {
+    $($accolades).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        centerPadding: true,
+        centerMode: true,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: smallBreakpoint,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: mediumBreakpoint,
+                settings: { slidesToShow: 3 }
+            },
+            {
+                breakpoint: largeBreakpoint,
+                settings: { slidesToShow: 4 }
+            },
+            {
+                breakpoint: xLargeBreakpoint,
+                settings: { slidesToShow: 5 }
+            },
+        ]
+    })
 }
 
 // -------------------------------------------------------------------------------
@@ -116,6 +156,12 @@ $($menuButton).on('click', function () {
 // -------------------------------------------------------------------------------
 
 $(window).on('scroll', toggleStickyHeader);
+
+// ----------------------------------------------------------------
+// Accolades Carousel
+// ----------------------------------------------------------------
+
+$(intializeCarousel);
 
 // ----------------------------------------------------------------
 // UTILITY
