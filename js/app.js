@@ -154,7 +154,7 @@ function intializeCarousel() {
 
 // Funtion which intitialises the cookie popup:
 
-function initialiseCookies() {
+function initializeCookies() {
     window.start.init({
         Palette:"palette6",
         Mode:"banner bottom",
@@ -196,7 +196,7 @@ $(intializeCarousel);
 
 // initialise the cookie popup:
 
-$(initialiseCookies);
+$(initializeCookies);
 
 // -------------------------------------------------------------------------------
 // UTILITY
