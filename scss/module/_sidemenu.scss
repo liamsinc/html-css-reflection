@@ -25,12 +25,9 @@
             padding: 0 em(20px);
             align-items: center;
             background-color: $pauper;
+            border-bottom: 1px solid $black;
             @include media-query(large) { display: none; };
         }
-    }
-
-    &__contact {
-        background-color: $pauper;
     }
 
     &__main {
@@ -63,6 +60,11 @@
         &-6:hover { .m-6 { background-color: lighten($pauper, 5%); } }
         &-7:hover { .m-7 { background-color: lighten($pauper, 5%); } }
         &-8:hover { .m-8 { background-color: lighten($pauper, 5%); } }
+        &-9 {
+            @include media-query (large) { display: none; }
+            &:hover { .m-9 { background-color: lighten($pauper, 5%); } }
+        }
+        
     }
 
     &__button {
