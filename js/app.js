@@ -18,6 +18,7 @@ const $style = 'style';
 const $visible = ':visible';
 const $hidden = ':hidden';
 const $stickyClass = 'sticky__wrapper';
+const $hamburgerClass = 'is-active';
 
 // General constants: 
 
@@ -93,11 +94,22 @@ function toggleSideMenu() {
     calculateMainContentWidth();
 }
 
+function toggleHamburger() {
+    if (!$($menuButton).hasClass($hamburgerClass)) {
+        $($menuButton).addClass($hamburgerClass);
+    } else {
+        $($menuButton).removeClass($hamburgerClass);
+    }
+}
+
 // -------------------------------------------------------------------------------
 // SIDE MENU
 // -------------------------------------------------------------------------------
 
-$($menuButton).on('click', toggleSideMenu);
+$($menuButton).on('click', function () {
+    toggleHamburger();
+    toggleSideMenu();
+});
 
 // -------------------------------------------------------------------------------
 // STICKY HEADER

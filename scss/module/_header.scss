@@ -243,17 +243,13 @@
         margin-top: em(7px);
         margin-left: em(20px);
         margin-bottom: em(15px);
-        padding: em(5px) em(15px);
 
         &:hover {
             background-color: darken($pauper, 10%);
-        }
-
-        & > i {
-            color: $white;
-            font-size: em(36px);
-        }
+        } 
     }
+
+
 }
 
 .header__wrapper {
