@@ -43,9 +43,9 @@ const breakpoints = [
 ];
 
 // CSS objects:
-
-const stickyHeroLarge = { marginTop: '210px' };
 const stickyHeroSmall = { marginTop: '110px' };
+const stickyHeroMedium = { marginTop: '170px' }; 
+const stickyHeroLarge = { marginTop: '210px' };
 const stickyContainer = { marginLeft: '10px' };
 const disableScroll = {
     overflow: 'hidden',
@@ -60,7 +60,7 @@ let oldScrollY = window.scrollY;
 
 let mainContentWidth;
 
-// Variables for storing 2 values. Used to check if window.innerWidth is in range
+// Variables for storing 2 values. Used to check if windowWidth is in range
 // See function scrollSideMenu for usage.
 
 let medBreakLowLimit = breakpoints[2] - 10;
@@ -74,7 +74,9 @@ let medBreakHighLimit = breakpoints[2] + 10;
 
 function calculateMainContentWidth() {
     let windowWidth = $(window).width();
+
     if ($($sideMenu).is($visible)) {
+
         if (windowWidth < breakpoints[2]) {
             mainContentWidth = windowWidth - smallMenuWidth;
             $($mainContent).css({width: mainContentWidth});
@@ -91,13 +93,19 @@ function calculateMainContentWidth() {
 
 function toggleStickyHeader() {
     $($headerWrapper).removeAttr($style);
+
     let currentScrollY = window.scrollY;
+    let windowWidth = $(window).width();
+
     if(currentScrollY === 0 || oldScrollY < currentScrollY){
         $($heroSection).removeAttr($style);
         $($headerWrapper).removeClass($stickyClass);
     } else {
         $($headerWrapper).addClass($stickyClass);
-        if (window.innerWidth < breakpoints[2]) {
+
+        if (windowWidth < breakpoints[1]) {
+            $($heroSection).css(stickyHeroMedium);
+        } else if (windowWidth < breakpoints[2] && windowWidth >= breakpoints[1]) {
             $($heroSection).css(stickyHeroSmall);
         } else {
             $($heroSection).css(stickyHeroLarge);
@@ -177,8 +185,8 @@ function initializeCookies() {
 // Function that scrolls the side menu when the medium breakpoint is crossed:
 
 function scrollSideMenu() {
-    let width = window.innerWidth;
-    if (width >= medBreakLowLimit && width <= medBreakHighLimit) {
+    let windowWidth = $(window).width();
+    if (windowWidth >= medBreakLowLimit && windowWidth <= medBreakHighLimit) {
         $($sideMenu).scrollTop(0);
     }
 }
