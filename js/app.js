@@ -44,7 +44,8 @@ const breakpoints = [
 
 // CSS objects:
 
-const stickyHero = { marginTop: '210px' };
+const stickyHeroLarge = { marginTop: '210px' };
+const stickyHeroSmall = { marginTop: '110px' };
 const stickyContainer = { marginLeft: '10px' };
 const disableScroll = {
     overflow: 'hidden',
@@ -95,8 +96,12 @@ function toggleStickyHeader() {
         $($heroSection).removeAttr($style);
         $($headerWrapper).removeClass($stickyClass);
     } else {
-        $($heroSection).css(stickyHero);
         $($headerWrapper).addClass($stickyClass);
+        if (window.innerWidth < breakpoints[2]) {
+            $($heroSection).css(stickyHeroSmall);
+        } else {
+            $($heroSection).css(stickyHeroLarge);
+        }
     }
     oldScrollY = currentScrollY;
 };
