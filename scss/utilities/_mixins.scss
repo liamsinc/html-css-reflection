@@ -169,4 +169,20 @@
 	}
 }
 
+// Sidemenu mixins:
+
+@mixin sidemenu-mobile-styles() {
+	color: $white;
+	padding: em(20px);
+	text-align: center;
+	background-color: $pauper;
+	border-radius: em(3px);
+	outline: 1px solid rgba(0,0,0,.25);
+    border: 1px solid hsla(0,0%,100%,.1);
+	margin-bottom: em(18px);
+	&:hover {
+		background-color: lighten($pauper, 5%);
+	}
+}
+
 
