@@ -234,6 +234,9 @@
     // Styles hamburger menu button
     
     &__menu-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: em(56px);
         width: em(63px);
         background-color: $pauper;
