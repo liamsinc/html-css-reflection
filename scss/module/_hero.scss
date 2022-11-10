@@ -32,17 +32,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: em(175px) 0;
+        padding-top: em(175px);
         text-align: center;
         color: $white;
-
+        
         @include media-query(large) {
             text-align: left;
-            padding: em(100px) 0;
-        }
-
-        @include media-query(x-large) {
-            padding: em(120px) 0;
+            padding-top: em(120px);
         }
     }
 
@@ -123,3 +119,22 @@
     }
 }
 
+.hr-1 {
+    padding-top: em(50px);
+
+    @include media-query (small) {
+        padding-top: em(150px);
+    }
+
+    @include media-query (medium) {
+        padding-top: em(140px);
+    }
+
+    @include media-query (large) {
+        padding-top: em(50px);
+    }
+
+    @include media-query (x-large) {
+        padding-top: em(90px);
+    }
+}
