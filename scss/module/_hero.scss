@@ -32,9 +32,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: em(175px);
+        padding-top: em(140px);
         text-align: center;
         color: $white;
+
+        @include media-query (small) {
+            padding-top: em(175px);
+        }
         
         @include media-query(large) {
             text-align: left;
