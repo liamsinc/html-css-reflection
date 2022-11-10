@@ -13,6 +13,12 @@
     &-7 {background-image: linear-gradient(to right, $black, transparent), url("../img/hero-7.jpg"); }
 }
 
+.hero-section .slick-dots {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 // Styles the text on top of the image
 
 .hero {

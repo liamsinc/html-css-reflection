@@ -75,6 +75,7 @@ const slickHeroSettings = {
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: false,
+    dots: true,
     speed: 300,
     mobileFirst: true
 };
