@@ -12,6 +12,7 @@ const $container = '.container';
 const $headerWrapper = '.header__wrapper';
 const $heroSection = '.hero-section';
 const $accolades = '.accolades__wrapper';
+const $heroCarousel = '.hero__carousel';
 const $sideMenuLinks = '.sidemenu__service-item > ul > a > li, \
                         .sidemenu__service-wrapper, \
                         .sidemenu__service-item, \
@@ -52,7 +53,7 @@ const disableScroll = {
 
 // Slick carousel settings:
 
-const slickSettings = {
+const slickAwardSettings = {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -66,6 +67,23 @@ const slickSettings = {
         {breakpoint: breakpoints[2], settings: { slidesToShow: 4 }},
         {breakpoint: breakpoints[3], settings: { slidesToShow: 5 }},
     ]
+};
+
+const slickHeroSettings = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    speed: 300,
+    mobileFirst: true
+};
+
+// Cookie plugin settings:
+const cookieSettings = {
+    Palette:"palette6",
+    Mode:"banner bottom",
+    Time:"1"
 };
 
 // Variable which holds the y position of the page:
@@ -157,44 +175,15 @@ function toggleHamburger() {
 
 // Function that initialises the accolades carousel:
 
-function intializeCarousel() {
-    $($accolades).slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: false,
-        centerPadding: true,
-        mobileFirst: true,
-        responsive: [
-            {
-                breakpoint: breakpoints[0],
-                settings: { slidesToShow: 2 }
-            },
-            {
-                breakpoint: breakpoints[1],
-                settings: { slidesToShow: 3 }
-            },
-            {
-                breakpoint: breakpoints[2],
-                settings: { slidesToShow: 4 }
-            },
-            {
-                breakpoint: breakpoints[3],
-                settings: { slidesToShow: 5 }
-            },
-        ]
-    });
+function intializeCarousels() {
+    $($accolades).slick(slickAwardSettings);
+    $($heroCarousel).slick(slickHeroSettings);
 };
 
 // Funtion which intitialises the cookie popup:
 
 function initializeCookies() {
-    window.start.init({
-        Palette:"palette6",
-        Mode:"banner bottom",
-        Time:"1"
-    });
+    window.start.init(cookieSettings);
 };
 
 // Function that scrolls the side menu when the medium breakpoint is crossed:
@@ -231,7 +220,7 @@ $(window).on('scroll', toggleStickyHeader);
 
 //initialise the accolades carousel:
 
-$(intializeCarousel);
+$(intializeCarousels);
 
 // initialise the cookie popup:
 

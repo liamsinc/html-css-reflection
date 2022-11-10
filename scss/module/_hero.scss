@@ -3,18 +3,27 @@
 
 // Styles the section with the background image
 
-.hero-section {
-    background-image: linear-gradient(to right, $black, transparent), url("../img/hero.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: em(550px);
+.slide {
+    &-1 { background-image: linear-gradient(to right, $black, transparent), url("../img/hero.jpeg"); }
+    &-2 {background-image: linear-gradient(to right, $black, transparent), url("../img/hero-2.jpg"); }
+    &-3 {background-image: linear-gradient(to right, $black, transparent), url("../img/hero-3.jpg"); }
+    &-4 {background-image: linear-gradient(to right, $black, transparent), url("../img/hero-4.jpg"); }
+    &-5 {background-image: linear-gradient(to right, $black, transparent), url("../img/hero-5.jpg"); }
+    &-6 {background-image: linear-gradient(to right, $black, transparent), url("../img/hero-6.jpg"); }
+    &-7 {background-image: linear-gradient(to right, $black, transparent), url("../img/hero-7.jpg"); }
 }
 
 // Styles the text on top of the image
 
 .hero {
+
+    &__slide {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: em(550px); 
+    }
 
     // Container for the hero text
 
@@ -33,7 +42,7 @@
         }
 
         @include media-query(x-large) {
-            padding: em(150px) 0;
+            padding: em(120px) 0;
         }
     }
 
@@ -45,7 +54,7 @@
 
         @include media-query (large) {
             font-size: em(64px);
-            margin-bottom: em(10px);
+            width: 100%;
         }
     }
 
@@ -54,11 +63,63 @@
     &__subtitle {
         font-size: em(20px);
         font-weight: $font-weight--bold;
+        margin-bottom: em(20px);
+        align-self: center;
+        line-height: 1.6;
 
         @include media-query (large) {
+            align-self: flex-start;
             font-size: em(26px);
             width: 100%;
         }
+    }
+
+    &__button {
+        border: none;
+        color: $white;
+        border-radius: em(3px);
+        margin: 0;
+        padding: 0;
+        height: em(50px);
+        width: em(180px);
+        font-size: em(20px);
+        align-self: center;
+        cursor: pointer;
+
+        @include media-query (large) {
+            align-self: flex-start;
+        }
+    }
+}
+
+.hb {
+    &-1 {
+        background-color: $bay-view;
+        &:hover {background-color: darken($bay-view, 10%);}
+    }
+    &-2 {
+        background-color: $bay-view;
+        &:hover {background-color: darken($bay-view, 10%);}
+    }
+    &-3 {
+        background-color: $magical-merlin;
+        &:hover {background-color: darken($magical-merlin, 10%);}
+    }
+    &-4 {
+        background-color: $ufo-green;
+        &:hover {background-color: darken($ufo-green, 10%);}
+    }
+    &-5 {
+        background-color: $cute-crab;
+        &:hover {background-color: darken($cute-crab, 10%);}
+    }
+    &-6 {
+        background-color: $violet-frog;
+        &:hover {background-color: darken($violet-frog, 10%);}
+    }
+    &-7 {
+        background-color: $red-pink;
+        &:hover {background-color: darken($red-pink, 10%);}
     }
 }
 
