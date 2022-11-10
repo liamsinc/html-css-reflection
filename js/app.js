@@ -11,7 +11,7 @@ const $htmlBody = 'html, body';
 const $container = '.container';
 const $headerWrapper = '.header__wrapper';
 const $heroSection = '.hero-section';
-const $accolades = '.accolades-wrapper';
+const $accolades = '.accolades__wrapper';
 const $sideMenuLinks = '.sidemenu__service-item > ul > a > li, \
                         .sidemenu__service-wrapper, \
                         .sidemenu__service-item, \
@@ -36,13 +36,11 @@ const largeMenuWidth = 350;
 // Breakpoint array:
 
 const breakpoints = [
-    576,
-    767,
-    991,
-    1259
+    576, 767, 991, 1259
 ];
 
 // CSS objects:
+
 const stickyHeroSmall = { marginTop: '110px' };
 const stickyHeroMedium = { marginTop: '170px' }; 
 const stickyHeroLarge = { marginTop: '210px' };
@@ -50,6 +48,24 @@ const stickyContainer = { marginLeft: '10px' };
 const disableScroll = {
     overflow: 'hidden',
     height: '100%' 
+};
+
+// Slick carousel settings:
+
+const slickSettings = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    centerPadding: true,
+    mobileFirst: true,
+    responsive: [
+        {breakpoint: breakpoints[0], settings: { slidesToShow: 2 }},
+        {breakpoint: breakpoints[1], settings: { slidesToShow: 3 }},
+        {breakpoint: breakpoints[2], settings: { slidesToShow: 4 }},
+        {breakpoint: breakpoints[3], settings: { slidesToShow: 5 }},
+    ]
 };
 
 // Variable which holds the y position of the page:
@@ -97,7 +113,7 @@ function toggleStickyHeader() {
     let currentScrollY = window.scrollY;
     let windowWidth = $(window).width();
 
-    if(currentScrollY === 0 || oldScrollY < currentScrollY){
+    if(currentScrollY === 0 || oldScrollY <= currentScrollY){
         $($heroSection).removeAttr($style);
         $($headerWrapper).removeClass($stickyClass);
     } else {
@@ -149,7 +165,6 @@ function intializeCarousel() {
         autoplaySpeed: 2000,
         arrows: false,
         centerPadding: true,
-        centerMode: true,
         mobileFirst: true,
         responsive: [
             {

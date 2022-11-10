@@ -4,29 +4,23 @@
 // Creates a flex container for the accolades to sit in. 
 // This make it fairly responsive for the time being until carousel is implemented using JS.
 
-.accolades {
-    &-wrapper {
-        margin: 0 em(15px);
-        width: inherit;
-    }
-
-    &-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.accolades__wrapper {
+    height: em(100px);
 }
 
 
-
 .slick-slide {
-    width: 100px;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
 
     &:hover {
         -webkit-filter: grayscale(0);
         filter: none;
-    }     
+    }
+    
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 110px !important;
 }
 
