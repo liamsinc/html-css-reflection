@@ -173,7 +173,7 @@ function toggleHamburger() {
     }
 };
 
-// Function that initialises the accolades carousel:
+// Function that initialises the carousels:
 
 function intializeCarousels() {
     $($accolades).slick(slickAwardSettings);
@@ -208,6 +208,10 @@ function toggleMenu() {
 
 $($menuButton).on('click', toggleMenu);
 
+// Close the side menu when a link is clicked
+
+$($sideMenuLinks).on('click', toggleMenu);
+
 // -------------------------------------------------------------------------------
 // STICKY HEADER
 // -------------------------------------------------------------------------------
@@ -218,7 +222,7 @@ $(window).on('scroll', toggleStickyHeader);
 // ACCOLADES/AWARDS CAROUSEL AND COOKIE POPUP
 // -------------------------------------------------------------------------------
 
-//initialise the accolades carousel:
+//initialise the carousels:
 
 $(intializeCarousels);
 
@@ -235,8 +239,6 @@ $(window).on('resize', function () {
     calculateMainContentWidth();
 });
 
-// Close the side menu when a link is clicked
 
-$($sideMenuLinks).on('click', toggleMenu);
 
 
