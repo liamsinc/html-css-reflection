@@ -130,15 +130,11 @@
         padding-top: em(150px);
     }
 
-    @include media-query (medium) {
-        padding-top: em(140px);
-    }
-
     @include media-query (large) {
-        padding-top: em(50px);
+        padding-top: em(60px);
     }
 
     @include media-query (x-large) {
-        padding-top: em(90px);
+        padding-top: em(100px);
     }
 }
