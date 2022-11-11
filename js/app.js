@@ -179,14 +179,15 @@ function adjustHeroSection() {
 toggleStickyHeader() is invoked whenever a scroll event is fired.
 
 It checks to see if the current y position is 0 (the user is at 
-the top of the page), or if the old y position is less than or 
-equal to the current y position (indicating the user has scrolled down).
+the top of the page), or if the old y position is less than the 
+current y position (indicating the user has scrolled down).
 
 In both these cases we remove the sticky styles/adjustments from the hero
 section and the header.
 
-If the check returns false, then the user must be 
-scrolling up AND not at the top of the page, so apply the sticky class
+If the check returns false, check if old y position is greater than
+current y position (indicating the user has scrolled up and IS NOT 
+at the top of the page), and if true, apply the sticky class
 to the header and invoke adjustHeroSection().
 */
 
@@ -195,10 +196,10 @@ function toggleStickyHeader() {
     let currentYPos = window.scrollY;
 
     // Run checks and toggle sticky rules:
-    if(currentYPos === 0 || oldYPos <= currentYPos){
+    if(currentYPos === 0 || oldYPos < currentYPos){
         $($heroSection).removeAttr($style);
         $($headerWrapper).removeClass(stickyHeaderClass);
-    } else {
+    } else if (oldYPos > currentYPos) {
         $($headerWrapper).addClass(stickyHeaderClass);
         adjustHeroSection();
     }
@@ -242,16 +243,16 @@ function toggleSideMenu() {
 // ---------------------------------------------------------------------------------------------------------------
 
 /*
-toggleHamburger() is invoked when the menu button (or a link inside of it) is clicked. 
-If the hamburger button has the active class, remove it. 
-Else apply the active class.
+toggleClass() is invoked when the menu button (or a link inside of it) is clicked. 
+If the given element already has the supplied class, remove it. 
+Else apply the supplied class to the given element.
 */
 
-function toggleHamburger() {
-    if ($($menuButton).hasClass(hamburgerActiveClass)) {
-        $($menuButton).removeClass(hamburgerActiveClass);
+function toggleClass(element, className) {
+    if ($(element).hasClass(className)) {
+        $(element).removeClass(className);
     } else {
-        $($menuButton).addClass(hamburgerActiveClass); 
+        $(element).addClass(className); 
     }
 };
 
@@ -319,11 +320,18 @@ function toggleCarouselAutoplay(element, settings) {
     }
 }
 
-// -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
+// END OF FUNCTIONS
+// ---------------------------------------------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------------------------------------------
 // ON READY EVENT:
-// -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
 $(function () {
+    // Scroll to the top of the page:
+    $($htmlBody).scrollTop(0)
+
     //initialize the carousels:
     intializeCarousel($heroCarousel, slickHeroSettings);
     intializeCarousel($awardsCarousel, slickAwardSettings);
@@ -332,20 +340,20 @@ $(function () {
     initializeCookies(cookieSettings);
 });
 
-// -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 // EVENT HANDLERS:
-// -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
 // Invoke some functions when the menu button is clicked:
 $($menuButton).on('click', function () {
-    toggleHamburger();
+    toggleClass(this, hamburgerActiveClass);
     toggleSideMenu();
     toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
 });
 
 // Invoke some functions when a link inside the side menu is clicked:
 $($sideMenuLinks).on('click', function () {
-    toggleHamburger();
+    toggleClass($menuButton, hamburgerActiveClass);
     toggleSideMenu();
     toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
 });
