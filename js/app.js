@@ -189,6 +189,10 @@ If the check returns false, check if old y position is greater than
 current y position (indicating the user has scrolled up and IS NOT 
 at the top of the page), and if true, apply the sticky class
 to the header and invoke adjustHeroSection().
+
+Don't add/remove/adjust anything if old y position is equal to the current y position.
+
+Finally assign currentYPos to the global variable oldYPos ready for re-evaulation.
 */
 
 function toggleStickyHeader() {
@@ -196,10 +200,10 @@ function toggleStickyHeader() {
     let currentYPos = window.scrollY;
 
     // Run checks and toggle sticky rules:
-    if(currentYPos === 0 || oldYPos < currentYPos){
+    if(currentYPos === 0 || (oldYPos + 10) < currentYPos){
         $($heroSection).removeAttr($style);
         $($headerWrapper).removeClass(stickyHeaderClass);
-    } else if (oldYPos > currentYPos) {
+    } else if ((oldYPos - 10) > currentYPos) {
         $($headerWrapper).addClass(stickyHeaderClass);
         adjustHeroSection();
     }
