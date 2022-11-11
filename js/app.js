@@ -179,18 +179,19 @@ function adjustHeroSection() {
 toggleStickyHeader() is invoked whenever a scroll event is fired.
 
 It checks to see if the current y position is 0 (the user is at 
-the top of the page), or if the old y position is less than the 
+the top of the page), or if the old y position + 10 is less than the 
 current y position (indicating the user has scrolled down).
 
 In both these cases we remove the sticky styles/adjustments from the hero
 section and the header.
 
-If the check returns false, check if old y position is greater than
+If the check returns false, check if old y position - 10 is greater than
 current y position (indicating the user has scrolled up and IS NOT 
 at the top of the page), and if true, apply the sticky class
 to the header and invoke adjustHeroSection().
 
-Don't add/remove/adjust anything if old y position is equal to the current y position.
+I check the old y position +/- 10 in order to stop the header from
+flickering on touchscreen devices.
 
 Finally assign currentYPos to the global variable oldYPos ready for re-evaulation.
 */
