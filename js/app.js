@@ -211,7 +211,7 @@ function toggleStickyHeader() {
 // ---------------------------------------------------------------------------------------------------------------
 
 /*
-toggleSideMenu() is invoked by toggleMenu().
+toggleSideMenu() is invoked when the menu button (or a link inside of it) is clicked.
 
 If the side menu is hidden, display the side menu (and scroll to the top of it), 
 disable scrolling on the main page and adjust the left margin of the container class.
@@ -242,8 +242,9 @@ function toggleSideMenu() {
 // ---------------------------------------------------------------------------------------------------------------
 
 /*
-toggleHamburger() is invoked by toggleMenu(). If the hamburger button
-has the active class, remove it. Else apply the active class.
+toggleHamburger() is invoked when the menu button (or a link inside of it) is clicked. 
+If the hamburger button has the active class, remove it. 
+Else apply the active class.
 */
 
 function toggleHamburger() {
@@ -257,7 +258,11 @@ function toggleHamburger() {
 // ---------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------
 
-// Function that initializes the carousels:
+/*
+intializeCarousel() takes an jQuery element and a settings object.
+It intializes the slick plugin on the given element using the 
+supplied settings object.
+*/
 
 function intializeCarousel(element, settings) {
     $(element).slick(settings);
@@ -266,7 +271,7 @@ function intializeCarousel(element, settings) {
 // ---------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------
 
-// Funtion which initializes the cookie popup:
+// initializeCookies() takes a settings object and uses it to initialize the cookie popup.
 
 function initializeCookies(settings) {
     window.start.init(settings);
@@ -276,8 +281,9 @@ function initializeCookies(settings) {
 // ---------------------------------------------------------------------------------------------------------------
 
 /*
-Function that scrolls to a given y position (default = 0) of a supplied
-element when the window width is within a range centered on a given breakpoint.
+scrollOnBreakpoint() scrolls to a y position (default = 0) of a
+given element when the window width is within a range centered 
+on the supplied breakpoint.
 */
 
 function scrollOnBreakpoint(element, index, yPos = 0) {
@@ -295,6 +301,14 @@ function scrollOnBreakpoint(element, index, yPos = 0) {
     }
 };
 
+// ---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
+
+/* 
+toggleCarouselAutoplay() is invoked when the menu button (or a link inside of it) is clicked.
+It checks the current state of the autoplay property then pauses or unpauses the carousel.
+*/
+
 function toggleCarouselAutoplay(element, settings) {
     if (settings.autoplay === true) {
         settings.autoplay = false;
@@ -304,17 +318,6 @@ function toggleCarouselAutoplay(element, settings) {
         $(element).slick('slickPlay');
     }
 }
-
-// ---------------------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------------------
-
-// toggleMenu() serves as a container for calling three connected functions:
-
-function toggleMenu() {
-    toggleHamburger();
-    toggleSideMenu();
-    toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
-};
 
 // -------------------------------------------------------------------------------
 // ON READY EVENT:
@@ -333,11 +336,19 @@ $(function () {
 // EVENT HANDLERS:
 // -------------------------------------------------------------------------------
 
-// Invoke toggleMenu() when the hamburger button is clicked:
-$($menuButton).on('click', toggleMenu);
+// Invoke some functions when the menu button is clicked:
+$($menuButton).on('click', function () {
+    toggleHamburger();
+    toggleSideMenu();
+    toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+});
 
-// Invoke toggleMenu() when a link inside the side menu is clicked:
-$($sideMenuLinks).on('click', toggleMenu);
+// Invoke some functions when a link inside the side menu is clicked:
+$($sideMenuLinks).on('click', function () {
+    toggleHamburger();
+    toggleSideMenu();
+    toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+});
 
 // Invoke toggleStickyHeader() when scroll event is triggered:
 $(window).on('scroll', toggleStickyHeader);
@@ -347,7 +358,3 @@ $(window).on('resize', function () {
     scrollOnBreakpoint($sideMenu, 2); 
     calcMainContentWidth();
 });
-
-
-
-
