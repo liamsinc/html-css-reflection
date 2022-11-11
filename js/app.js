@@ -1,18 +1,21 @@
-// -------------------------------------------------------------------------------
-// VARIABLES AND CONSTANTS
-// -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
+// GLOBAL CONSTANTS
+// ---------------------------------------------------------------------------------------------------------------
 
-// JQuery selectors stored in constants:
+// JQuery single-element selectors:
 
 const $sideMenu = '.sidemenu';
 const $mainContent = '.main__content';
 const $menuButton = '.header__menu-btn';
-const $htmlBody = 'html, body';
 const $container = '.container';
 const $headerWrapper = '.header__wrapper';
 const $heroSection = '.hero-section';
-const $accolades = '.accolades__wrapper';
+const $awardsCarousel = '.accolades__wrapper';
 const $heroCarousel = '.hero__carousel';
+
+//Jquery multi-element selectors:
+
+const $htmlBody = 'html, body';
 const $sideMenuLinks = '.sidemenu__service-item > ul > a > li, \
                         .sidemenu__service-wrapper, \
                         .sidemenu__service-item, \
@@ -21,43 +24,60 @@ const $sideMenuLinks = '.sidemenu__service-item > ul > a > li, \
                         .sidemenu__button'
 ;
 
-// JQuery helper constants:
+// JQuery helpers: 
 
 const $style = 'style';
 const $visible = ':visible';
 const $hidden = ':hidden';
-const $stickyClass = 'sticky__wrapper';
-const $hamburgerClass = 'is-active';
 
-// General constants: 
+// CSS class references:
+
+const stickyHeaderClass = 'sticky__wrapper';
+const hamburgerActiveClass = 'is-active';
+
+// Holds the two different widths the side menu can be:
 
 const smallMenuWidth = 275;
 const largeMenuWidth = 350;
 
-// Breakpoint array:
+// Array holding the values of the breakpoints:
 
 const breakpoints = [
     576, 767, 991, 1259
 ];
 
-// CSS objects:
-
+// Hero section margin adjustments:
 const stickyHeroSmall = { marginTop: '110px' };
 const stickyHeroMedium = { marginTop: '170px' }; 
 const stickyHeroLarge = { marginTop: '210px' };
+
+// Main content margin adjustment:
 const stickyContainer = { marginLeft: '10px' };
+
+// Rules to disable scrolling:
 const disableScroll = {
     overflow: 'hidden',
     height: '100%' 
 };
 
-// Slick carousel settings:
+// Cookie plugin settings:
+const cookieSettings = {
+    Palette:"palette6",
+    Mode:"banner bottom",
+    Time:"1"
+};
 
-const slickAwardSettings = {
+// ---------------------------------------------------------------------------------------------------------------
+// SLICK CAROUSEL SETTINGS
+// ---------------------------------------------------------------------------------------------------------------
+
+// Awards/accolades carousel settings:
+let slickAwardSettings = {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    pauseOnFocus: false,
     arrows: false,
     centerPadding: true,
     mobileFirst: true,
@@ -69,10 +89,12 @@ const slickAwardSettings = {
     ]
 };
 
-const slickHeroSettings = {
+// Hero carousel settings:
+let slickHeroSettings = {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    pauseOnFocus: false,
     autoplaySpeed: 4000,
     arrows: false,
     dots: true,
@@ -80,78 +102,128 @@ const slickHeroSettings = {
     mobileFirst: true
 };
 
-// Cookie plugin settings:
-const cookieSettings = {
-    Palette:"palette6",
-    Mode:"banner bottom",
-    Time:"1"
-};
+// ---------------------------------------------------------------------------------------------------------------
+// GLOBAL VARIABLES
+// ---------------------------------------------------------------------------------------------------------------
 
-// Variable which holds the y position of the page:
+// Holds the y position of the page:
+let oldYPos = window.scrollY;
 
-let oldScrollY = window.scrollY;
-
-// Variable used for storing the calculated main content width:
-
-let mainContentWidth;
-
-// Variables for storing 2 values. Used to check if windowWidth is in range
-// See function scrollSideMenu for usage.
-
-let medBreakLowLimit = breakpoints[2] - 10;
-let medBreakHighLimit = breakpoints[2] + 10;
-
-// -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 // FUNCTIONS
-// -------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
-// Function which calculates how wide the main content should be:
+/*
+calcMainContentWidth() calculates the width of the main content.
 
-function calculateMainContentWidth() {
-    let windowWidth = $(window).width();
+It is invoked when the side menu is toggled and when the window is resized. 
 
+Implemented to support the functionality of the side menu.
+*/
+
+function calcMainContentWidth() {
+    // Initial check: ensure the side menu is visible
     if ($($sideMenu).is($visible)) {
+        // Grab the current window width and initialize a local variable.
+        let windowWidth = $(window).width();
+        let widthToApply = 0;
 
+        // Check if what side of the large breakpoint we are on:
         if (windowWidth < breakpoints[2]) {
-            mainContentWidth = windowWidth - smallMenuWidth;
-            $($mainContent).css({width: mainContentWidth});
+            // If below 991px, use the smallMenuWidth to calculate widthToApply:
+            widthToApply = windowWidth - smallMenuWidth;
+            $($mainContent).css({width: widthToApply});
         } else {
-            mainContentWidth = windowWidth - largeMenuWidth;
-            $($mainContent).css({width: mainContentWidth});
-        }    
+            // Else use the largeMenuWidth:
+            widthToApply = windowWidth - largeMenuWidth;
+            $($mainContent).css({width: widthToApply});
+        }
+
     } else {
+        // Reset the main content styles if the side menu is hidden:
         $($mainContent).removeAttr($style);
     }
 };
 
-// Function which toggles the sticky header:
+// ---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
-function toggleStickyHeader() {
-    $($headerWrapper).removeAttr($style);
+/* 
+adjustHeroSection() is invoked by toggleStickyHeader().
 
-    let currentScrollY = window.scrollY;
+It calculates the correct margin to apply to the hero content
+when the header become sticky, based on the current breakpoint.
+
+Stops page jumping up to fill the empty space when the header 
+becomes sticky.
+*/
+
+function adjustHeroSection() {
+    // Grab the current window width:
     let windowWidth = $(window).width();
 
-    if(currentScrollY === 0 || oldScrollY <= currentScrollY){
-        $($heroSection).removeAttr($style);
-        $($headerWrapper).removeClass($stickyClass);
+    // Apply the appropriate adjustment based on current breakpoint:
+    if (windowWidth < breakpoints[1]) {
+        $($heroSection).css(stickyHeroMedium);
+    } else if (windowWidth < breakpoints[2] && windowWidth >= breakpoints[1]) {
+        $($heroSection).css(stickyHeroSmall);
     } else {
-        $($headerWrapper).addClass($stickyClass);
-
-        if (windowWidth < breakpoints[1]) {
-            $($heroSection).css(stickyHeroMedium);
-        } else if (windowWidth < breakpoints[2] && windowWidth >= breakpoints[1]) {
-            $($heroSection).css(stickyHeroSmall);
-        } else {
-            $($heroSection).css(stickyHeroLarge);
-        }
+        $($heroSection).css(stickyHeroLarge);
     }
-    oldScrollY = currentScrollY;
 };
 
-// Function which toggles the side menu and calls calculateMainContentWidth:
+// ---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
+
+/*
+toggleStickyHeader() is invoked whenever a scroll event is fired.
+
+It checks to see if the current y position is 0 (the user is at 
+the top of the page), or if the old y position is less than or 
+equal to the current y position (indicating the user has scrolled down).
+
+In both these cases we remove the sticky styles/adjustments from the hero
+section and the header.
+
+If the check returns false, then the user must be 
+scrolling up AND not at the top of the page, so apply the sticky class
+to the header and invoke adjustHeroSection().
+*/
+
+function toggleStickyHeader() {
+    // Grab the current y position and window width:
+    let currentYPos = window.scrollY;
+
+    // Run checks and toggle sticky rules:
+    if(currentYPos === 0 || oldYPos <= currentYPos){
+        $($heroSection).removeAttr($style);
+        $($headerWrapper).removeClass(stickyHeaderClass);
+    } else {
+        $($headerWrapper).addClass(stickyHeaderClass);
+        adjustHeroSection();
+    }
+
+    // Assign the current y position to the global variable, ready for re-evaluation: 
+    oldYPos = currentYPos;
+};
+
+// ---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
+
+/*
+toggleSideMenu() is invoked by toggleMenu().
+
+If the side menu is hidden, display the side menu (and scroll to the top of it), 
+disable scrolling on the main page and adjust the left margin of the container class.
+
+If side menu is visible, hide it, re-enable scrolling and remove the left 
+margin adjustment.
+
+Finally it invokes calcMainContentWidth() to adjust the width of the main content.
+*/
 
 function toggleSideMenu() {
+    // Run the conditional and toggle side menu as appropriate:
     if ($($sideMenu).is($hidden)) {
         $($sideMenu).show().scrollTop(0);
         $($htmlBody).css(disableScroll);
@@ -161,83 +233,119 @@ function toggleSideMenu() {
         $($htmlBody).removeAttr($style);
         $($container).removeAttr($style);
     }
-    calculateMainContentWidth();
-}
 
-// Function which toggles the hamburger animation:
+    // Update the main content width:
+    calcMainContentWidth();
+};
+
+// ---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
+
+/*
+toggleHamburger() is invoked by toggleMenu(). If the hamburger button
+has the active class, remove it. Else apply the active class.
+*/
 
 function toggleHamburger() {
-    if (!$($menuButton).hasClass($hamburgerClass)) {
-        $($menuButton).addClass($hamburgerClass);
+    if ($($menuButton).hasClass(hamburgerActiveClass)) {
+        $($menuButton).removeClass(hamburgerActiveClass);
     } else {
-        $($menuButton).removeClass($hamburgerClass);
+        $($menuButton).addClass(hamburgerActiveClass); 
     }
 };
 
-// Function that initialises the carousels:
+// ---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
-function intializeCarousels() {
-    $($accolades).slick(slickAwardSettings);
-    $($heroCarousel).slick(slickHeroSettings);
+// Function that initializes the carousels:
+
+function intializeCarousel(element, settings) {
+    $(element).slick(settings);
 };
 
-// Funtion which intitialises the cookie popup:
+// ---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
-function initializeCookies() {
-    window.start.init(cookieSettings);
+// Funtion which initializes the cookie popup:
+
+function initializeCookies(settings) {
+    window.start.init(settings);
 };
 
-// Function that scrolls the side menu when the medium breakpoint is crossed:
+// ---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
-function scrollSideMenu() {
+/*
+Function that scrolls to a given y position (default = 0) of a supplied
+element when the window width is within a range centered on a given breakpoint.
+*/
+
+function scrollOnBreakpoint(element, index, yPos = 0) {
+    // Grab the current window width:
     let windowWidth = $(window).width();
-    if (windowWidth >= medBreakLowLimit && windowWidth <= medBreakHighLimit) {
-        $($sideMenu).scrollTop(0);
+
+    // Set the range based on the supplied breakpoint:
+    let largeBreakLower = breakpoints[index] - 10;
+    let largeBreakUpper = breakpoints[index] + 10;
+    
+    // Run the range check:
+    if (windowWidth >= largeBreakLower && windowWidth <= largeBreakUpper) {
+        // Scroll the given element to the supplied position:
+        $(element).scrollTop(yPos);
+    }
+};
+
+function toggleCarouselAutoplay(element, settings) {
+    if (settings.autoplay === true) {
+        settings.autoplay = false;
+        $(element).slick('slickPause');
+    } else {
+        settings.autoplay = true;
+        $(element).slick('slickPlay');
     }
 }
 
-// Helper function that helps me adhere to DRY principles:
+// ---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
+
+// toggleMenu() serves as a container for calling three connected functions:
 
 function toggleMenu() {
     toggleHamburger();
     toggleSideMenu();
-}
+    toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+};
 
 // -------------------------------------------------------------------------------
-// SIDE MENU
+// ON READY EVENT:
 // -------------------------------------------------------------------------------
 
+$(function () {
+    //initialize the carousels:
+    intializeCarousel($heroCarousel, slickHeroSettings);
+    intializeCarousel($awardsCarousel, slickAwardSettings);
+    
+    //initialize the cookies:
+    initializeCookies(cookieSettings);
+});
+
+// -------------------------------------------------------------------------------
+// EVENT HANDLERS:
+// -------------------------------------------------------------------------------
+
+// Invoke toggleMenu() when the hamburger button is clicked:
 $($menuButton).on('click', toggleMenu);
 
-// Close the side menu when a link is clicked
-
+// Invoke toggleMenu() when a link inside the side menu is clicked:
 $($sideMenuLinks).on('click', toggleMenu);
 
-// -------------------------------------------------------------------------------
-// STICKY HEADER
-// -------------------------------------------------------------------------------
-
+// Invoke toggleStickyHeader() when scroll event is triggered:
 $(window).on('scroll', toggleStickyHeader);
 
-// -------------------------------------------------------------------------------
-// ACCOLADES/AWARDS CAROUSEL AND COOKIE POPUP
-// -------------------------------------------------------------------------------
-
-//initialise the carousels:
-
-$(intializeCarousels);
-
-// initialise the cookie popup:
-
-$(initializeCookies);
-
-// -------------------------------------------------------------------------------
-// UTILITY
-// -------------------------------------------------------------------------------
-
+// Invoke scrollOnBreakpoint() and calcMainContentWidth() when the browser window is resized:
 $(window).on('resize', function () {
-    scrollSideMenu();
-    calculateMainContentWidth();
+    scrollOnBreakpoint($sideMenu, 2); 
+    calcMainContentWidth();
 });
 
 
