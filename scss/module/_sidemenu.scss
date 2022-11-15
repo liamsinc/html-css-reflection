@@ -1,0 +1,144 @@
+.sidemenu {
+    display: none;
+    background-color: $white;
+    min-width: em(275px);
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 1;
+    text-transform: uppercase;
+    
+
+    @include media-query(large) {
+        min-width: em(350px);
+    }
+
+    &__content {
+        &-large { 
+            display: none;
+            @include media-query(large) { display: block; };
+        }
+
+        &-small {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0 em(20px);
+            align-items: center;
+            background-color: $pauper;
+            border-bottom: 1px solid $black;
+            @include media-query(large) { display: none; };
+        }
+    }
+
+    &__main {
+        padding: em(20px) 0 em(20px) em(20px);
+        background-color: $pauper;
+        border-top: .5px solid hsla(0,0%,100%,.05);
+        box-shadow: inset 0px -1px 1px $black;
+        & > a {
+            color: $white;
+            padding: em(18px) em(100px) em(18px) em(0px);
+        }
+    }
+
+    &__item {
+        border-top: .5px solid hsla(0,0%,100%,.05);
+        box-shadow: inset 0px -1px 1px $black;
+        color: $white;
+        padding: em(20px) 0 em(20px) em(20px);
+        background-color: darken($pauper, 5%);
+        font-size: em(14.5px);
+        
+        &::before { content: '\BB' }
+
+        & > a { 
+            color: $white; 
+            padding: em(18px) em(20px) em(18px) em(20px);
+        }
+    }
+
+    &__category {
+        &-1:hover { .m-1 { background-color: lighten($pauper, 5%); } }
+        &-2:hover { .m-2 { background-color: lighten($pauper, 5%); } }
+        &-3:hover { .m-3 { background-color: lighten($pauper, 5%); } }
+        &-4:hover { .m-4 { background-color: lighten($pauper, 5%); } }
+        &-5:hover { .m-5 { background-color: lighten($pauper, 5%); } }
+        &-6:hover { .m-6 { background-color: lighten($pauper, 5%); } }
+        &-7:hover { .m-7 { background-color: lighten($pauper, 5%); } }
+        &-8:hover { .m-8 { background-color: lighten($pauper, 5%); } }
+        &-9 {
+            @include media-query (large) { display: none }
+            &:hover { .m-9 { background-color: lighten($pauper, 5%); } }
+        }
+        
+    }
+
+    &__button {
+        @include sidemenu-mobile-styles();
+        width: em(208px);
+        margin-top: em(18px);
+        font-size: em(18px);
+
+        & > a { color: $white }
+    }
+
+    &__service {
+        @include sidemenu-mobile-styles();
+        width: em(232px);
+        cursor: pointer;
+
+        &-wrapper {
+            margin-bottom: em(18px);
+        }
+
+        & > i {
+            font-size: em(20px);
+            padding-bottom: em(10px);
+        }
+
+        &-p1 {
+            font-size: em(10px);
+            padding-bottom: em(10px);
+        }
+
+        &-p2 {
+            font-size: em(18px);
+        }
+
+        &-item {
+            & > ul {
+                & > li {
+                    border-top: .5px solid hsla(0,0%,100%,.05);
+                    box-shadow: inset 0px -1px 1px $black;
+                    color: $white;
+                    text-align: center;
+                    width: em(232px);
+                    padding: em(13px);
+                    background-color: darken($pauper, 5%);
+    
+                    & > a {
+                        color: $white;
+                        padding: em(13px) 0;
+                    }
+                }   
+            }
+        }
+    }
+}
+
+.ssw1:hover { .ssbs { background-color: lighten($pauper, 5%) } }
+.ssw2:hover { .ssit { background-color: lighten($pauper, 5%) } }
+.ssw3:hover { .ssdm { background-color: lighten($pauper, 5%) } }
+.ssw4:hover { .ssts { background-color: lighten($pauper, 5%) } }
+.ssw5:hover { .sswd { background-color: lighten($pauper, 5%) } }
+.ssw6:hover { .sscs { background-color: lighten($pauper, 5%) } }
+.ssw7:hover { .ssdc { background-color: lighten($pauper, 5%) } }
+
+.ssbs > i { color: $bay-view }
+.ssit > i { color: $magical-merlin }
+.ssdm > i { color: $ufo-green }
+.ssts > i { color: $cute-crab }
+.sswd > i { color: $violet-frog }
+.sscs > i { color: $red-pink }
+.ssdc > i { color: $underpass-shrine }
+

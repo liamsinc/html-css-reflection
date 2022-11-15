@@ -4,6 +4,7 @@
     padding-top: em(20px);
     padding-bottom: em(18px);
     height: em(170px);
+    background-color: $white;
 
     @include media-query (medium) {
         height: em(110px);
@@ -233,6 +234,9 @@
     // Styles hamburger menu button
     
     &__menu-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: em(56px);
         width: em(63px);
         background-color: $pauper;
@@ -242,15 +246,22 @@
         margin-top: em(7px);
         margin-left: em(20px);
         margin-bottom: em(15px);
-        padding: em(5px) em(15px);
 
         &:hover {
             background-color: darken($pauper, 10%);
-        }
-
-        & > i {
-            color: $white;
-            font-size: em(36px);
-        }
+        } 
     }
+
+
+}
+
+.header__wrapper {
+    z-index: 2;
+}
+
+.sticky__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
