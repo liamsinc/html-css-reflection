@@ -55,7 +55,6 @@
         & > i {
             color: $pauper;
             font-size: em(25px);
-            transform: rotate(-45deg);
         }
 
         @include media-query (medium) {
