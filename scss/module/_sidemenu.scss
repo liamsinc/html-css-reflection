@@ -3,8 +3,8 @@
     background-color: $white;
     min-width: em(275px);
     height: 100vh;
-    overflow-y: scroll;
-    z-index: 1;
+    overflow: auto;
+    z-index: 2;
     text-transform: uppercase;
     
 

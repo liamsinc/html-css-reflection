@@ -56,8 +56,8 @@ const stickyContainer = { marginLeft: '10px' };
 
 // Rules to disable scrolling:
 const disableScroll = {
-    overflow: 'hidden',
-    height: '100%' 
+    height: '100vh',
+    overflow: 'auto'
 };
 
 // Cookie plugin settings:
@@ -109,6 +109,9 @@ let slickHeroSettings = {
 // Holds the y position of the page:
 let oldYPos = window.scrollY;
 
+// Indicates whether the sidemenu is open:
+let menuOpen = false;
+
 // ---------------------------------------------------------------------------------------------------------------
 // FUNCTIONS
 // ---------------------------------------------------------------------------------------------------------------
@@ -158,19 +161,19 @@ Stops page jumping up to fill the empty space when the header
 becomes sticky.
 */
 
-function adjustHeroSection() {
-    // Grab the current window width:
-    let windowWidth = $(window).width();
+// function adjustHeroSection() {
+//     // Grab the current window width:
+//     let windowWidth = $(window).width();
 
-    // Apply the appropriate adjustment based on current breakpoint:
-    if (windowWidth < breakpoints[1]) {
-        $($heroSection).css(stickyHeroMedium);
-    } else if (windowWidth < breakpoints[2] && windowWidth >= breakpoints[1]) {
-        $($heroSection).css(stickyHeroSmall);
-    } else {
-        $($heroSection).css(stickyHeroLarge);
-    }
-};
+//     // Apply the appropriate adjustment based on current breakpoint:
+//     if (windowWidth < breakpoints[1]) {
+//         $($heroSection).css(stickyHeroMedium);
+//     } else if (windowWidth < breakpoints[2] && windowWidth >= breakpoints[1]) {
+//         $($heroSection).css(stickyHeroSmall);
+//     } else {
+//         $($heroSection).css(stickyHeroLarge);
+//     }
+// };
 
 // ---------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------
@@ -202,11 +205,11 @@ function toggleStickyHeader() {
 
     // Run checks and toggle sticky rules:
     if(currentYPos === 0 || (oldYPos + 10) < currentYPos){
-        $($heroSection).removeAttr($style);
+        // $($heroSection).removeAttr($style);
         $($headerWrapper).removeClass(stickyHeaderClass);
     } else if ((oldYPos - 10) > currentYPos) {
         $($headerWrapper).addClass(stickyHeaderClass);
-        adjustHeroSection();
+        // adjustHeroSection();
     }
 
     // Assign the current y position to the global variable, ready for re-evaluation: 
@@ -231,13 +234,16 @@ Finally it invokes calcMainContentWidth() to adjust the width of the main conten
 function toggleSideMenu() {
     // Run the conditional and toggle side menu as appropriate:
     if ($($sideMenu).is($hidden)) {
+        let pageScroll = window.scrollY;
         $($sideMenu).show().scrollTop(0);
-        $($htmlBody).css(disableScroll);
+        $($mainContent).css(disableScroll).scrollTop(pageScroll);
         $($container).css(stickyContainer);
+        menuOpen = true;
     } else {
         $($sideMenu).hide();
-        $($htmlBody).removeAttr($style);
+        $($mainContent).removeAttr($style);
         $($container).removeAttr($style);
+        menuOpen = false;
     }
 
     // Update the main content width:
@@ -324,6 +330,7 @@ function toggleCarouselAutoplay(element, settings) {
         $(element).slick('slickPlay');
     }
 }
+
 
 // ---------------------------------------------------------------------------------------------------------------
 // END OF FUNCTIONS
