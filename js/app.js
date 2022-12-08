@@ -47,9 +47,9 @@ const breakpoints = [
 ];
 
 // Hero section margin adjustments:
-const stickyHeroSmall = { marginTop: '110px' };
-const stickyHeroMedium = { marginTop: '170px' }; 
-const stickyHeroLarge = { marginTop: '210px' };
+// const stickyHeroSmall = { marginTop: '110px' };
+// const stickyHeroMedium = { marginTop: '170px' }; 
+// const stickyHeroLarge = { marginTop: '210px' };
 
 // Main content margin adjustment:
 const stickyContainer = { marginLeft: '10px' };
@@ -109,9 +109,6 @@ let slickHeroSettings = {
 // Holds the y position of the page:
 let oldYPos = window.scrollY;
 
-// Indicates whether the sidemenu is open:
-let menuOpen = false;
-
 // ---------------------------------------------------------------------------------------------------------------
 // FUNCTIONS
 // ---------------------------------------------------------------------------------------------------------------
@@ -152,6 +149,7 @@ function calcMainContentWidth() {
 // ---------------------------------------------------------------------------------------------------------------
 
 /* 
+REDUNDANT
 adjustHeroSection() is invoked by toggleStickyHeader().
 
 It calculates the correct margin to apply to the hero content
@@ -231,6 +229,8 @@ margin adjustment.
 Finally it invokes calcMainContentWidth() to adjust the width of the main content.
 */
 
+const posFixed = {position: 'fixed', overflowY: 'auto'};
+
 function toggleSideMenu() {
     // Run the conditional and toggle side menu as appropriate:
     if ($($sideMenu).is($hidden)) {
@@ -238,12 +238,10 @@ function toggleSideMenu() {
         $($sideMenu).show().scrollTop(0);
         $($mainContent).css(disableScroll).scrollTop(pageScroll);
         $($container).css(stickyContainer);
-        menuOpen = true;
     } else {
         $($sideMenu).hide();
         $($mainContent).removeAttr($style);
         $($container).removeAttr($style);
-        menuOpen = false;
     }
 
     // Update the main content width:
@@ -378,3 +376,5 @@ $(window).on('resize', function () {
     scrollOnBreakpoint($sideMenu, 2); 
     calcMainContentWidth();
 });
+
+
