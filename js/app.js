@@ -12,6 +12,7 @@ const $headerWrapper = '.header__wrapper';
 const $heroSection = '.hero-section';
 const $awardsCarousel = '.accolades__wrapper';
 const $heroCarousel = '.hero__carousel';
+const $overlay = '.overlay';
 
 //Jquery multi-element selectors:
 
@@ -108,6 +109,8 @@ let slickHeroSettings = {
 
 // Holds the y position of the page:
 let oldYPos = window.scrollY;
+
+let savedYPos;
 
 // ---------------------------------------------------------------------------------------------------------------
 // FUNCTIONS
@@ -232,13 +235,13 @@ Finally it invokes calcMainContentWidth() to adjust the width of the main conten
 function toggleSideMenu() {
     // Run the conditional and toggle side menu as appropriate:
     if ($($sideMenu).is($hidden)) {
-        let pageScroll = window.scrollY;
         $($sideMenu).show().scrollTop(0);
-        $($mainContent).css(disableScroll).scrollTop(pageScroll);
+        $($overlay).css({display: 'block'});
+        $($mainContent).css(disableScroll).scrollTop(oldYPos);
         $($container).css(stickyContainer);
     } else {
         $($sideMenu).hide();
-        $($mainContent).removeAttr($style);
+        $($overlay).removeAttr($style);
         $($container).removeAttr($style);
     }
 
@@ -354,6 +357,7 @@ $(function () {
 
 // Invoke some functions when the menu button is clicked:
 $($menuButton).on('click', function () {
+    oldYPos = $(window).scrollTop();
     toggleClass(this, hamburgerActiveClass);
     toggleSideMenu();
     toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
@@ -373,6 +377,13 @@ $(window).on('scroll', toggleStickyHeader);
 $(window).on('resize', function () {
     scrollOnBreakpoint($sideMenu, 2); 
     calcMainContentWidth();
+});
+
+// When the overlay is clicked, close the side menu:
+$($overlay).on('click', function () {
+    toggleClass($menuButton, hamburgerActiveClass);
+    toggleSideMenu();
+    toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
 });
 
 
