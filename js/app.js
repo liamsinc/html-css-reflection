@@ -229,8 +229,6 @@ margin adjustment.
 Finally it invokes calcMainContentWidth() to adjust the width of the main content.
 */
 
-const posFixed = {position: 'fixed', overflowY: 'auto'};
-
 function toggleSideMenu() {
     // Run the conditional and toggle side menu as appropriate:
     if ($($sideMenu).is($hidden)) {
