@@ -12,6 +12,7 @@ const $headerWrapper = '.header__wrapper';
 const $heroSection = '.hero-section';
 const $awardsCarousel = '.accolades__wrapper';
 const $heroCarousel = '.hero__carousel';
+const $overlay = '.overlay';
 
 //Jquery multi-element selectors:
 
@@ -47,17 +48,17 @@ const breakpoints = [
 ];
 
 // Hero section margin adjustments:
-const stickyHeroSmall = { marginTop: '110px' };
-const stickyHeroMedium = { marginTop: '170px' }; 
-const stickyHeroLarge = { marginTop: '210px' };
+// const stickyHeroSmall = { marginTop: '110px' };
+// const stickyHeroMedium = { marginTop: '170px' }; 
+// const stickyHeroLarge = { marginTop: '210px' };
 
 // Main content margin adjustment:
 const stickyContainer = { marginLeft: '10px' };
 
 // Rules to disable scrolling:
 const disableScroll = {
-    overflow: 'hidden',
-    height: '100%' 
+    height: '100vh',
+    overflow: 'auto'
 };
 
 // Cookie plugin settings:
@@ -109,6 +110,8 @@ let slickHeroSettings = {
 // Holds the y position of the page:
 let oldYPos = window.scrollY;
 
+let savedYPos;
+
 // ---------------------------------------------------------------------------------------------------------------
 // FUNCTIONS
 // ---------------------------------------------------------------------------------------------------------------
@@ -149,6 +152,7 @@ function calcMainContentWidth() {
 // ---------------------------------------------------------------------------------------------------------------
 
 /* 
+REDUNDANT
 adjustHeroSection() is invoked by toggleStickyHeader().
 
 It calculates the correct margin to apply to the hero content
@@ -158,19 +162,19 @@ Stops page jumping up to fill the empty space when the header
 becomes sticky.
 */
 
-function adjustHeroSection() {
-    // Grab the current window width:
-    let windowWidth = $(window).width();
+// function adjustHeroSection() {
+//     // Grab the current window width:
+//     let windowWidth = $(window).width();
 
-    // Apply the appropriate adjustment based on current breakpoint:
-    if (windowWidth < breakpoints[1]) {
-        $($heroSection).css(stickyHeroMedium);
-    } else if (windowWidth < breakpoints[2] && windowWidth >= breakpoints[1]) {
-        $($heroSection).css(stickyHeroSmall);
-    } else {
-        $($heroSection).css(stickyHeroLarge);
-    }
-};
+//     // Apply the appropriate adjustment based on current breakpoint:
+//     if (windowWidth < breakpoints[1]) {
+//         $($heroSection).css(stickyHeroMedium);
+//     } else if (windowWidth < breakpoints[2] && windowWidth >= breakpoints[1]) {
+//         $($heroSection).css(stickyHeroSmall);
+//     } else {
+//         $($heroSection).css(stickyHeroLarge);
+//     }
+// };
 
 // ---------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------
@@ -202,11 +206,11 @@ function toggleStickyHeader() {
 
     // Run checks and toggle sticky rules:
     if(currentYPos === 0 || (oldYPos + 10) < currentYPos){
-        $($heroSection).removeAttr($style);
+        // $($heroSection).removeAttr($style);
         $($headerWrapper).removeClass(stickyHeaderClass);
     } else if ((oldYPos - 10) > currentYPos) {
         $($headerWrapper).addClass(stickyHeaderClass);
-        adjustHeroSection();
+        // adjustHeroSection();
     }
 
     // Assign the current y position to the global variable, ready for re-evaluation: 
@@ -232,11 +236,12 @@ function toggleSideMenu() {
     // Run the conditional and toggle side menu as appropriate:
     if ($($sideMenu).is($hidden)) {
         $($sideMenu).show().scrollTop(0);
-        $($htmlBody).css(disableScroll);
+        $($overlay).css({display: 'block'});
+        $($mainContent).css(disableScroll).scrollTop(oldYPos);
         $($container).css(stickyContainer);
     } else {
         $($sideMenu).hide();
-        $($htmlBody).removeAttr($style);
+        $($overlay).removeAttr($style);
         $($container).removeAttr($style);
     }
 
@@ -325,6 +330,7 @@ function toggleCarouselAutoplay(element, settings) {
     }
 }
 
+
 // ---------------------------------------------------------------------------------------------------------------
 // END OF FUNCTIONS
 // ---------------------------------------------------------------------------------------------------------------
@@ -351,6 +357,7 @@ $(function () {
 
 // Invoke some functions when the menu button is clicked:
 $($menuButton).on('click', function () {
+    oldYPos = $(window).scrollTop();
     toggleClass(this, hamburgerActiveClass);
     toggleSideMenu();
     toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
@@ -371,3 +378,12 @@ $(window).on('resize', function () {
     scrollOnBreakpoint($sideMenu, 2); 
     calcMainContentWidth();
 });
+
+// When the overlay is clicked, close the side menu:
+$($overlay).on('click', function () {
+    toggleClass($menuButton, hamburgerActiveClass);
+    toggleSideMenu();
+    toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+});
+
+

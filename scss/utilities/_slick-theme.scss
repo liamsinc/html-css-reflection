@@ -11,12 +11,14 @@ $slick-font-path: "./fonts/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "./" !default;
 $slick-arrow-color: white !default;
-$slick-dot-color: $pauper !default;
+$slick-dot-color: $white !default;
 $slick-dot-color-active: $slick-dot-color !default;
 $slick-prev-character: "\2190" !default;
 $slick-next-character: "\2192" !default;
-$slick-dot-character: "\2022" !default;
-$slick-dot-size: 60px !default; // Changed
+$slick-dot-character-inactive: "\2022"; // Added
+$slick-dot-character: "\25C9"; // Changed
+$slick-dot-size-inactive: 25px; // Added 
+$slick-dot-size: 50px; // Changed
 $slick-opacity-default: 0.75 !default;
 $slick-opacity-on-hover: 1 !default;
 $slick-opacity-not-active: 0.25 !default;
@@ -137,7 +139,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-dots {
     position: absolute;
-    bottom: -25px;
+    bottom: 60px;
     list-style: none;
     display: block;
     text-align: center;
@@ -167,6 +169,8 @@ $slick-opacity-not-active: 0.25 !default;
             &:hover, &:focus {
                 outline: none;
                 &:before {
+                    content: $slick-dot-character; // Added
+                    font-size: $slick-dot-size-inactive; // Changed
                     opacity: $slick-opacity-on-hover;
                 }
             }
@@ -174,7 +178,7 @@ $slick-opacity-not-active: 0.25 !default;
                 position: absolute;
                 top: 0;
                 left: 0;
-                content: $slick-dot-character;
+                content: $slick-dot-character-inactive; // Changed 
                 width: 20px;
                 height: 20px;
                 font-family: $slick-font-family;
@@ -188,8 +192,10 @@ $slick-opacity-not-active: 0.25 !default;
             }
         }
         &.slick-active button:before {
+            content: $slick-dot-character; // Added
             color: $slick-dot-color-active;
             opacity: $slick-opacity-default;
+            font-size: $slick-dot-size-inactive; //Added 
         }
     }
 }
