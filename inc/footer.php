@@ -108,7 +108,7 @@
         </div>
         <div class="footer__bottom">
             <div class="footer__license">
-            &copy; Copyright Netmatters 2022.&nbsp; 
+            &copy; Copyright Netmatters <?php echo date("Y"); ?>.&nbsp; 
             <br class="visible-xs">All rights reserved.&nbsp;
             <span>&nbsp;-&nbsp;&nbsp;</span>
             <ul>
