@@ -2,17 +2,19 @@
     <header class="header">
         <div class="container">
             <div class="header__top-row">
-                <a class="header__logo-link" href="#">
+                <a class="header__logo-link" href="index.php">
                     <img src="img/logo.png" alt="Netmatters">
                 </a>
                 <button class="header__support-btn" type="button">
                     <i class="fa-solid fa-computer-mouse"></i>
                     Support
                 </button>
-                <button class="header__contact-btn" type="button">
-                    <i class="fa-regular fa-paper-plane"></i>
-                    Contact
-                </button>
+                <a href="contact.php">
+                    <button class="header__contact-btn" type="button">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        Contact
+                    </button>
+                </a>
                 <input class="header__search-sm" type="search" placeholder="Search...">
                 <button class="header__search-sm-btn" type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
