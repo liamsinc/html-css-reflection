@@ -151,34 +151,6 @@ function calcMainContentWidth() {
 // ---------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------
 
-/* 
-REDUNDANT
-adjustHeroSection() is invoked by toggleStickyHeader().
-
-It calculates the correct margin to apply to the hero content
-when the header become sticky, based on the current breakpoint.
-
-Stops page jumping up to fill the empty space when the header 
-becomes sticky.
-*/
-
-// function adjustHeroSection() {
-//     // Grab the current window width:
-//     let windowWidth = $(window).width();
-
-//     // Apply the appropriate adjustment based on current breakpoint:
-//     if (windowWidth < breakpoints[1]) {
-//         $($heroSection).css(stickyHeroMedium);
-//     } else if (windowWidth < breakpoints[2] && windowWidth >= breakpoints[1]) {
-//         $($heroSection).css(stickyHeroSmall);
-//     } else {
-//         $($heroSection).css(stickyHeroLarge);
-//     }
-// };
-
-// ---------------------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------------------
-
 /*
 toggleStickyHeader() is invoked whenever a scroll event is fired.
 
@@ -192,7 +164,7 @@ section and the header.
 If the check returns false, check if old y position - 10 is greater than
 current y position (indicating the user has scrolled up and IS NOT 
 at the top of the page), and if true, apply the sticky class
-to the header and invoke adjustHeroSection().
+to the header.
 
 I check the old y position +/- 10 in order to stop the header from
 flickering on touchscreen devices.
@@ -328,7 +300,21 @@ function toggleCarouselAutoplay(element, settings) {
         settings.autoplay = true;
         $(element).slick('slickPlay');
     }
-}
+};
+
+/* 
+checkPage() returns true if the current location is the homepage.
+Used to prevent certain carousel functions from running on pages where carousels are not present.
+*/
+
+function checkPage() {
+    const currentLoc = $(location).attr('href');
+    if(currentLoc.endsWith("index.php")) {
+        return true;
+    } else {
+        return false;
+    }
+};
 
 
 // ---------------------------------------------------------------------------------------------------------------
@@ -341,11 +327,13 @@ function toggleCarouselAutoplay(element, settings) {
 
 $(function () {
     // Scroll to the top of the page:
-    $($htmlBody).scrollTop(0)
-
+    $($htmlBody).scrollTop(0);
+    
     //initialize the carousels:
-    intializeCarousel($heroCarousel, slickHeroSettings);
-    intializeCarousel($awardsCarousel, slickAwardSettings);
+    if (checkPage()) {
+        intializeCarousel($heroCarousel, slickHeroSettings);
+        intializeCarousel($awardsCarousel, slickAwardSettings);
+    }
     
     //initialize the cookies:
     initializeCookies(cookieSettings);
@@ -360,14 +348,19 @@ $($menuButton).on('click', function () {
     oldYPos = $(window).scrollTop();
     toggleClass(this, hamburgerActiveClass);
     toggleSideMenu();
-    toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+    if (checkPage()) {
+        toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+    }
+    
 });
 
 // Invoke some functions when a link inside the side menu is clicked:
 $($sideMenuLinks).on('click', function () {
     toggleClass($menuButton, hamburgerActiveClass);
     toggleSideMenu();
-    toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+    if (checkPage()) {
+        toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+    }
 });
 
 // Invoke toggleStickyHeader() when scroll event is triggered:
@@ -383,7 +376,9 @@ $(window).on('resize', function () {
 $($overlay).on('click', function () {
     toggleClass($menuButton, hamburgerActiveClass);
     toggleSideMenu();
-    toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+    if (checkPage()) {
+        toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
+    }
 });
 
 

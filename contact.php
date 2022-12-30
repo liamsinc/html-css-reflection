@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netmatters | Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters</title>
+    <title>Contact Us | Netmatters</title>
     <script src="https://kit.fontawesome.com/99c00af02e.js" crossorigin="anonymous"></script>
     <script src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -19,8 +19,12 @@
 
             <h1></h1>
 
-            <?php require "inc/footer.php"; ?>
+            <?php
+                require "inc/newsletter.php";
+                require "inc/footer.php"; 
+            ?>
         </div>
+        <?php require "inc/sidemenu.php"; ?>
     </div>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/app.js"></script>
