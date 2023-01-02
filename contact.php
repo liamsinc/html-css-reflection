@@ -16,8 +16,19 @@
         <div class="overlay"></div>
         <div class="main__content">
             <?php require "inc/header.php"; ?>
+            
+            <section class="breadcrumb__section">
+                <div class="navspan">
+                    <div class="navspan__content container">
+                        <p class="navspan__text"><a href="index.php">Home</a>&nbsp;&nbsp;/&nbsp;&nbsp;Our Offices</p>
+                    </div>
+                </div>
+            </section>
 
-            <h1></h1>
+            <section class="offices__section container">
+                <h1 class="offices__heading">Our Offices</h1>
+                
+            </section>
 
             <?php
                 require "inc/newsletter.php";

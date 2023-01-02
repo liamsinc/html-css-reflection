@@ -1,0 +1,26 @@
+.navspan {
+    color: $pauper;
+    padding: 15px 0px 15px 8px;
+    font-size: em(13px);
+    box-shadow: 0px 5px 35px rgba(0,0,0,.1);
+
+    &__content > p > a {
+        font-weight: $font-weight--bold;
+        color: $pauper;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.offices {
+    &__section {
+        height: 1000px;
+    }
+
+    &__heading {
+        margin-top: em(22px);
+        font-size: em(36px);
+        font-weight: $font-weight--regular;
+    }
+}
