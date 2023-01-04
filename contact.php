@@ -16,36 +16,25 @@
         <div class="overlay"></div>
         <div class="main__content">
             <?php require "inc/header.php"; ?>
-            <?php
 
-            require 'inc/DatabaseModel.php';
-
-            $db = new DatabaseModel('localhost', 'netmatters', 'root');
-
-            $data = $db->select("SELECT * FROM test");
-
-            echo $data[0][0];
-
-            
-
-            
-
-            
-            
-            ?>
-            
             <section class="breadcrumb__section">
-                <div class="navspan">
-                    <div class="navspan__content container">
-                        <p class="navspan__text"><a href="index.php">Home</a>&nbsp;&nbsp;/&nbsp;&nbsp;Our Offices</p>
-                    </div>
+                <div class="breadcrumb__wrapper container">
+                    <p class="breadcrumb__text"><a class="breadcrumb__link" href="index.php">Home</a>&nbsp;&nbsp;/&nbsp;&nbsp;Our Offices</p> 
                 </div>
             </section>
 
-            <section class="offices__section container">
-                <h1 class="offices__heading">Our Offices</h1>
-                
+            <section class="xs__heading__section">
+                <div class="xs__heading__wrapper container">
+                    <h2 class="xs__heading__title">Our Offices</h2>  
+                </div>
             </section>
+
+            <section class="xl__heading__section">
+                <div class="xl__heading__wrapper container">
+                    <h2 class="xl__heading__title">Our Offices</h2>  
+                </div>
+            </section>
+            
 
             <?php
                 require "inc/newsletter.php";

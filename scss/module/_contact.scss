@@ -1,26 +1,85 @@
-.navspan {
-    color: $pauper;
-    padding: 15px 0px 15px 8px;
-    font-size: em(13px);
-    box-shadow: 0px 5px 35px rgba(0,0,0,.1);
+// Mixins holding repeated styles:
+@mixin contact-heading-wrapper-styles () {
+    height: inherit;
+    display: flex;
+    align-items: center; 
+}
 
-    &__content > p > a {
-        font-weight: $font-weight--bold;
+@mixin contact-heading-text-styles () {
+    font-size: em(36px);
+    font-weight: $font-weight--regular;
+}
+
+//---------------------------------------------------------------------------------
+
+// The breadcrumb navigation bar:
+.breadcrumb {
+    // The outer container:
+    &__section {
+        display: none;
+        height: em(46px);
         color: $pauper;
-        &:hover {
-            text-decoration: underline;
+        border-top: 1px solid $black;
+        box-shadow: 0 5px 35px rgba(0,0,0,.1);
+
+        @include media-query(medium) {
+            display: block;
         }
+
+        @include media-query(large) {
+            border: none;
+        }
+    }
+
+    // The inner container:
+    &__wrapper { @include contact-heading-wrapper-styles(); }
+
+    // The text: " / Our Offices":
+    &__text { font-size: em(13px); }
+
+    // The link: "Home":
+    &__link {
+        font-weight: $font-weight--bold;
+        color: inherit;
+        &:hover { text-decoration: underline; }
     }
 }
 
-.offices {
+// The page heading on smaller screens:
+.xs__heading {
+    // The outer container:
     &__section {
-        height: 1000px;
+        height: em(90px);
+        color: $white;
+        background-color: $pauper;
+
+        @include media-query(large) {
+            display: none;
+        }
     }
 
-    &__heading {
-        margin-top: em(22px);
-        font-size: em(36px);
-        font-weight: $font-weight--regular;
+    // The inner container:
+    &__wrapper { @include contact-heading-wrapper-styles(); }
+
+    // The page heading:
+    &__title { @include contact-heading-text-styles(); }
+}
+
+// The page heading on larger screens:
+.xl__heading {
+    // The outer container:
+    &__section {
+        display: none;
+        height: em(140px);
+
+        @include media-query(large) {
+            display: block;
+        }
     }
+
+    // The inner container:
+    &__wrapper { @include contact-heading-wrapper-styles(); }
+
+    // The page heading:
+    &__title { @include contact-heading-text-styles(); }
 }

@@ -1,14 +1,12 @@
 <?php
 
-// echo phpinfo();
-
 class DatabaseModel
 {
     protected $server;
     protected $database;
     protected $username;
     protected $password;
-    public $connection;
+    protected $connection;
 
     public function __construct($host, $db, $user, $pw = "") 
     {
@@ -29,21 +27,35 @@ class DatabaseModel
         }
     }
 
-    function select($sql) {
+    function select($sql)
+    {
         try {
-            $stmt = $this->connection->prepare($sql);
-            $stmt->execute();
-            $rows = $stmt->fetchAll();
-            return $rows;
+            $query = $this->connection->prepare($sql);
+            $query->execute();
+            $results = $query->fetchAll();
+            return $results;
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
         }
     }
-
-    
-
 }
 
 
 
+// require 'inc/DatabaseModel.php';
+
+// $db = new DatabaseModel('localhost', 'netmatters', 'root');
+
+// $data = $db->select("SELECT * FROM test");
+
+// echo $data[0][0];
+
+            
+
+            
+
+            
+            
+
 ?>
+
