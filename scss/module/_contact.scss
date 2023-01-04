@@ -10,6 +10,13 @@
     font-weight: $font-weight--regular;
 }
 
+@mixin location-link-hover-styles () {
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: inherit;
+    }
+}
+
 //---------------------------------------------------------------------------------
 
 // The breadcrumb navigation bar:
@@ -52,6 +59,7 @@
         height: em(90px);
         color: $white;
         background-color: $pauper;
+        margin-bottom: em(80px);
 
         @include media-query(large) {
             display: none;
@@ -82,4 +90,71 @@
 
     // The page heading:
     &__title { @include contact-heading-text-styles(); }
+}
+
+// The location section:
+.location {
+    &__section {
+        height: fit-content;
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        max-width: em(710px);
+        border: 1px solid $cerebral-grey;
+        border-bottom-right-radius: em(15px);
+        border-bottom-left-radius: em(15px);
+
+        & > img { width: 100%; }
+    }
+
+    &__content { 
+        padding: 30px; 
+    }
+
+    &__title {
+        margin-bottom: em(15px);
+        font-size: em(18px);
+        color: $pauper;
+
+        & > a {
+            color: inherit;
+            @include location-link-hover-styles();
+        }
+    }
+
+    &__address {
+        margin-bottom: em(20px);
+        font-size: em(13px);
+        color: $squant;
+
+        & > li { margin-bottom: em(10px); }
+    } 
+        
+
+    &__phone {
+        font-weight: $font-weight--bold;
+        color: $violet-frog;
+        font-size: em(26px);
+        @include location-link-hover-styles();
+    }
+
+    &__btn {
+        color: $white;
+        text-transform: uppercase;
+        font-size: em(15px);
+        height: em(50px);
+        width: em(155px);
+        margin-top: em(15px);
+        background-color: $violet-frog;
+        border: 1px solid transparent;
+        border-radius: em(3px);
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($violet-frog, 10%);
+        }
+    }
 }

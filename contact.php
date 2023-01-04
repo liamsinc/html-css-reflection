@@ -37,6 +37,83 @@
                     <h2 class="xl__heading__title">Our Offices</h2>  
                 </div>
             </section>
+
+            <section class="location__section">
+                <div class="location__wrapper container">
+                    <div class="location__item">
+                        <img src="img/cambridge.jpg" alt="Cambridge Office">
+                        <div class="location__content">
+                            <p class="location__title"><a href="#">Cambridge Office</a></p>
+                            <ul class="location__address">
+                                <li>Unit 1.31,</li>
+                                <li>St John's Innovation Centre,</li>
+                                <li>Cowley Road, Milton,</li>
+                                <li>Cambridge,</li>
+                                <li>CB4 0WS</li>
+                            </ul>
+                            <a class="location__phone" href="tel:01223375772">01223 37 57 72</a>
+                            <br>
+                            <button class="location__btn">View More</button>
+                        </div>
+                    </div>
+                    <div class="location__map">
+                        <img src="" alt="Cambridge Office Location">
+                    </div>
+                    <div class="location__item">
+                        <img src="img/wymondham.jpg" alt="Wymondham Office">
+                        <div class="location__content">
+                            <p class="location__title"><a href="#">Wymondham Office</a></p>
+                            <ul class="location__address">
+                                <li>Unit 15,</li>
+                                <li>Penfold Drive,</li>
+                                <li>Gateway 11 Business Park,</li>
+                                <li>Wymondham, Norfolk,</li>
+                                <li>NR18 0WZ</li>
+                            </ul>
+                            <a class="location__phone" href="tel:01603704020">01603 70 40 20</a>
+                            <br>
+                            <button class="location__btn">View More</button>
+                        </div>
+                    </div>
+                    <div class="location__map">
+                        <img src="" alt="Wymondham Office Location">
+                    </div>
+                    <div class="location__item">
+                        <img src="img/yarmouth.jpg" alt="Great Yarmouth Office">
+                        <div class="location__content">
+                            <p class="location__title"><a href="#">Great Yarmouth Office</a></p>
+                            <ul class="location__address">
+                                <li>Suite F23,</li>
+                                <li>Beacon Innovation Centre,</li>
+                                <li>Beacon Park, Gorleston,</li>
+                                <li>Great Yarmouth, Norfolk,</li>
+                                <li>NR31 7RA</li>
+                            </ul>
+                            <a class="location__phone" href="tel:01493603204">01493 60 32 04</a>
+                            <br>
+                            <button class="location__btn">View More</button>
+                        </div>
+                    </div>
+                    <div class="location__map">
+                        <img src="" alt="Great Yarmouth Office Location">
+                    </div>
+                </div>
+            </section>
+
+            <section class="info__section">
+                <div class="info__wrapper container">
+                    <div class="info__content">
+                        <p class="info_text">Email us on:</p>
+                        <a class="info__email" href="mailto:sales@netmatters.com">sales@netmatters.com</a>
+                        <p class="info_text">Business hours:</p>
+                        <p class="info_text">Monday - Friday 07:00 - 18:00</p>
+                    </div>
+                    <p class="info__btn">Out of Hours IT Support</p>
+                    <div class="info__dropdown">
+
+                    </div>
+                </div>
+            </section>
             
 
             <?php
