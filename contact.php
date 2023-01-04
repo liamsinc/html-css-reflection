@@ -19,7 +19,10 @@
 
             <section class="breadcrumb__section">
                 <div class="breadcrumb__wrapper container">
-                    <p class="breadcrumb__text"><a class="breadcrumb__link" href="index.php">Home</a>&nbsp;&nbsp;/&nbsp;&nbsp;Our Offices</p> 
+                    <p class="breadcrumb__text">
+                        <a class="breadcrumb__link" href="index.php">Home</a>
+                        &nbsp;/&nbsp; Our Offices
+                    </p> 
                 </div>
             </section>
 
