@@ -18,20 +18,19 @@
             <?php require "inc/header.php"; ?>
             <?php
 
-            $servername = "127.0.0.1";
-            $username = "root";
-            $password = "";
+            require 'inc/DatabaseModel.php';
 
-            try {
-                echo "Hello\n";
-                $conn = new PDO("mysql:host=$servername;dbname=netmatters", $username, $password);
-                // set the PDO error mode to exception
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                echo "Connected successfully";
-            } catch(PDOException $e) {
-                echo "Connection failed: " . $e->getMessage();
-            }
+            $db = new DatabaseModel('localhost', 'netmatters', 'root');
 
+            $data = $db->select("SELECT * FROM test");
+
+            echo $data[0][0];
+
+            
+
+            
+
+            
             
             ?>
             
