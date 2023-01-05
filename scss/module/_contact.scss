@@ -345,6 +345,8 @@
         padding: em(5px) em(15px);
         text-transform: uppercase;
         cursor: pointer;
+
+        &:hover { background-color: darken($violet-frog, 10%); }
     }
 
     &__required:before {
