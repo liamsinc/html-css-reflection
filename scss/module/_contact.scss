@@ -10,7 +10,7 @@
     font-weight: $font-weight--regular;
 }
 
-@mixin location-link-hover-styles () {
+@mixin link-hover-styles () {
     &:hover {
         text-decoration: underline;
         text-decoration-color: inherit;
@@ -143,7 +143,7 @@
 
         & > a {
             color: inherit;
-            @include location-link-hover-styles();
+            @include link-hover-styles();
         }
     }
 
@@ -160,7 +160,7 @@
         font-weight: $font-weight--bold;
         color: $violet-frog;
         font-size: em(26px);
-        @include location-link-hover-styles();
+        @include link-hover-styles();
     }
 
     &__btn {
@@ -203,5 +203,97 @@
                 }
             }
         }
+    }
+}
+
+.info {
+
+    &__form__container {
+        display: flex;
+        flex-direction: column;
+        @include media-query(x-large) {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: flex-start;
+            column-gap: em(30px);
+        }
+
+    }
+
+    &__content {
+        & > p:first-child {
+            margin-top: 0;
+        }
+    }
+    
+
+
+    &__wrapper {
+        padding-left: 5px;
+
+        @include media-query(large) {
+            padding-left: 0;
+        }
+    }
+
+    &__btn {
+        font-weight: $font-weight--bold;
+        margin-bottom: em(30px);
+        @include link-hover-styles();
+        cursor: pointer;
+    }
+
+    &__dropdown {
+
+        & > p:first-child, p:last-child {
+            line-height: em(30px);
+            color: $squant;
+            font-weight: $font-weight--regular;
+        }
+
+        & > p:first-child {
+            margin-top: 0;
+        }
+    }
+        
+    &__text {
+        font-weight: $font-weight--bold;
+        margin-bottom: em(35px);
+        margin-top: em(35px);
+    }
+
+    &__hours {
+        font-weight: $font-weight--bold;
+        margin-bottom: em(20px);
+        margin-top: em(20px);
+    }
+
+    &__email {
+        color: $violet-frog;
+        font-weight: $font-weight--bold;
+        font-size: em(26px);
+
+        @include link-hover-styles();
+    }
+
+
+
+}
+
+.form {
+    &__form {
+        height: fit-content;
+        max-width: em(720px);
+        background-color: red;
+        margin-bottom: em(32px);
+        border-radius: 15px;
+
+        @include media-query (large) {
+            max-width: em(940px);
+        }    
+
+        @include media-query (x-large) {
+            min-width: em(770px);
+        }        
     }
 }

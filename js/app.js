@@ -13,6 +13,8 @@ const $heroSection = '.hero-section';
 const $awardsCarousel = '.accolades__wrapper';
 const $heroCarousel = '.hero__carousel';
 const $overlay = '.overlay';
+const $infoDropdown = '.info__dropdown';
+const $infoBtn = '.info__btn';
 
 //Jquery multi-element selectors:
 
@@ -316,6 +318,14 @@ function checkPage() {
     }
 };
 
+function toggleDropdown() {
+    if ($($infoDropdown).is($visible)) {
+        $($infoDropdown).slideUp();
+    } else {
+        $($infoDropdown).slideDown();
+    }
+}
+
 
 // ---------------------------------------------------------------------------------------------------------------
 // END OF FUNCTIONS
@@ -328,6 +338,7 @@ function checkPage() {
 $(function () {
     // Scroll to the top of the page:
     $($htmlBody).scrollTop(0);
+    $($infoDropdown).hide();
     
     //initialize the carousels:
     if (checkPage()) {
@@ -380,5 +391,9 @@ $($overlay).on('click', function () {
         toggleCarouselAutoplay($heroCarousel, slickHeroSettings);
     }
 });
+
+$($infoBtn).on('click', function () {
+    toggleDropdown();
+})
 
 

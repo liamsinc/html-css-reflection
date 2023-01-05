@@ -109,21 +109,37 @@
                 </div>
             </section>
 
-            <section class="info__section">
-                <div class="info__wrapper container">
-                    <div class="info__content">
-                        <p class="info_text">Email us on:</p>
-                        <a class="info__email" href="mailto:sales@netmatters.com">sales@netmatters.com</a>
-                        <p class="info_text">Business hours:</p>
-                        <p class="info_text">Monday - Friday 07:00 - 18:00</p>
+            <div class="info__form__container container">
+                <section class="info__section">
+                    <div class="info__wrapper">
+                        <div class="info__content">
+                            <p class="info__text">Email us on:</p>
+                            <a class="info__email" href="mailto:sales@netmatters.com">sales@netmatters.com</a>
+                            <p class="info__text">Business hours:</p>
+                            <p class="info__text">Monday - Friday 07:00 - 18:00</p>
+                        </div>
+                        <p class="info__btn">Out of Hours IT Support <i class="fa-solid fa-chevron-down"></i></p>
+                        <div class="info__dropdown">
+                            <p class="info__text">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                            <p class="info__hours">Monday - Friday 18:00 - 22:00</p>
+                            <p class="info__hours">Saturday 08:00 - 16:00</p>
+                            <p class="info__hours">Sunday 10:00 - 18:00</p>
+                            <p class="info__text">
+                                To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail.
+                                A technician will contact you on the number provided within 45 minutes of your call.
+                            </p>
+                        </div>
                     </div>
-                    <p class="info__btn">Out of Hours IT Support</p>
-                    <div class="info__dropdown">
+                </section>
 
+                <section class="form__section">
+                    <div class="form__wrapper">
+                        <div class="form__form">
+                            <h1>Hello</h1>
+                        </div>
                     </div>
-                </div>
-            </section>
-            
+                </section>
+            </div>
 
             <?php
                 require "inc/newsletter.php";
