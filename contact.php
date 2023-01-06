@@ -134,7 +134,7 @@
 
                 <section class="form__section">
                     <div class="form__wrapper">
-                        <form class="form__form" action="inc/test.php" method="post">
+                        <form class="form__form" method="post" action="inc/test.php">
                             <div class="form__group-2 form__group-2-flex">
                                 <div class="form__input__group">
                                     <label for="name" class="form__label required">Your Name</label>

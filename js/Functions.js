@@ -6,6 +6,14 @@ export class Functions
     #MAIN_CONTENT = '.main__content';
     #CONTAINER = '.container';
     #HEADER = '.header__wrapper';
+    SIDE_MENU_LINKS = '.sidemenu__service-item > ul > a > li, \
+        .sidemenu__service-wrapper, \
+        .sidemenu__service-item, \
+        .sidemenu__main, \
+        .sidemenu__item, \
+        .sidemenu__button'
+    ;
+    HTML_BODY = 'html, body';
     INFO_DROPDOWN = '.info__dropdown';
     SIDE_MENU = '.sidemenu';
     OVERLAY = '.overlay';
@@ -209,17 +217,21 @@ export class Functions
 
     /**
      * Strips HTML tags from a string.
-     * @param {string} str - The string to strip HTML tags from.
-     * @returns {string} - The string stripped of any HTML tags.
+     * @param {array} arr - An array containing the strings to strip HTML tags from.
+     * @returns {array} - An array containing the cleaned strings.
      */
-    stripTags (str) {
-        return str.replace(/(<([^>]+)>)/gi, "");
+    stripTags (arr) {
+        let cleaned = [];
+        for (let i = 0; i < arr.length; i++) {
+            cleaned.push(arr[i].replace(/(<([^>]+)>)/gi, ""));
+        }
+        return cleaned;
     };
 
     /**
      * Toggles the div containing out of hours support information.
      */
-    toggleDropDown() {
+    toggleDropdown() {
         if ($(this.INFO_DROPDOWN).is(':visible')) {
             $(this.INFO_DROPDOWN).slideUp();
         } else {
@@ -253,9 +265,27 @@ export class Functions
                     console.log("Marketing invalid!");
                     break;
                 default:
-                    console.log("Welcome to hell!");
+                    console.log("Default case reached!");
                     break;
             }
+        }
+    };
+
+    /**
+     * Gets the value of an element and returns it to the caller. Used for form fields.
+     * Additionally normalises the result from the checkbox input.
+     * @param {string} element - The element selector as a string.
+     * @returns {string} - The value of the selected element.
+     */
+    getValueOf(element) {
+        if (element === '#checkbox-2:checked') {
+            if ($(element).val() === undefined) {
+                return 'false';
+            } else {
+                return 'true';
+            }
+        } else {
+            return $(element).val().trim();
         }
     };
 };

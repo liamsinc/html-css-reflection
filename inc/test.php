@@ -1,38 +1,46 @@
 <?php
 
-header('location: ../contact.php');
 
-$filteredInputs = filter_input_array(INPUT_POST, [
-    "phone" => FILTER_SANITIZE_NUMBER_INT,
-    "email" => FILTER_SANITIZE_EMAIL
-]);
+require("Validation.php");
+require("View.php");
+require("Functions.php");
+require("DatabaseModel.php");
 
-$phone = $filteredInputs["phone"];
-$email = $filteredInputs["email"];
+$view = new View();
+$util = new Functions();
+$validator = new Validation();
+$db = new DatabaseModel('localhost', 'netmatters', 'root');
 
-/*
-I would have filtered all the inputs using filter_input / filter_input_array functions but
-the FILTER_SANITIZE_STRING flag has been depreceated. Using htmlspecialchars for inputs where 
-that flag would have been used.
-*/ 
+if (isset($_POST)) {
+    $name = trim(htmlspecialchars($_POST["name"]));
+    $company = trim(htmlspecialchars($_POST["company"]));
 
-$name = htmlspecialchars($_POST["name"]);
-$company = htmlspecialchars($_POST["company"]); 
-$subject = htmlspecialchars($_POST["subject"]);
-$message = htmlspecialchars($_POST["message"]);
-$marketing = htmlspecialchars($_POST["marketing"]);
+    $inputs = filter_input_array(INPUT_POST, [
+        "email" => FILTER_SANITIZE_EMAIL,
+        "phone" => FILTER_SANITIZE_NUMBER_INT
+    ]);
 
-$inputs = array($name, $company, $email, $phone, $subject, $message, $marketing);
+    $email = trim($inputs["email"]);
+    $phone = trim($inputs["phone"]);
+    
+    $subject = trim(htmlspecialchars($_POST["subject"]));
+    $message = trim(htmlspecialchars($_POST["message"]));
+    $marketing = trim(htmlspecialchars($_POST["marketing"]));
 
-var_dump($inputs);
+    $inputValues = array($name, $company, $email, $phone, $subject, $message, $marketing);
 
-for ($i = 0; $i < count($inputs); $i++) {
-    echo $inputs[$i] . "<br>";
+    $results = $util->validate($inputValues, $validator);
+
+    $formValid = $util->error_handler($results, $view, $validator);
+
+    if ($formValid) {
+        $db->insert($inputValues);
+    } else {
+        echo "Form invalid.";
+    }
+
+    
 }
-
-
-
-
 
 
 ?>
