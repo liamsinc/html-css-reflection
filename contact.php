@@ -191,7 +191,7 @@
         <?php require "inc/sidemenu.php"; ?>
     </div>
     <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/index.js"></script>
     <script type="module" src="js/contact.js"></script>
 </body>
 </html>

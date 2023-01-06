@@ -409,6 +409,6 @@
     </div>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/index.js"></script>
 </body>
 </html>
