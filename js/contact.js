@@ -2,15 +2,19 @@
 // CONTACT PAGE --------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------
 
-// Import class used for JS validation:
+// Import class(es):
 import { Validation } from "./Validation.js";
+import { Functions } from "./Functions.js";
+
+// Instantiate instances of imported class(es):
+const Utility = new Functions();
+const Validate = new Validation();
 
 // Declare jquery constants
-const $FORM = '.form__form';
-const $INFO_DROPDOWN = '.info__dropdown';
-const $INFO_BTN = '.info__btn';
-const $VISIBLE = ':visible';
-const $FORM_SUBMIT = '.form__button-2';
+const FORM = '.form__form';
+const INFO_DROPDOWN = Utility.INFO_DROPDOWN;
+const INFO_BTN = '.info__btn';
+const FORM_SUBMIT = '.form__button-2';
 const $CHECKBOX = '#checkbox-2:checked';
 const $NAME_INPUT = '#name';
 const $COMPANY_INPUT = '#company';
@@ -20,52 +24,14 @@ const $SUBJECT_INPUT = '#subject';
 const $MESSAGE_INPUT = '#message';
 const $CHECKBOX_INPUT = '#checkbox-2-input';
 
-function stripTags (original) {
-    return original.replace(/(<([^>]+)>)/gi, "");
-};
-
-function toggleDropdown() {
-    if ($($INFO_DROPDOWN).is($VISIBLE)) {
-        $($INFO_DROPDOWN).slideUp();
-    } else {
-        $($INFO_DROPDOWN).slideDown();
-    }
-};
-
-function formErrors(array) {
-    for (let i = 0; i < array.length; i++) {
-        switch(array[i]) {
-            case 0:
-                console.log("Name invalid!");
-                break;
-            case 1:
-                console.log("Email invalid!");
-                break;
-            case 2:
-                console.log("Phone invalid!");
-                break;
-            case 3:
-                console.log("Subject invalid!");
-                break;
-            case 4:
-                console.log("Message invalid!");
-                break;
-            case 5:
-                console.log("Marketing invalid!");
-                break;
-            default:
-                console.log("Welcome to hell!");
-
-        }
-    }
-}
-
 // Immediately hide the information dropdown:
-$($($INFO_DROPDOWN).hide());
+$($(INFO_DROPDOWN).hide());
 
-$($INFO_BTN).on('click', toggleDropdown);
+$(INFO_BTN).on('click', function () {
+    Utility.toggleDropdown();
+});
 
-$($FORM_SUBMIT).on('click', (event) => {
+$(FORM_SUBMIT).on('click', (event) => {
     // Prevent the default action:
     event.preventDefault();
 
@@ -97,23 +63,20 @@ $($FORM_SUBMIT).on('click', (event) => {
     // Call stripTags() on each value, then push the result to the cleanInputs array:
     for (let i = 0; i < dirtyInputs.length; i++) {
         let dirtyInput = dirtyInputs[i];
-        let cleanInput = stripTags(dirtyInput);
+        let cleanInput = Utility.stripTags(dirtyInput);
         cleanInputs.push(cleanInput);
     }
 
     // Validation ------------------------------------------------------------------------------------------
 
-    // Instantiate an object of the Validation class:
-    const VALIDATE = new Validation();
-
     // Declare variables for every required field and call my class methods on the relevant inputs:
-    let nameValid = VALIDATE.inputExists(cleanInputs[0]);
+    let nameValid = Validate.inputExists(cleanInputs[0]);
     // No need to validate company as its not a required field!
-    let emailValid = VALIDATE.email(cleanInputs[2]);
-    let phoneValid = VALIDATE.phone(cleanInputs[3]);
-    let subjectValid = VALIDATE.inputExists(cleanInputs[4]);
-    let messageValid = VALIDATE.inputExists(cleanInputs[5]);
-    let marketingValid = VALIDATE.inputExists(cleanInputs[6]);
+    let emailValid = Validate.email(cleanInputs[2]);
+    let phoneValid = Validate.phone(cleanInputs[3]);
+    let subjectValid = Validate.inputExists(cleanInputs[4]);
+    let messageValid = Validate.inputExists(cleanInputs[5]);
+    let marketingValid = Validate.inputExists(cleanInputs[6]);
 
     // Store the results in an array:
     let validationResults = [nameValid, emailValid, phoneValid, subjectValid, messageValid, marketingValid];
@@ -133,8 +96,8 @@ $($FORM_SUBMIT).on('click', (event) => {
         $($SUBJECT_INPUT).val(cleanInputs[4]);
         $($MESSAGE_INPUT).val(cleanInputs[5]);
         $($CHECKBOX_INPUT).val(cleanInputs[6]);
-        $($FORM).submit();
+        $(FORM).submit();
     } else {
-        formErrors(invalidFields);
+        Utility.formErrors(invalidFields);
     }
 });

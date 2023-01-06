@@ -6,6 +6,7 @@ export class Functions
     #MAIN_CONTENT = '.main__content';
     #CONTAINER = '.container';
     #HEADER = '.header__wrapper';
+    INFO_DROPDOWN = '.info__dropdown';
     SIDE_MENU = '.sidemenu';
     OVERLAY = '.overlay';
     
@@ -154,7 +155,7 @@ export class Functions
             settings.autoplay = true;
             $(element).slick('slickPlay');
         }
-    }
+    };
 
     /**
      * Determines which carousel is being targeted, then calls the #updateCarousel method.
@@ -204,5 +205,57 @@ export class Functions
      */
     initializeCookies(settings) {
         window.start.init(settings);
+    };
+
+    /**
+     * Strips HTML tags from a string.
+     * @param {string} str - The string to strip HTML tags from.
+     * @returns {string} - The string stripped of any HTML tags.
+     */
+    stripTags (str) {
+        return str.replace(/(<([^>]+)>)/gi, "");
+    };
+
+    /**
+     * Toggles the div containing out of hours support information.
+     */
+    toggleDropDown() {
+        if ($(this.INFO_DROPDOWN).is(':visible')) {
+            $(this.INFO_DROPDOWN).slideUp();
+        } else {
+            $(this.INFO_DROPDOWN).slideDown();
+        }
+    };
+
+    /**
+     * For now, identifies which form field was invalid and prints this to the console.
+     * @param {array} arr - The array containing the index(s) of invalid fields.
+     */
+    formErrors(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            switch(arr[i]) {
+                case 0:
+                    console.log("Name invalid!");
+                    break;
+                case 1:
+                    console.log("Email invalid!");
+                    break;
+                case 2:
+                    console.log("Phone invalid!");
+                    break;
+                case 3:
+                    console.log("Subject invalid!");
+                    break;
+                case 4:
+                    console.log("Message invalid!");
+                    break;
+                case 5:
+                    console.log("Marketing invalid!");
+                    break;
+                default:
+                    console.log("Welcome to hell!");
+                    break;
+            }
+        }
     };
 };
