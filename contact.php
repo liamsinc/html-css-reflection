@@ -182,35 +182,36 @@
                                 if ($formValid) {
                                     $db->insert($inputValues);
                                     $view->show_success();
+                                    $_POST = array();
                                 }
                             }
                         }
-                        ?>
+                        ?>  
                             <div class="enquiry_group enquiry__group-flex">
                                 <div class="enquiry__group-inner">
                                     <label for="e-fname" class="enquiry__label required">Your Name</label>
-                                    <input type="text" id="e-fname" name="e-fname" class="enquiry__input">
+                                    <input type="text" id="e-fname" name="e-fname" class="enquiry__input" value="<?php echo isset($_POST["e-fname"]) ? $_POST["e-fname"] : ''; ?>">
                                 </div>
                                 <div class="enquiry__group-inner">
                                     <label for="e-cname" class="enquiry__label">Company Name</label>
-                                    <input type="text" id="e-cname" name="e-cname" class="enquiry__input">
+                                    <input type="text" id="e-cname" name="e-cname" class="enquiry__input" value="<?php echo isset($_POST["e-cname"]) ? $_POST["e-cname"] : ''; ?>">
                                 </div>
                             </div>
                             <div class="enquiry_group enquiry__group-flex">
                                 <div class="enquiry__group-inner">
                                     <label for="e-email" class="enquiry__label required">Your Email</label>
-                                    <input type="text" id="e-email" name="e-email" class="enquiry__input">
+                                    <input type="text" id="e-email" name="e-email" class="enquiry__input" value="<?php echo isset($_POST["e-email"]) ? $_POST["e-email"] : ''; ?>">
                                 </div>
                                 <div class="enquiry__group-inner">
                                     <label for="e-phone" class="enquiry__label required">Your Telephone Number</label>
-                                    <input type="text" id="e-phone" name="e-phone" class="enquiry__input">
+                                    <input type="text" id="e-phone" name="e-phone" class="enquiry__input" value="<?php echo isset($_POST["e-phone"]) ? $_POST["e-phone"] : ''; ?>">
                                 </div>
                             </div>
                             <div class="enquiry_group">
                                 <label for="e-subject" class="enquiry__label required">Subject</label>
-                                <input type="text" id="e-subject" name="e-subject" class="enquiry__input">
+                                <input type="text" id="e-subject" name="e-subject" class="enquiry__input" value="<?php echo isset($_POST["e-subject"]) ? $_POST["e-subject"] : ''; ?>">
                                 <label for="e-message" class="enquiry__label required">Message</label>
-                                <textarea cols="50" rows="5" id="e-message" name="e-message" class="enquiry__area"></textarea>
+                                <textarea cols="50" rows="5" id="e-message" name="e-message" class="enquiry__area"><?php echo isset($_POST["e-message"]) ? $_POST["e-message"] : ''; ?></textarea>
                             </div>
                             <div class="enquiry_group">
                                 <div class="marketing__wrapper">
