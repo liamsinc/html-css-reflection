@@ -1,7 +1,19 @@
 <?php
 
 class Functions
-{
+{   
+    /**
+     * Handles any errors and determines validity of form.
+     * If the errors array is empty, $formValid will remain true and that will be returned.
+     * If the errors array contains values, it will determine the invalid field, and the reason it failed.
+     * It then sets $formValid to false, and calls a method of the $validator object which shows the PHP errors.
+     * 
+     * @param array $errors - An array containing any errors. Can be empty.
+     * @param object $view - An instance of the View class. Used to call a method.
+     * @param object $validator - An instance of the Validator class. Used to retrieve properties.
+     * 
+     * @return boolean $formValid - A boolean indicating if the form is valid.
+     */
     function error_handler ($errors, $view, $validator)
     {   
         $formValid = true;
@@ -72,7 +84,15 @@ class Functions
         return $formValid;
     }
 
-
+    /**
+     * Takes an array of values and for each value, calls the relevant validation method.
+     * Pushes the result ($res) to the $results array.
+     * 
+     * @param array $inputValues - An array containing the filtered form inputs.
+     * @param object $validator - An instance of the Validator class. Used to call methods.
+     * 
+     * @return array $results - An array of strings containing validation results.
+     */
     function validate($inputValues, $validator) 
     {   
         $results = array();

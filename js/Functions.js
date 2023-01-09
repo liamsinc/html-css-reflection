@@ -2,7 +2,7 @@ export class Functions
 {   
     // PROPERTIES --------------------------------------------------------------------------------
 
-    // Single element selectors:
+    // Element selectors:
     #MAIN_CONTENT = '.main__content';
     #CONTAINER = '.container';
     #HEADER = '.header__wrapper';
@@ -18,13 +18,13 @@ export class Functions
     SIDE_MENU = '.sidemenu';
     OVERLAY = '.overlay';
 
+    // Enquiry form input field IDs:
     NAME_FIELD = '#e-fname';
     COMPANY_FIELD = '#e-cname';
     EMAIL_FIELD = '#e-email';
     PHONE_FIELD = '#e-phone';
     SUBJECT_FIELD = '#e-subject';
     MESSAGE_FIELD = '#e-message';
-    
     
     // CSS class names:
     #STICKY = 'sticky__wrapper';
@@ -248,7 +248,10 @@ export class Functions
     };
 
     /**
-     * For now, identifies which form field was invalid and prints this to the console.
+     * Handles JS errors.
+     * Identifies which form fields were invalid and sets the relevant styling on the input field.
+     * Additionally prints a message to the console.
+     * 
      * @param {array} arr - The array containing the index(s) of invalid fields.
      */
     formErrors(arr) {
@@ -291,6 +294,7 @@ export class Functions
     /**
      * Gets the value of an element and returns it to the caller. Used for form fields.
      * Additionally normalises the result from the checkbox input.
+     * 
      * @param {string} element - The element selector as a string.
      * @returns {string} - The value of the selected element.
      */

@@ -14,18 +14,19 @@ const validate = new Validation();
 const FORM = '.enquiry__form';
 const INFO_DROPDOWN = util.INFO_DROPDOWN;
 const INFO_BTN = '.info__btn';
-const FORM_SUBMIT = '#e-submit';
 
 // Form input element selectors.
 const CHECKBOX_INPUT = '#e-checkbox:checked';
-const NAME_INPUT = '#e-fname';
-const COMPANY_INPUT = '#e-cname';
-const EMAIL_INPUT = '#e-email';
-const PHONE_INPUT = '#e-phone';
-const SUBJECT_INPUT = '#e-subject';
-const MESSAGE_INPUT = '#e-message';
+const FORM_SUBMIT = '#e-submit';
+const NAME_INPUT = util.NAME_FIELD;
+const COMPANY_INPUT = util.COMPANY_FIELD;
+const EMAIL_INPUT = util.EMAIL_FIELD;
+const PHONE_INPUT = util.PHONE_FIELD;
+const SUBJECT_INPUT = util.SUBJECT_FIELD;
+const MESSAGE_INPUT = util.MESSAGE_FIELD;
 
-// Hidden text input used to send checkbox result on submission.
+// Hidden text input used to send checkbox result on submission if JS enabled.
+// If JS is disabled then PHP handles determining checkbox input.
 const CHECKBOX_POST = '#e-checkbox-input'; 
 
 // Immediately hide the information dropdown:
@@ -83,7 +84,7 @@ $(FORM_SUBMIT).on('click', (event) => {
         }
     }
 
-    // If invalid fields is empty, no i
+    // If invalid fields is empty, override the field values with the cleaned inputs and submit the form.
     if (invalidInputs.length === 0) {
         $(NAME_INPUT).val(cleanInputs[0]); 
         $(COMPANY_INPUT).val(cleanInputs[1]);
@@ -94,6 +95,7 @@ $(FORM_SUBMIT).on('click', (event) => {
         $(CHECKBOX_POST).val(cleanInputs[6]);
         $(FORM).submit();
     } else {
+        // Else don't submit the form and call the formErrors method, passing in the invalidInputs array.
         util.formErrors(invalidInputs);
     }
 });

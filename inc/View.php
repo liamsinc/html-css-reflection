@@ -35,7 +35,13 @@ class View
     private const ERROR_HTML_1 = "<p class='enquiry__error'>";
     private const ERROR_HTML_2 = "</p>";
 
-
+    /**
+     * Displays the PHP errors to the user.
+     * Based on the field and the reason, it will determine which error(s) to display.
+     * 
+     * @param string $field - the field name.
+     * @param string $reason - the reason the validation failed.
+     */
     function show_errors($field, $reason)
     {   
 
