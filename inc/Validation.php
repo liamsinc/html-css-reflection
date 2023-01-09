@@ -11,6 +11,14 @@ class Validation
     private const PHONE_CHAR_REGEX = "/^[\d \-()]*$/";
     private const PHONE_FORMAT_REGEX = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/";
 
+
+    /**
+     * Returns an appropriate string based on the state of the input value.
+     * 
+     * @param string $name - The value of the name input field.
+     * 
+     * @return string - Can be "EMPTY", "LENGTH" or "VALID".
+     */
     function check_name($name)  
     {
         if (empty($name)) {
@@ -22,6 +30,14 @@ class Validation
         }
     }
 
+    /**
+     * Returns an appropriate string based on the state of the input value.
+     * Company name is not a required field so an empty string can be valid.
+     * 
+     * @param string $company - The value of the company name input field.
+     * 
+     * @return string - Can be "LENGTH" or "VALID". 
+     */
     function check_company($company) 
     {
         if (empty($company)) {
@@ -33,6 +49,13 @@ class Validation
         }
     }
 
+    /**
+     * Returns an appropriate string based on the state of the input value.
+     * 
+     * @param string $email - The value of the email input field.
+     * 
+     * @return string - Can be "EMPTY", "LENGTH", "REGEX" or "VALID".
+     */
     function check_email($email)
     {
         if (empty($email)) {
@@ -46,6 +69,13 @@ class Validation
         }
     }
 
+    /**
+     * Returns an appropriate string based on the state of the input value.
+     * 
+     * @param string $phone - The value of the phone input field.
+     * 
+     * @return string - Can be "EMPTY", "LENGTH", "NAN", "REGEX" or "VALID".
+     */
     function check_phone($phone)
     {
         if (empty($phone)) {
@@ -63,6 +93,13 @@ class Validation
         }
     }
 
+    /**
+     * Returns an appropriate string based on the state of the input value.
+     * 
+     * @param string $subject - The value of the subject input field.
+     * 
+     * @return string - Can be "EMPTY", "LENGTH" or "VALID".
+     */
     function check_subject($subject)
     {
         if (empty($subject)) {
@@ -74,6 +111,13 @@ class Validation
         }
     }
 
+    /**
+     * Returns an appropriate string based on the state of the input value.
+     * 
+     * @param string $message - The value of the message text area.
+     * 
+     * @return string - Can be "EMPTY", "LENGTH" or "VALID".
+     */
     function check_message($message) 
     {
         if (empty($message)) {
@@ -85,6 +129,13 @@ class Validation
         }
     }
     
+    /**
+     * Returns an appropriate string based on the state of the input value.
+     * 
+     * @param string $marketing - The value of the marketing input field.
+     * 
+     * @return string - Can be "EMPTY", "LENGTH" or "VALID".
+     */
     function check_marketing($marketing) 
     {
         if (empty($marketing)) {
