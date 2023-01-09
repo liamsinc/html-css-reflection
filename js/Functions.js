@@ -223,6 +223,8 @@ export class Functions
         window.start.init(settings);
     };
 
+    // CONTACT PAGE SPECIFIC METHODS START HERE ---------------------------------------------------------------
+
     /**
      * Strips HTML tags from a string.
      * @param {array} arr - An array containing the strings to strip HTML tags from.
