@@ -183,15 +183,13 @@
                             
                                 if ($formValid) {
                                     $db->insert($inputValues);
-                                } else {
-                                    echo "Form invalid.";
                                 }
                             }
                         }
                         ?>
-                            <div class="enquiry_group">
+                            <div class="enquiry_group enquiry__group-flex">
                                 <div class="enquiry__group-inner">
-                                    <label for="e-fname" class="enquiry__label">Your Name</label>
+                                    <label for="e-fname" class="enquiry__label required">Your Name</label>
                                     <input type="text" id="e-fname" name="e-fname" class="enquiry__input">
                                 </div>
                                 <div class="enquiry__group-inner">
@@ -199,21 +197,21 @@
                                     <input type="text" id="e-cname" name="e-cname" class="enquiry__input">
                                 </div>
                             </div>
-                            <div class="enquiry_group">
+                            <div class="enquiry_group enquiry__group-flex">
                                 <div class="enquiry__group-inner">
-                                    <label for="e-email" class="enquiry__label">Your Email</label>
+                                    <label for="e-email" class="enquiry__label required">Your Email</label>
                                     <input type="text" id="e-email" name="e-email" class="enquiry__input">
                                 </div>
                                 <div class="enquiry__group-inner">
-                                    <label for="e-phone" class="enquiry__label">Your Telephone Number</label>
+                                    <label for="e-phone" class="enquiry__label required">Your Telephone Number</label>
                                     <input type="text" id="e-phone" name="e-phone" class="enquiry__input">
                                 </div>
                             </div>
                             <div class="enquiry_group">
-                                <label for="e-subject" class="enquiry__label">Subject</label>
+                                <label for="e-subject" class="enquiry__label required">Subject</label>
                                 <input type="text" id="e-subject" name="e-subject" class="enquiry__input">
-                                <label for="e-message" class="enquiry__label">Message</label>
-                                <textarea cols="50" rows="10" id="e-message" name="e-message" class="enquiry__input"></textarea>
+                                <label for="e-message" class="enquiry__label required">Message</label>
+                                <textarea cols="50" rows="5" id="e-message" name="e-message" class="enquiry__area"></textarea>
                             </div>
                             <div class="enquiry_group">
                             <div class="enquriy__checkbox">
@@ -226,8 +224,9 @@
                                     <label class="marketing__label-2">Please see our <a class="form__link" href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>
                                 </div>
                             </div>
-                            <div class="enquiry_group">
+                            <div class="enquiry__group enquiry__group-inline">
                                 <input type="submit" id="e-submit">
+                                <p class="enquiry__required"> Fields Required</p>
                             </div>
                         </form>
                     </div>
@@ -276,7 +275,7 @@
                                 </div> 
                                 <div class="form__group-2 form__group-2-inline">
                                     <input class="form__button-2" type="submit" name="submit" value="Send Enquiry">
-                                    <p class="form__required"> Fields Required</p>
+                                    <p class="enquiry__required"> Fields Required</p>
                                 </div>
                             </div>
                         </form>

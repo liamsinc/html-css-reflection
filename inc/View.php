@@ -32,6 +32,9 @@ class View
         "LENGTH" => "The message field cannot exceed 2000 characters."
     );
 
+    private const ERROR_HTML_1 = "<p class='enquiry__error'>";
+    private const ERROR_HTML_2 = "</p>";
+
 
     function show_errors($field, $reason)
     {   
@@ -42,51 +45,51 @@ class View
         switch ($field) {
             case 'name':
                 if ($reason === 'empty') {
-                    echo self::NAME_ERRORS["NULL"]; 
+                    echo self::ERROR_HTML_1 . self::NAME_ERRORS["NULL"] . self::ERROR_HTML_2; 
                 } else {
-                    echo self::NAME_ERRORS["LENGTH"];
+                    echo self::ERROR_HTML_1 . self::NAME_ERRORS["LENGTH"] . self::ERROR_HTML_2;
                 }
                 break;
 
             case 'company':
-                echo self::COMPANY_ERROR;
+                echo self::ERROR_HTML_1 . self::COMPANY_ERROR  . self::ERROR_HTML_2;
                 break;
 
             case 'email':
                 if ($reason === 'empty') {
-                    echo self::EMAIL_ERRORS["NULL"];
+                    echo self::ERROR_HTML_1 . self::EMAIL_ERRORS["NULL"] . self::ERROR_HTML_2;
                 } else if ($reason === 'length') {
-                    echo self::EMAIL_ERRORS["LENGTH"];
+                    echo self::ERROR_HTML_1 . self::EMAIL_ERRORS["LENGTH"] . self::ERROR_HTML_2;
                 } else {
-                    echo self::EMAIL_ERRORS["FORMAT"];
+                    echo self::ERROR_HTML_1 . self::EMAIL_ERRORS["FORMAT"] . self::ERROR_HTML_2;
                 }
                 break;
 
             case 'phone':
                 if ($reason === 'empty') {
-                    echo self::PHONE_ERRORS["NULL"];
+                    echo self::ERROR_HTML_1 . self::PHONE_ERRORS["NULL"] . self::ERROR_HTML_2;
                 } else if ($reason === 'length') {
-                    echo self::PHONE_ERRORS["LENGTH"];
+                    echo self::ERROR_HTML_1 . self::PHONE_ERRORS["LENGTH"] . self::ERROR_HTML_2;
                 } else if ($reason === 'nan') {
-                    echo self::PHONE_ERRORS["NAN"];
+                    echo self::ERROR_HTML_1 . self::PHONE_ERRORS["NAN"] . self::ERROR_HTML_2;
                 } else {
-                    echo self::PHONE_ERRORS["FORMAT"];
+                    echo self::ERROR_HTML_1 . self::PHONE_ERRORS["FORMAT"] . self::ERROR_HTML_2;
                 }
                 break;
 
             case 'subject':
                 if ($reason === 'empty') {
-                    echo self::SUBJECT_ERRORS["NULL"];
+                    echo self::ERROR_HTML_1 . self::SUBJECT_ERRORS["NULL"] . self::ERROR_HTML_2;
                 } else {
-                    echo self::SUBJECT_ERRORS["LENGTH"];
+                    echo self::ERROR_HTML_1 . self::SUBJECT_ERRORS["LENGTH"] . self::ERROR_HTML_2;
                 }
                 break;
 
             case 'message':
                 if ($reason === 'empty') {
-                    echo self::MESSAGE_ERRORS["NULL"];
+                    echo self::ERROR_HTML_1 . self::MESSAGE_ERRORS["NULL"] . self::ERROR_HTML_2;
                 } else {
-                    echo self::MESSAGE_ERRORS["LENGTH"];
+                    echo self::ERROR_HTML_1 . self::MESSAGE_ERRORS["LENGTH"] . self::ERROR_HTML_2;
                 }
                 break;
         } 
