@@ -34,6 +34,7 @@ class View
 
     private const ERROR_HTML_1 = "<p class='enquiry__error'>";
     private const ERROR_HTML_2 = "</p>";
+    private const SUCCESS_HTML = "<p class='enquiry__success'>Enquiry sent successfully!</p>";
 
     /**
      * Displays the PHP errors to the user.
@@ -99,6 +100,14 @@ class View
                 }
                 break;
         } 
+    }
+
+    /**
+     * Displays a success message to the user.
+     */
+    function show_success()
+    {
+        echo self::SUCCESS_HTML;
     }
 }
 

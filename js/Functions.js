@@ -72,6 +72,12 @@ export class Functions
         ]
     };
 
+    // RegEx rules used by validator functions:
+    #emailRegex = /^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/; 
+    #phoneCharRegex = /^[\d \-()]*$/;
+    #phoneFormatRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+
+
     // METHODS --------------------------------------------------------------------------------
 
     /**
@@ -79,7 +85,8 @@ export class Functions
      * Used to prevent certain carousel functions from running on pages where carousels are not present.
      * @returns {boolean} - true if currently on the homepage, false if not.
      */
-    checkPage() {
+    checkPage() 
+    {
         let currentLoc = $(location).attr('href');
         if(currentLoc.endsWith("index.php") || currentLoc.endsWith("index.php#")) {
             return true;
@@ -92,7 +99,8 @@ export class Functions
      * Calculates and sets the width of the main content.
      * Called when the side menu is toggled or the window is resized.
      */
-    calcMainContentWidth() {
+    calcMainContentWidth() 
+    {
         if ($(this.SIDE_MENU).is(':visible')) {
             let windowWidth = $(window).width();
             let widthToApply = 0;
@@ -113,7 +121,8 @@ export class Functions
      * Opens or closes the side menu.
      * Invokes the calcMainContentWidth() method.
      */
-    toggleSideMenu() {
+    toggleSideMenu() 
+    {
         if ($(this.SIDE_MENU).is(':hidden')) {
             $(this.SIDE_MENU).show().scrollTop(0);
             $(this.OVERLAY).css(this.#DISPLAY_BLOCK);
@@ -133,7 +142,8 @@ export class Functions
      * Applies the relevant slick settings based on the parameter value.
      * @param {string} element - the element selector as a string. 
      */
-    intializeCarousel(element) {
+    intializeCarousel(element) 
+    {
         if (element === '.hero__carousel') {
             $(element).slick(this.heroSettings);
         } else {
@@ -145,7 +155,8 @@ export class Functions
      * Activates or deactivates the sticky header.
      * Toggles based on scroll direction and only when more than 10 pixels of scroll is detected.
      */
-    toggleStickyHeader() {
+    toggleStickyHeader() 
+    {
         let currentYPos = window.scrollY;
     
         if(currentYPos === 0 || (this.yPos + 10) < currentYPos){
@@ -163,7 +174,8 @@ export class Functions
      * @param {string} element - The element selector as a string.
      * @param {object} settings - The slick settings object to update.
      */
-    #updateCarousel(element, settings) {
+    #updateCarousel(element, settings) 
+    {
         if (settings.autoplay === true) {
             settings.autoplay = false;
             $(element).slick('slickPause');
@@ -178,7 +190,8 @@ export class Functions
      * Passes in the relevant slick settings object based on the element.
      * @param {string} element - The element selector as a string 
      */
-    toggleCarousel(element) {
+    toggleCarousel(element) 
+    {
         if (element === '.hero__carousel') {
             this.#updateCarousel(element, this.heroSettings);
         } else {
@@ -192,7 +205,8 @@ export class Functions
      * @param {string} element - The element selector as a string.
      * @param {string} className - The name of the class to toggle as a string. Default is #HAMBURGER.
      */
-    toggleClass(element, className = this.#HAMBURGER) {
+    toggleClass(element, className = this.#HAMBURGER) 
+    {
         if ($(element).hasClass(className)) {
             $(element).removeClass(className);
         } else {
@@ -205,7 +219,8 @@ export class Functions
      * @param {string} element - the element selector passed as a string.
      * @param {number} index - the index of the #BREAKPOINTS array value.
      */
-    scrollOnBreakpoint(element, index) {
+    scrollOnBreakpoint(element, index) 
+    {
         let windowWidth = $(window).width();
         let largeBreakLower = this.#BREAKPOINTS[index] - 10;
         let largeBreakUpper = this.#BREAKPOINTS[index] + 10;
@@ -219,7 +234,8 @@ export class Functions
      * Initializes the cookie plugin with given settings. 
      * @param {object} settings - The cookie settings passed as an object.
      */
-    initializeCookies(settings) {
+    initializeCookies(settings) 
+    {
         window.start.init(settings);
     };
 
@@ -230,7 +246,8 @@ export class Functions
      * @param {array} arr - An array containing the strings to strip HTML tags from.
      * @returns {array} - An array containing the cleaned strings.
      */
-    stripTags (arr) {
+    stripTags (arr) 
+    {
         let cleaned = [];
         for (let i = 0; i < arr.length; i++) {
             cleaned.push(arr[i].replace(/(<([^>]+)>)/gi, ""));
@@ -241,7 +258,8 @@ export class Functions
     /**
      * Toggles the div containing out of hours support information.
      */
-    toggleDropdown() {
+    toggleDropdown() 
+    {
         if ($(this.INFO_DROPDOWN).is(':visible')) {
             $(this.INFO_DROPDOWN).slideUp();
         } else {
@@ -256,7 +274,8 @@ export class Functions
      * 
      * @param {array} arr - The array containing the index(s) of invalid fields.
      */
-    formErrors(arr) {
+    formErrors(arr) 
+    {
         for (let i = 0; i < arr.length; i++) {
             switch(arr[i]) {
                 case 0:
@@ -300,15 +319,148 @@ export class Functions
      * @param {string} element - The element selector as a string.
      * @returns {string} - The value of the selected element.
      */
-    getValueOf(element) {
+    getValueOf(element) 
+    {
         if (element.endsWith(":checked")) {
             if ($(element).val() === undefined) {
-                return 'false';
+                return 'False';
             } else {
-                return 'true';
+                return 'True';
             }
         } else {
             return $(element).val().trim();
+        }
+    };
+
+    
+    /**
+     * Returns false if name is empty or exceeds 100 characters in length.
+     * Returns true otherwise.
+     * 
+     * @param {string} name - The value from the name input field.
+     * @returns {boolean}
+     */
+    checkName(name) 
+    {
+        if (name === '') {
+            return false;
+        } else if (name.length > 100) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    /**
+     * Returns false if company name exceeds 100 characters in length.
+     * Returns true otherwise.
+     * 
+     * @param {string} company - The value from the company name input field.
+     * @returns {boolean}
+     */
+    checkCompany(company) 
+    {
+        if (company.length > 100) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    /**
+     * Returns false if email is empty, exceeds 320 characters in length or fails the RegEx checks.
+     * Returns true otherwise.
+     * 
+     * @param {string} email - The value from the email input field.
+     * @returns {boolean}
+     */
+    checkEmail(email) 
+    {
+        if (email === '') {
+            return false;
+        } else if (email.length > 320){
+            return false;
+        } else if (!email.match(this.#emailRegex)) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    /**
+     * Returns false if phone is empty, exceeds 11 characters in length or fails the RegEx checks.
+     * Returns true otherwise.
+     * 
+     * @param {string} phone - The value from the phone input field.
+     * @returns {boolean}
+     */
+    checkPhone(phone) 
+    {
+        if (phone === '') {
+            return false;
+        } else if (phone.length > 11) {
+            return false;
+        } else if (!phone.match(this.#phoneCharRegex)) {
+            return false;
+        } else if (!phone.match(this.#phoneFormatRegex)) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+
+    /**
+     * Returns false if subject is empty or exceeds 200 characters in length.
+     * Returns true otherwise.
+     * 
+     * @param {string} subject - The value from the subject input field.
+     * @returns {boolean}
+     */
+    checkSubject(subject) 
+    {
+        if (subject === '') {
+            return false;
+        } else if (subject.length > 200) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    /**
+     * Returns false if message is empty or exceeds 2000 characters in length.
+     * Returns true otherwise.
+     * 
+     * @param {string} message - The value from the message text area. 
+     * @returns {boolean}
+     */
+    checkMessage(message) 
+    {
+        if (message === '') {
+            return false;
+        } else if (message.length > 2000) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    /**
+     * Returns true unless marketing is empty or exceeds 5 characters in length.
+     * Never expected to return false as I manully set marketing to be either true or false prior to validation.
+     * 
+     * @param {string} marketing - Will always be the string True or False
+     * @returns 
+     */
+    checkMarketing(marketing) 
+    {
+        if (marketing === '') {
+            return false;
+        } else if (marketing.length > 5) {
+            return false;
+        } else {
+            return true;
         }
     };
 };

@@ -397,6 +397,14 @@
         margin-bottom: em(20px);
 
     }
+
+    &__success {
+        background-color: #def2de;
+        color: #42a942;
+        border: 1px solid #ccebcc;
+        padding: em(15px);
+        margin-bottom: em(20px);
+    }
     
 }
 

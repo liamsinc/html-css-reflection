@@ -17,14 +17,14 @@
         <div class="main__content">
             <?php require "inc/header.php"; ?>
 
-            <section class="breadcrumb__section">
+            <div class="breadcrumb__section">
                 <div class="breadcrumb__wrapper container">
                     <p class="breadcrumb__text">
                         <a class="breadcrumb__link" href="index.php">Home</a>
                         &nbsp;/&nbsp; Our Offices
                     </p> 
                 </div>
-            </section>
+            </div>
 
             <section class="xs__heading__section">
                 <div class="xs__heading__wrapper container">
@@ -38,7 +38,7 @@
                 </div>
             </section>
 
-            <section class="location__section">
+            <div class="location__section">
                 <div class="location__wrapper container">
                     <div class="location__group">
                         <div class="location__item">
@@ -107,10 +107,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
             <div class="info__form__container container">
-                <section class="info__section">
+                <div class="info__section">
                     <div class="info__wrapper">
                         <div class="info__content">
                             <p class="info__text">Email us on:</p>
@@ -130,21 +130,19 @@
                             </p>
                         </div>
                     </div>
-                </section>
+                </div>
 
-                <section class="enquiry__section">
+                <div class="enquiry__section">
                     <div class="enquiry__wrapper">
                         <form class="enquiry__form" action="contact.php" method="post">
 
                         <?php
-                        require("inc/Validation.php");
                         require("inc/View.php");
                         require("inc/Functions.php");
                         require("inc/DatabaseModel.php");
                         
                         $view = new View();
                         $util = new Functions();
-                        $validator = new Validation();
                         $db = new DatabaseModel('localhost', 'netmatters', 'root');
 
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -166,23 +164,24 @@
                                 // Will be empty if JS disabled:
                                 $marketing = trim(htmlspecialchars($_POST["e-checkbox-input"]));
 
-                                // If JS is disabled extrapolate if the checkbox is ticked.
+                                // If JS is disabled check if the checkbox is ticked.
                                 if ($marketing === "") {
                                     if (isset($_POST["e-checkbox"])) {
-                                        $marketing = "true";
+                                        $marketing = "True";
                                     } else {
-                                        $marketing = "false";
+                                        $marketing = "False";
                                     }
                                 }
                                 
                                 $inputValues = array($name, $company, $email, $phone, $subject, $message, $marketing);
                             
-                                $results = $util->validate($inputValues, $validator);
+                                $results = $util->validate($inputValues);
                             
-                                $formValid = $util->error_handler($results, $view, $validator);
+                                $formValid = $util->error_handler($results, $view);
                             
                                 if ($formValid) {
                                     $db->insert($inputValues);
+                                    $view->show_success();
                                 }
                             }
                         }
@@ -216,8 +215,8 @@
                             <div class="enquiry_group">
                                 <div class="marketing__wrapper">
                                     <div class="marketing__checkbox">
-                                        <input class="form__checkbox" type="checkbox" id="e-checkbox" name="e-checkbox" value="True">
-                                        <input type="hidden" type="text" id="e-checkbox-input" name="e-checkbox-input">
+                                        <input class="form__checkbox" type="checkbox" id="e-checkbox" name="e-checkbox">
+                                        <input type="hidden" id="e-checkbox-input" name="e-checkbox-input">
                                         <i class="fa-solid fa-check checkbox-tick"></i>
                                     </div>
                                     <div class="marketing__text">
@@ -232,7 +231,7 @@
                             </div>
                         </form>
                     </div>
-                </section>
+                </div>
             </div>
 
             <?php

@@ -3,12 +3,10 @@
 //----------------------------------------------------------------------------------------------------------------
 
 // Import class(es):
-import { Validation } from "./Validation.js";
 import { Functions } from "./Functions.js";
 
 // Instantiate instances of imported class(es):
 const util = new Functions();
-const validate = new Validation();
 
 // Declare jquery constants
 const FORM = '.enquiry__form';
@@ -27,15 +25,22 @@ const MESSAGE_INPUT = util.MESSAGE_FIELD;
 
 // Hidden text input used to send checkbox result on submission if JS enabled.
 // If JS is disabled then PHP handles determining checkbox input.
-const CHECKBOX_POST = '#e-checkbox-input'; 
+const CHECKBOX_POST = '#e-checkbox-input';
+
+// Allows the user to refresh the page after a successful form submission, without resubmitting the data and showing the alert.
+if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+}
 
 // Immediately hide the information dropdown:
 $($(INFO_DROPDOWN).hide());
 
+// Event handler for the "Out of Hours IT Support" dropdown element:
 $(INFO_BTN).on('click', function () {
     util.toggleDropdown();
 });
 
+// Event handler for the "Send Enquiry" submit button:
 $(FORM_SUBMIT).on('click', (event) => {
     // Prevent the default action:
     event.preventDefault();
@@ -66,13 +71,13 @@ $(FORM_SUBMIT).on('click', (event) => {
     // Validation ------------------------------------------------------------------------------------------
 
     // Declare variables for every required field and call my class methods on the relevant inputs:
-    let nameValid = validate.inputExists(cleanInputs[0]);
-    let companyValid = validate.inputLength(cleanInputs[1]);
-    let emailValid = validate.email(cleanInputs[2]);
-    let phoneValid = validate.phone(cleanInputs[3]);
-    let subjectValid = validate.inputExists(cleanInputs[4]);
-    let messageValid = validate.inputExists(cleanInputs[5]);
-    let marketingValid = validate.inputExists(cleanInputs[6]);
+    let nameValid = util.checkName(cleanInputs[0]);
+    let companyValid = util.checkCompany(cleanInputs[1]);
+    let emailValid = util.checkEmail(cleanInputs[2]);
+    let phoneValid = util.checkPhone(cleanInputs[3]);
+    let subjectValid = util.checkSubject(cleanInputs[4]);
+    let messageValid = util.checkMessage(cleanInputs[5]);
+    let marketingValid = util.checkMarketing(cleanInputs[6]);
 
     // Store the results in an array:
     results.push(nameValid, companyValid, emailValid, phoneValid, subjectValid, messageValid, marketingValid);
