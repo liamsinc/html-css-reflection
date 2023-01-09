@@ -233,56 +233,6 @@
                         </form>
                     </div>
                 </section>
-
-                <!-- <section class="form__section">
-                    <div class="form__wrapper">
-                        <form class="form__form" method="post" action="inc/test.php">
-                            <div class="form__group-2 form__group-2-flex">
-                                <div class="form__input__group">
-                                    <label for="name" class="form__label required">Your Name</label>
-                                    <input type="text" id="name" class="form__input" name="name" value="">
-                                </div>
-                                <div class="form__input__group">
-                                    <label for="company" class="form__label">Company Name</label>
-                                    <input type="text" id="company" class="form__input" name="company" value="">
-                                </div>
-                            </div>
-                            <div class="form__group-2 form__group-2-flex">
-                                <div class="form__input__group">
-                                    <label for="email" class="form__label required">Your Email</label>
-                                    <input type="text" id="email" class="form__input" name="email" value="">
-                                </div>
-                                <div class="form__input__group">
-                                    <label for="phone" class="form__label required">Your Telephone Number</label>
-                                    <input type="tel" id="phone" class="form__input" name="phone" value="">
-                                </div>
-                            </div>
-                            <div class="form__group-2">
-                                <label for="subject" class="form__label required">Subject</label>
-                                <input type="text" id="subject" class="form__input" name="subject" value="">
-                                <label for="message" class="form__label required">Message</label>
-                                <textarea cols="50" rows="10" id="message" class="form__input form__input-message" name="message" value=""></textarea>
-                            </div>
-                            <div class="form__group-2">
-                                <div class="marketing__wrapper">
-                                    <div class="marketing__checkbox">
-                                        <input class="form__checkbox" type="checkbox" id="checkbox-2">
-                                        <input type="hidden" type="text" id="checkbox-2-input" name="marketing" value="">
-                                        <i class="fa-solid fa-check checkbox-tick"></i>
-                                    </div>
-                                    <div class="marketing__text">
-                                        <label class="marketing__label-1" for="checkbox-2">Please tick this box if you wish to receive marketing information from us.</label>
-                                        <label class="marketing__label-2">Please see our <a class="form__link" href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>
-                                    </div>
-                                </div> 
-                                <div class="form__group-2 form__group-2-inline">
-                                    <input class="form__button-2" type="submit" name="submit" value="Send Enquiry">
-                                    <p class="enquiry__required"> Fields Required</p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </section> -->
             </div>
 
             <?php
