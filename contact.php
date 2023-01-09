@@ -214,18 +214,20 @@
                                 <textarea cols="50" rows="5" id="e-message" name="e-message" class="enquiry__area"></textarea>
                             </div>
                             <div class="enquiry_group">
-                            <div class="enquriy__checkbox">
-                                    <input class="enquiry__check" type="checkbox" id="e-checkbox" name="e-checkbox" value="True">
-                                    <input type="hidden" type="text" id="e-checkbox-input" name="e-checkbox-input">
-                                    <i class="fa-solid fa-check checkbox-tick"></i>
-                                </div>
-                                <div class="enquiry__text">
-                                    <label class="marketing__label-1" for="checkbox-2">Please tick this box if you wish to receive marketing information from us.</label>
-                                    <label class="marketing__label-2">Please see our <a class="form__link" href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>
-                                </div>
+                                <div class="marketing__wrapper">
+                                    <div class="marketing__checkbox">
+                                        <input class="form__checkbox" type="checkbox" id="e-checkbox" name="e-checkbox" value="True">
+                                        <input type="hidden" type="text" id="e-checkbox-input" name="e-checkbox-input">
+                                        <i class="fa-solid fa-check checkbox-tick"></i>
+                                    </div>
+                                    <div class="marketing__text">
+                                        <label class="marketing__label-1" for="e-checkbox">Please tick this box if you wish to receive marketing information from us.
+                                        Please see our <a class="form__link" href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>
+                                    </div>
+                                </div> 
                             </div>
                             <div class="enquiry__group enquiry__group-inline">
-                                <input type="submit" id="e-submit">
+                                <input type="submit" id="e-submit" class="enquiry__submit" value="Send Enquiry">
                                 <p class="enquiry__required"> Fields Required</p>
                             </div>
                         </form>
