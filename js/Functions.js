@@ -17,6 +17,14 @@ export class Functions
     INFO_DROPDOWN = '.info__dropdown';
     SIDE_MENU = '.sidemenu';
     OVERLAY = '.overlay';
+
+    NAME_FIELD = '#e-fname';
+    COMPANY_FIELD = '#e-cname';
+    EMAIL_FIELD = '#e-email';
+    PHONE_FIELD = '#e-phone';
+    SUBJECT_FIELD = '#e-subject';
+    MESSAGE_FIELD = '#e-message';
+    
     
     // CSS class names:
     #STICKY = 'sticky__wrapper';
@@ -247,21 +255,30 @@ export class Functions
         for (let i = 0; i < arr.length; i++) {
             switch(arr[i]) {
                 case 0:
+                    $(this.NAME_FIELD).css({borderColor: 'red'});
                     console.log("Name invalid!");
                     break;
                 case 1:
-                    console.log("Email invalid!");
+                    $(this.COMPANY_FIELD).css({borderColor: 'red'});
+                    console.log("Company invalid!");
                     break;
                 case 2:
-                    console.log("Phone invalid!");
+                    $(this.EMAIL_FIELD).css({borderColor: 'red'});
+                    console.log("Email invalid!");
                     break;
                 case 3:
-                    console.log("Subject invalid!");
+                    $(this.PHONE_FIELD).css({borderColor: 'red'});
+                    console.log("Phone invalid!");
                     break;
                 case 4:
-                    console.log("Message invalid!");
+                    $(this.SUBJECT_FIELD).css({borderColor: 'red'});
+                    console.log("Subject invalid!");
                     break;
                 case 5:
+                    $(this.MESSAGE_FIELD).css({borderColor: 'red'});
+                    console.log("Message invalid!");
+                    break;
+                case 6:
                     console.log("Marketing invalid!");
                     break;
                 default:
@@ -278,7 +295,7 @@ export class Functions
      * @returns {string} - The value of the selected element.
      */
     getValueOf(element) {
-        if (element === '#checkbox-2:checked') {
+        if (element.endsWith(":checked")) {
             if ($(element).val() === undefined) {
                 return 'false';
             } else {

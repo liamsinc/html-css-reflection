@@ -11,22 +11,22 @@ const util = new Functions();
 const validate = new Validation();
 
 // Declare jquery constants
-const FORM = '.form__form';
+const FORM = '.enquiry__form';
 const INFO_DROPDOWN = util.INFO_DROPDOWN;
 const INFO_BTN = '.info__btn';
-const FORM_SUBMIT = '.form__button-2';
+const FORM_SUBMIT = '#e-submit';
 
 // Form input element selectors.
-const CHECKBOX_INPUT = '#checkbox-2:checked';
-const NAME_INPUT = '#name';
-const COMPANY_INPUT = '#company';
-const EMAIL_INPUT = '#email';
-const PHONE_INPUT = '#phone';
-const SUBJECT_INPUT = '#subject';
-const MESSAGE_INPUT = '#message';
+const CHECKBOX_INPUT = '#e-checkbox:checked';
+const NAME_INPUT = '#e-fname';
+const COMPANY_INPUT = '#e-cname';
+const EMAIL_INPUT = '#e-email';
+const PHONE_INPUT = '#e-phone';
+const SUBJECT_INPUT = '#e-subject';
+const MESSAGE_INPUT = '#e-message';
 
 // Hidden text input used to send checkbox result on submission.
-const CHECKBOX_POST = '#checkbox-2-input'; 
+const CHECKBOX_POST = '#e-checkbox-input'; 
 
 // Immediately hide the information dropdown:
 $($(INFO_DROPDOWN).hide());
@@ -66,6 +66,7 @@ $(FORM_SUBMIT).on('click', (event) => {
 
     // Declare variables for every required field and call my class methods on the relevant inputs:
     let nameValid = validate.inputExists(cleanInputs[0]);
+    let companyValid = validate.inputLength(cleanInputs[1]);
     let emailValid = validate.email(cleanInputs[2]);
     let phoneValid = validate.phone(cleanInputs[3]);
     let subjectValid = validate.inputExists(cleanInputs[4]);
@@ -73,7 +74,7 @@ $(FORM_SUBMIT).on('click', (event) => {
     let marketingValid = validate.inputExists(cleanInputs[6]);
 
     // Store the results in an array:
-    results.push(nameValid, emailValid, phoneValid, subjectValid, messageValid, marketingValid);
+    results.push(nameValid, companyValid, emailValid, phoneValid, subjectValid, messageValid, marketingValid);
 
     // Loop through the results and push the index of any failures to the invalidInputs array:
     for(let i = 0; i < results.length; i++) {

@@ -12,6 +12,14 @@ export class Validation
         }
     }
 
+    inputLength(input) {
+        if (input.length > 100) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     email(email) {
         if (email === '') {
             return false;
