@@ -253,7 +253,12 @@
                         </div>
                     </div>
                     <div class="news__wrapper">
-                        <div class="news__item ni-1">
+                        <?php 
+                        require('inc/View.php');
+                        $view = new View();
+                        $view->show_news();
+                        ?>
+                        <!-- <div class="news__item ni-1">
                             <div class="news__type">
                                 <p>Careers</p>
                             </div>
@@ -281,8 +286,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="news__item ni-2">
+                        </div> -->
+                        <!-- <div class="news__item ni-2">
                             <div class="news__type">
                                 <p>Technologies</p>
                             </div>
@@ -308,8 +313,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="news__item ni-3">
+                        </div> -->
+                        <!-- <div class="news__item ni-3">
                             <div class="news__type">
                                 <p>News</p>
                             </div>
@@ -335,7 +340,7 @@
                                     </div>
                                 </div> 
                             </div>
-                        </div>
+                        </div> -->
                         <div class="news__view-all-xs">
                             <a href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
                         </div>

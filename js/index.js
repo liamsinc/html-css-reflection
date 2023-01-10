@@ -11,6 +11,10 @@ const OVERLAY = util.OVERLAY;
 const SIDE_MENU_BTN = '.header__menu-btn';
 const AWARD_CAROUSEL = '.accolades__wrapper';
 const HERO_CAROUSEL = '.hero__carousel';
+const NEWS_TYPE_BOX = '.news__type';
+const NEWS_BTN = '.news__button';
+const NEWS_TITLE = '.news__title';
+const NEWS_TYPES = ['#news__type-1', '#news__type-2', '#news__type-3'];
 
 // Multi element selectors:
 
@@ -32,6 +36,16 @@ const COOKIE_SETTINGS = {
 $(function () {
     // Scroll to the top of the page:
     $(HTML_BODY).scrollTop(0);
+
+    // for (let i = 0; i < NEWS_TYPES.length; i++) {
+    //     if ($(NEWS_TYPES[i]).text() === "Careers") {
+    //         console.log("1");
+    //     } else if ($(NEWS_TYPES[i]).text() === "Technologies") {
+    //         console.log("2");
+    //     } else if ($(NEWS_TYPES[i]).text() === "News") {
+    //         console.log("3");
+    //     }
+    // }
     
     // Initialize the carousels:
     if (util.checkPage()) {
